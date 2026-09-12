@@ -1,0 +1,33 @@
+{
+  "candidate": "risk005",
+  "runs": [
+    {
+      "label": "train",
+      "cases": 70,
+      "manifest_sha256": "df40720166bd717c4b41cd1e53f8f53b6ec9c9f1160a1355e88aa11a57c61c47",
+      "results_sha256": "0e2386b80f19914bc159c297f68f594340a32bc1daaee83253aeca4b6c00d5f3",
+      "actions_sha256": "12b7de5247ec6eada4947895a3ac3140e2472d98329df0f411de677742b3e035"
+    },
+    {
+      "label": "validation",
+      "cases": 70,
+      "manifest_sha256": "86cc4acf3af7beac00677a95af46bab1d962a8ebec697a17cd88bfc382e34d1c",
+      "results_sha256": "933442b75636094f04a9363d824aea78800768eeebb7a1f0a13536d51650141d",
+      "actions_sha256": "228afcf6f1eecdf930e93ec5b62584f657fd195876643202f89ee662726ea256"
+    },
+    {
+      "label": "development",
+      "cases": 600,
+      "manifest_sha256": "182527b791690a006a4756bed2b2838a7e76b82a8dc58294441695e541535646",
+      "results_sha256": "9918b2d1209b027f09ad15cfb565e12523bd98c28be320ada70194ad6eb21527",
+      "actions_sha256": "81a82101360c463e5222263b76c0d1f3a74042c58115d0647859b052bfb6cefe"
+    },
+    {
+      "label": "confirmation",
+      "cases": 1200,
+      "manifest_sha256": "315c926557d26206a40f8aa40a1382893b8e722ae9d31a1e601a0e923fea94b7",
+      "results_sha256": "fc43cdd7c5b0c25d1f6e736f4d5eeb1af2e5b9fe872ef4f94cebcf4cff48d38e",
+      "actions_sha256": "ed7f858146e1dfb9bb99f3a5f8beb6ccb38ee906c820ad7eb4686c3065238af2"
+    }
+  ]
+}

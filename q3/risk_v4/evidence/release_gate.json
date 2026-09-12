@@ -1,0 +1,40 @@
+{
+  "status": "PASS",
+  "candidate": "risk005",
+  "risk_gate": true,
+  "gain_gate": true,
+  "seed_gate": true,
+  "publish_allowed": true,
+  "summary": {
+    "variant": "risk005",
+    "runs": 600,
+    "fullclear": 600,
+    "failure_rate": 0.0,
+    "failure_rate_upper95": 0.004980443380361347,
+    "all_case_mean_s_per_cleared_source": 280.09050408677956,
+    "missing": 0,
+    "mean_fullclear_s_per_source": 280.09050408677956,
+    "max_fullclear_s_per_source": 466.6326545,
+    "errors": 0,
+    "mean_wall_s": 5.5353693551666945
+  },
+  "paired": {
+    "valid": true,
+    "candidate": "risk005",
+    "reference": "certified_reference",
+    "cases": 600,
+    "candidate_all_case_mean": 280.09050408677956,
+    "reference_all_case_mean": 316.6803693842139,
+    "saved_s_per_source": 36.58986529743431,
+    "relative_gain": 0.1155419433436415,
+    "saved_bootstrap95": [
+      33.339493819652965,
+      39.968808539131004
+    ],
+    "wins": 473,
+    "ties": 52,
+    "losses": 75,
+    "failed_cases_included": true
+  },
+  "authorization": "User permitted very small risk for substantial gain and previously authorized pushing successful work."
+}

@@ -1,0 +1,39 @@
+{
+  "status": "PASS",
+  "cases": 1940,
+  "actions": 318025,
+  "runs": [
+    {
+      "label": "train",
+      "cases": 70,
+      "status": "PASS"
+    },
+    {
+      "label": "validation",
+      "cases": 70,
+      "status": "PASS"
+    },
+    {
+      "label": "development",
+      "cases": 600,
+      "status": "PASS"
+    },
+    {
+      "label": "confirmation",
+      "cases": 1200,
+      "status": "PASS"
+    }
+  ],
+  "timestamp": "2026-09-12T20:01:22.918009+00:00",
+  "evidence_index_sha256": "148e6b1b179f7dd1460d1efa07ca1423c1383098ee747116cad2fd62b36c9945",
+  "checks": [
+    "source_hashes",
+    "archive_integrity",
+    "simulator_responses",
+    "virtual_time",
+    "no_failed_case_filtering",
+    "confidence_limit",
+    "risk_from_public_observations",
+    "strict_reference_coverage"
+  ]
+}

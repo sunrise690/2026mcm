@@ -1,0 +1,14 @@
+{
+  "authorization": "User explicitly permits very small risk in exchange for large gain and asks to continue iteration; successful candidates may be pushed under the existing authorization.",
+  "baseline_commit": "a03a8f1deb27f11b426aafa10a1349b62cbec843",
+  "risk_budgets": [0.001, 0.003, 0.005, 0.01],
+  "development_range_half_open": [2000, 2300],
+  "previous_training": "../geometry_v3/configs/train_seeds.json",
+  "previous_validation": "../geometry_v3/configs/validation_seeds.json",
+  "fresh_confirmation_range_half_open": [70000, 70600],
+  "selection": "Choose one candidate on development cases, freeze before confirmation. Do not tune on confirmation.",
+  "small_risk_gate": "One-sided exact 95% upper confidence limit of run-level non-full-clear probability <= 0.01 on at least 600 new cases, with no process or protocol errors.",
+  "large_gain_gate": "At least 10% reduction in paired all-case virtual time per actually cleared source relative to the frozen zero-risk certified_reference, and a positive paired 95% bootstrap interval for saved time.",
+  "publication": "Publish the selected candidate to a separate risk-budget branch if both gates pass; keep the zero-risk and probabilistic fast references available and disclose failures.",
+  "limitations": "Model risk assumes independent source locations, uniform reception-radius prior, count and channel assignment model. Empirical risk applies to the offline practice generator, not arbitrary formal datasets."
+}

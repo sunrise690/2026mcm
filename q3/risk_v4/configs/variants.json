@@ -1,0 +1,9 @@
+{
+  "fast_reference": {"module": "baseline_latest", "latest_tune": true},
+  "certified_reference": {"module": "controller", "tune": {"geometric_route_scan": 1, "joint_geometry": 1, "joint_detour_m": 800}},
+  "risk001": {"module": "risk_controller", "tune": {"risk_epsilon": 0.001}},
+  "risk003": {"module": "risk_controller", "tune": {"risk_epsilon": 0.003}},
+  "risk005": {"module": "risk_controller", "tune": {"risk_epsilon": 0.005}},
+  "risk010": {"module": "risk_controller", "tune": {"risk_epsilon": 0.01}},
+  "risk001_discrete": {"module": "risk_controller", "tune": {"risk_epsilon": 0.001, "risk_projection": 0}}
+}

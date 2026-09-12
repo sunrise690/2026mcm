@@ -1,0 +1,23 @@
+{
+  "train": null,
+  "validation": null,
+  "development": null,
+  "confirmation": {
+    "valid": true,
+    "candidate": "risk005",
+    "reference": "certified_reference",
+    "cases": 600,
+    "candidate_all_case_mean": 280.09050408677956,
+    "reference_all_case_mean": 316.6803693842139,
+    "saved_s_per_source": 36.58986529743431,
+    "relative_gain": 0.1155419433436415,
+    "saved_bootstrap95": [
+      33.339493819652965,
+      39.968808539131004
+    ],
+    "wins": 473,
+    "ties": 52,
+    "losses": 75,
+    "failed_cases_included": true
+  }
+}

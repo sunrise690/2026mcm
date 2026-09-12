@@ -1,0 +1,5143 @@
+{
+  "summary": [
+    {
+      "variant": "risk005",
+      "runs": 35,
+      "fullclear": 35,
+      "failure_rate": 0.0,
+      "failure_rate_upper95": 0.08203163585667045,
+      "all_case_mean_s_per_cleared_source": 283.42175779482125,
+      "missing": 0,
+      "mean_fullclear_s_per_source": 283.42175779482125,
+      "max_fullclear_s_per_source": 432.44741889999995,
+      "errors": 0,
+      "mean_wall_s": 4.148529514286201
+    },
+    {
+      "variant": "risk010",
+      "runs": 35,
+      "fullclear": 35,
+      "failure_rate": 0.0,
+      "failure_rate_upper95": 0.08203163585667045,
+      "all_case_mean_s_per_cleared_source": 277.11083054194177,
+      "missing": 0,
+      "mean_fullclear_s_per_source": 277.11083054194177,
+      "max_fullclear_s_per_source": 388.1271262,
+      "errors": 0,
+      "mean_wall_s": 4.171456682856868
+    }
+  ],
+  "rows": [
+    {
+      "variant": "risk005",
+      "seed": 1000,
+      "N": 15,
+      "cleared": 15,
+      "missing": 0,
+      "ok": true,
+      "virtual_time_s": 3903.656014,
+      "avg_clear_time_s": 260.24373426666665,
+      "wall_s": 3.7037619999973685,
+      "error": null,
+      "engine_summary": {
+        "problem_no": 3,
+        "jammer_count": 15,
+        "directional_count": 0,
+        "omni_count": 15,
+        "cleared_count": 15,
+        "measure_accepted_count": 146,
+        "channel_switch_count": 141,
+        "clear_failure_count": 0,
+        "clear_success_count": 15,
+        "virtual_time_us": 3903656014,
+        "virtual_time_s": 3903.656014,
+        "position": {
+          "x": 895.7384609705744,
+          "y": 158.7657952606967
+        },
+        "receiver_channel": 8,
+        "entered": true,
+        "exited": true,
+        "timed_out": false
+      },
+      "controller_end": {
+        "completion_verified": true,
+        "completion_reason": "bounded_model_risk",
+        "completion_certificate": {
+          "kind": "model_risk_budget",
+          "risk": {
+            "accepted": true,
+            "risk_upper": 0.004144203092894995,
+            "envelope_risk_lower": 0.0026392833459382725,
+            "mass_lower": 0.00016539172474581968,
+            "mass_upper": 0.00026009056141498594,
+            "cells_checked": 7412,
+            "depth": 10,
+            "reason": "threshold_separated",
+            "epsilon": 0.005,
+            "density_factor": 1.0341855788566503,
+            "radius_likelihood_margin": 2.000999996e-09,
+            "scope": "conditional probability under the documented independent-source practice model"
+          },
+          "all_detected_cleared": true
+        },
+        "geometry_report": {
+          "tail_probes": 3,
+          "inserted_probes": 0,
+          "risk_planning_calls": 3,
+          "probability_projections": 1
+        },
+        "risk_report": {
+          "accepted": true,
+          "risk_upper": 0.004144203092894995,
+          "envelope_risk_lower": 0.0026392833459382725,
+          "mass_lower": 0.00016539172474581968,
+          "mass_upper": 0.00026009056141498594,
+          "cells_checked": 7412,
+          "depth": 10,
+          "reason": "threshold_separated",
+          "epsilon": 0.005,
+          "density_factor": 1.0341855788566503,
+          "radius_likelihood_margin": 2.000999996e-09,
+          "scope": "conditional probability under the documented independent-source practice model"
+        }
+      }
+    },
+    {
+      "variant": "risk005",
+      "seed": 1001,
+      "N": 16,
+      "cleared": 16,
+      "missing": 0,
+      "ok": true,
+      "virtual_time_s": 3521.494811,
+      "avg_clear_time_s": 220.0934256875,
+      "wall_s": 4.455341699998826,
+      "error": null,
+      "engine_summary": {
+        "problem_no": 3,
+        "jammer_count": 16,
+        "directional_count": 0,
+        "omni_count": 16,
+        "cleared_count": 16,
+        "measure_accepted_count": 117,
+        "channel_switch_count": 110,
+        "clear_failure_count": 2,
+        "clear_success_count": 16,
+        "virtual_time_us": 3521494811,
+        "virtual_time_s": 3521.494811,
+        "position": {
+          "x": -548.6440277348341,
+          "y": -1382.8832888093111
+        },
+        "receiver_channel": 1,
+        "entered": true,
+        "exited": true,
+        "timed_out": false
+      },
+      "controller_end": {
+        "completion_verified": true,
+        "completion_reason": "maximum_count",
+        "completion_certificate": {
+          "kind": "model_risk_budget",
+          "risk": {
+            "accepted": true,
+            "risk_upper": 0.0,
+            "mass_upper": 0.0,
+            "cells_checked": 0,
+            "reason": "maximum_count"
+          },
+          "all_detected_cleared": true
+        },
+        "geometry_report": {
+          "tail_probes": 1,
+          "inserted_probes": 0,
+          "risk_planning_calls": 1,
+          "probability_projections": 0
+        },
+        "risk_report": {
+          "accepted": true,
+          "risk_upper": 0.0,
+          "mass_upper": 0.0,
+          "cells_checked": 0,
+          "reason": "maximum_count"
+        }
+      }
+    },
+    {
+      "variant": "risk005",
+      "seed": 1002,
+      "N": 13,
+      "cleared": 13,
+      "missing": 0,
+      "ok": true,
+      "virtual_time_s": 2990.337626,
+      "avg_clear_time_s": 230.02597123076924,
+      "wall_s": 3.649991599995701,
+      "error": null,
+      "engine_summary": {
+        "problem_no": 3,
+        "jammer_count": 13,
+        "directional_count": 0,
+        "omni_count": 13,
+        "cleared_count": 13,
+        "measure_accepted_count": 136,
+        "channel_switch_count": 130,
+        "clear_failure_count": 1,
+        "clear_success_count": 13,
+        "virtual_time_us": 2990337626,
+        "virtual_time_s": 2990.337626,
+        "position": {
+          "x": -320.9824503536536,
+          "y": -1528.247634210989
+        },
+        "receiver_channel": 20,
+        "entered": true,
+        "exited": true,
+        "timed_out": false
+      },
+      "controller_end": {
+        "completion_verified": true,
+        "completion_reason": "bounded_model_risk",
+        "completion_certificate": {
+          "kind": "model_risk_budget",
+          "risk": {
+            "accepted": true,
+            "risk_upper": 0.0029194764420836,
+            "envelope_risk_lower": 0.0,
+            "mass_lower": 0.0,
+            "mass_upper": 0.00020881722541310594,
+            "cells_checked": 142,
+            "depth": 6,
+            "reason": "threshold_separated",
+            "epsilon": 0.005,
+            "density_factor": 1.0341855788566503,
+            "radius_likelihood_margin": 2.000999996e-09,
+            "scope": "conditional probability under the documented independent-source practice model"
+          },
+          "all_detected_cleared": true
+        },
+        "geometry_report": {
+          "tail_probes": 0,
+          "inserted_probes": 0,
+          "risk_planning_calls": 0,
+          "probability_projections": 0
+        },
+        "risk_report": {
+          "accepted": true,
+          "risk_upper": 0.0029194764420836,
+          "envelope_risk_lower": 0.0,
+          "mass_lower": 0.0,
+          "mass_upper": 0.00020881722541310594,
+          "cells_checked": 142,
+          "depth": 6,
+          "reason": "threshold_separated",
+          "epsilon": 0.005,
+          "density_factor": 1.0341855788566503,
+          "radius_likelihood_margin": 2.000999996e-09,
+          "scope": "conditional probability under the documented independent-source practice model"
+        }
+      }
+    },
+    {
+      "variant": "risk005",
+      "seed": 1003,
+      "N": 10,
+      "cleared": 10,
+      "missing": 0,
+      "ok": true,
+      "virtual_time_s": 3530.275002,
+      "avg_clear_time_s": 353.02750019999996,
+      "wall_s": 2.415195699999458,
+      "error": null,
+      "engine_summary": {
+        "problem_no": 3,
+        "jammer_count": 10,
+        "directional_count": 0,
+        "omni_count": 10,
+        "cleared_count": 10,
+        "measure_accepted_count": 125,
+        "channel_switch_count": 118,
+        "clear_failure_count": 1,
+        "clear_success_count": 10,
+        "virtual_time_us": 3530275002,
+        "virtual_time_s": 3530.275002,
+        "position": {
+          "x": -559.1794862101439,
+          "y": 676.6215750020557
+        },
+        "receiver_channel": 17,
+        "entered": true,
+        "exited": true,
+        "timed_out": false
+      },
+      "controller_end": {
+        "completion_verified": true,
+        "completion_reason": "bounded_model_risk",
+        "completion_certificate": {
+          "kind": "model_risk_budget",
+          "risk": {
+            "accepted": true,
+            "risk_upper": 0.004569230771621924,
+            "envelope_risk_lower": 0.0022846283080105805,
+            "mass_lower": 0.00020790947955337218,
+            "mass_upper": 0.0004162498543921327,
+            "cells_checked": 2735,
+            "depth": 9,
+            "reason": "threshold_separated",
+            "epsilon": 0.005,
+            "density_factor": 1.0341855788566503,
+            "radius_likelihood_margin": 2.000999996e-09,
+            "scope": "conditional probability under the documented independent-source practice model"
+          },
+          "all_detected_cleared": true
+        },
+        "geometry_report": {
+          "tail_probes": 5,
+          "inserted_probes": 0,
+          "risk_planning_calls": 4,
+          "probability_projections": 2
+        },
+        "risk_report": {
+          "accepted": true,
+          "risk_upper": 0.004569230771621924,
+          "envelope_risk_lower": 0.0022846283080105805,
+          "mass_lower": 0.00020790947955337218,
+          "mass_upper": 0.0004162498543921327,
+          "cells_checked": 2735,
+          "depth": 9,
+          "reason": "threshold_separated",
+          "epsilon": 0.005,
+          "density_factor": 1.0341855788566503,
+          "radius_likelihood_margin": 2.000999996e-09,
+          "scope": "conditional probability under the documented independent-source practice model"
+        }
+      }
+    },
+    {
+      "variant": "risk005",
+      "seed": 1004,
+      "N": 16,
+      "cleared": 16,
+      "missing": 0,
+      "ok": true,
+      "virtual_time_s": 3359.543966,
+      "avg_clear_time_s": 209.971497875,
+      "wall_s": 4.532616200005577,
+      "error": null,
+      "engine_summary": {
+        "problem_no": 3,
+        "jammer_count": 16,
+        "directional_count": 0,
+        "omni_count": 16,
+        "cleared_count": 16,
+        "measure_accepted_count": 123,
+        "channel_switch_count": 118,
+        "clear_failure_count": 1,
+        "clear_success_count": 16,
+        "virtual_time_us": 3359543966,
+        "virtual_time_s": 3359.543966,
+        "position": {
+          "x": 1589.9197965780543,
+          "y": -28.967884278062428
+        },
+        "receiver_channel": 12,
+        "entered": true,
+        "exited": true,
+        "timed_out": false
+      },
+      "controller_end": {
+        "completion_verified": true,
+        "completion_reason": "maximum_count",
+        "completion_certificate": {
+          "kind": "model_risk_budget",
+          "risk": {
+            "accepted": true,
+            "risk_upper": 0.0,
+            "mass_upper": 0.0,
+            "cells_checked": 0,
+            "reason": "maximum_count"
+          },
+          "all_detected_cleared": true
+        },
+        "geometry_report": {
+          "tail_probes": 1,
+          "inserted_probes": 0,
+          "risk_planning_calls": 1,
+          "probability_projections": 0
+        },
+        "risk_report": {
+          "accepted": true,
+          "risk_upper": 0.0,
+          "mass_upper": 0.0,
+          "cells_checked": 0,
+          "reason": "maximum_count"
+        }
+      }
+    },
+    {
+      "variant": "risk005",
+      "seed": 1005,
+      "N": 16,
+      "cleared": 16,
+      "missing": 0,
+      "ok": true,
+      "virtual_time_s": 3085.755651,
+      "avg_clear_time_s": 192.8597281875,
+      "wall_s": 4.8580186999970465,
+      "error": null,
+      "engine_summary": {
+        "problem_no": 3,
+        "jammer_count": 16,
+        "directional_count": 0,
+        "omni_count": 16,
+        "cleared_count": 16,
+        "measure_accepted_count": 133,
+        "channel_switch_count": 128,
+        "clear_failure_count": 0,
+        "clear_success_count": 16,
+        "virtual_time_us": 3085755651,
+        "virtual_time_s": 3085.755651,
+        "position": {
+          "x": 1511.9232341594484,
+          "y": -422.46737970950886
+        },
+        "receiver_channel": 1,
+        "entered": true,
+        "exited": true,
+        "timed_out": false
+      },
+      "controller_end": {
+        "completion_verified": true,
+        "completion_reason": "maximum_count",
+        "completion_certificate": {
+          "kind": "model_risk_budget",
+          "risk": {
+            "accepted": true,
+            "risk_upper": 0.0,
+            "mass_upper": 0.0,
+            "cells_checked": 0,
+            "reason": "maximum_count"
+          },
+          "all_detected_cleared": true
+        },
+        "geometry_report": {
+          "tail_probes": 0,
+          "inserted_probes": 0,
+          "risk_planning_calls": 0,
+          "probability_projections": 0
+        },
+        "risk_report": {
+          "accepted": true,
+          "risk_upper": 0.0,
+          "mass_upper": 0.0,
+          "cells_checked": 0,
+          "reason": "maximum_count"
+        }
+      }
+    },
+    {
+      "variant": "risk005",
+      "seed": 1006,
+      "N": 14,
+      "cleared": 14,
+      "missing": 0,
+      "ok": true,
+      "virtual_time_s": 3598.899657,
+      "avg_clear_time_s": 257.0642612142857,
+      "wall_s": 3.3965704000002006,
+      "error": null,
+      "engine_summary": {
+        "problem_no": 3,
+        "jammer_count": 14,
+        "directional_count": 0,
+        "omni_count": 14,
+        "cleared_count": 14,
+        "measure_accepted_count": 147,
+        "channel_switch_count": 140,
+        "clear_failure_count": 1,
+        "clear_success_count": 14,
+        "virtual_time_us": 3598899657,
+        "virtual_time_s": 3598.899657,
+        "position": {
+          "x": -942.8769035781818,
+          "y": -208.94180542502983
+        },
+        "receiver_channel": 18,
+        "entered": true,
+        "exited": true,
+        "timed_out": false
+      },
+      "controller_end": {
+        "completion_verified": true,
+        "completion_reason": "bounded_model_risk",
+        "completion_certificate": {
+          "kind": "model_risk_budget",
+          "risk": {
+            "accepted": true,
+            "risk_upper": 0.004439640892435248,
+            "envelope_risk_lower": 0.00226009849248605,
+            "mass_lower": 0.0001508325369343,
+            "mass_upper": 0.0002965922112199258,
+            "cells_checked": 1668,
+            "depth": 9,
+            "reason": "threshold_separated",
+            "epsilon": 0.005,
+            "density_factor": 1.0341855788566503,
+            "radius_likelihood_margin": 2.000999996e-09,
+            "scope": "conditional probability under the documented independent-source practice model"
+          },
+          "all_detected_cleared": true
+        },
+        "geometry_report": {
+          "tail_probes": 3,
+          "inserted_probes": 0,
+          "risk_planning_calls": 3,
+          "probability_projections": 1
+        },
+        "risk_report": {
+          "accepted": true,
+          "risk_upper": 0.004439640892435248,
+          "envelope_risk_lower": 0.00226009849248605,
+          "mass_lower": 0.0001508325369343,
+          "mass_upper": 0.0002965922112199258,
+          "cells_checked": 1668,
+          "depth": 9,
+          "reason": "threshold_separated",
+          "epsilon": 0.005,
+          "density_factor": 1.0341855788566503,
+          "radius_likelihood_margin": 2.000999996e-09,
+          "scope": "conditional probability under the documented independent-source practice model"
+        }
+      }
+    },
+    {
+      "variant": "risk005",
+      "seed": 1007,
+      "N": 11,
+      "cleared": 11,
+      "missing": 0,
+      "ok": true,
+      "virtual_time_s": 4031.135828,
+      "avg_clear_time_s": 366.46689345454547,
+      "wall_s": 4.354357000003802,
+      "error": null,
+      "engine_summary": {
+        "problem_no": 3,
+        "jammer_count": 11,
+        "directional_count": 0,
+        "omni_count": 11,
+        "cleared_count": 11,
+        "measure_accepted_count": 142,
+        "channel_switch_count": 133,
+        "clear_failure_count": 2,
+        "clear_success_count": 11,
+        "virtual_time_us": 4031135828,
+        "virtual_time_s": 4031.135828,
+        "position": {
+          "x": 706.5928641025217,
+          "y": -656.1952506134005
+        },
+        "receiver_channel": 15,
+        "entered": true,
+        "exited": true,
+        "timed_out": false
+      },
+      "controller_end": {
+        "completion_verified": true,
+        "completion_reason": "bounded_model_risk",
+        "completion_certificate": {
+          "kind": "model_risk_budget",
+          "risk": {
+            "accepted": true,
+            "risk_upper": 0.004149316258344087,
+            "envelope_risk_lower": 0.0025270559467237092,
+            "mass_lower": 0.00021083230025359487,
+            "mass_upper": 0.00034643569046695734,
+            "cells_checked": 1770,
+            "depth": 9,
+            "reason": "threshold_separated",
+            "epsilon": 0.005,
+            "density_factor": 1.0341855788566503,
+            "radius_likelihood_margin": 2.000999996e-09,
+            "scope": "conditional probability under the documented independent-source practice model"
+          },
+          "all_detected_cleared": true
+        },
+        "geometry_report": {
+          "tail_probes": 4,
+          "inserted_probes": 0,
+          "risk_planning_calls": 2,
+          "probability_projections": 1
+        },
+        "risk_report": {
+          "accepted": true,
+          "risk_upper": 0.004149316258344087,
+          "envelope_risk_lower": 0.0025270559467237092,
+          "mass_lower": 0.00021083230025359487,
+          "mass_upper": 0.00034643569046695734,
+          "cells_checked": 1770,
+          "depth": 9,
+          "reason": "threshold_separated",
+          "epsilon": 0.005,
+          "density_factor": 1.0341855788566503,
+          "radius_likelihood_margin": 2.000999996e-09,
+          "scope": "conditional probability under the documented independent-source practice model"
+        }
+      }
+    },
+    {
+      "variant": "risk005",
+      "seed": 1008,
+      "N": 14,
+      "cleared": 14,
+      "missing": 0,
+      "ok": true,
+      "virtual_time_s": 3472.126329,
+      "avg_clear_time_s": 248.0090235,
+      "wall_s": 4.369765000003099,
+      "error": null,
+      "engine_summary": {
+        "problem_no": 3,
+        "jammer_count": 14,
+        "directional_count": 0,
+        "omni_count": 14,
+        "cleared_count": 14,
+        "measure_accepted_count": 145,
+        "channel_switch_count": 139,
+        "clear_failure_count": 1,
+        "clear_success_count": 14,
+        "virtual_time_us": 3472126329,
+        "virtual_time_s": 3472.126329,
+        "position": {
+          "x": -884.2260169992768,
+          "y": -396.35467462423713
+        },
+        "receiver_channel": 12,
+        "entered": true,
+        "exited": true,
+        "timed_out": false
+      },
+      "controller_end": {
+        "completion_verified": true,
+        "completion_reason": "bounded_model_risk",
+        "completion_certificate": {
+          "kind": "model_risk_budget",
+          "risk": {
+            "accepted": true,
+            "risk_upper": 0.004970223523296291,
+            "envelope_risk_lower": 0.001931311803954941,
+            "mass_lower": 0.00012887040514306483,
+            "mass_upper": 0.00033212090155385337,
+            "cells_checked": 455,
+            "depth": 8,
+            "reason": "threshold_separated",
+            "epsilon": 0.005,
+            "density_factor": 1.0341855788566503,
+            "radius_likelihood_margin": 2.000999996e-09,
+            "scope": "conditional probability under the documented independent-source practice model"
+          },
+          "all_detected_cleared": true
+        },
+        "geometry_report": {
+          "tail_probes": 3,
+          "inserted_probes": 0,
+          "risk_planning_calls": 3,
+          "probability_projections": 1
+        },
+        "risk_report": {
+          "accepted": true,
+          "risk_upper": 0.004970223523296291,
+          "envelope_risk_lower": 0.001931311803954941,
+          "mass_lower": 0.00012887040514306483,
+          "mass_upper": 0.00033212090155385337,
+          "cells_checked": 455,
+          "depth": 8,
+          "reason": "threshold_separated",
+          "epsilon": 0.005,
+          "density_factor": 1.0341855788566503,
+          "radius_likelihood_margin": 2.000999996e-09,
+          "scope": "conditional probability under the documented independent-source practice model"
+        }
+      }
+    },
+    {
+      "variant": "risk005",
+      "seed": 1009,
+      "N": 16,
+      "cleared": 16,
+      "missing": 0,
+      "ok": true,
+      "virtual_time_s": 2936.564931,
+      "avg_clear_time_s": 183.5353081875,
+      "wall_s": 6.243947700000717,
+      "error": null,
+      "engine_summary": {
+        "problem_no": 3,
+        "jammer_count": 16,
+        "directional_count": 0,
+        "omni_count": 16,
+        "cleared_count": 16,
+        "measure_accepted_count": 101,
+        "channel_switch_count": 97,
+        "clear_failure_count": 2,
+        "clear_success_count": 16,
+        "virtual_time_us": 2936564931,
+        "virtual_time_s": 2936.564931,
+        "position": {
+          "x": 923.1592806438371,
+          "y": 616.8967160066798
+        },
+        "receiver_channel": 3,
+        "entered": true,
+        "exited": true,
+        "timed_out": false
+      },
+      "controller_end": {
+        "completion_verified": true,
+        "completion_reason": "maximum_count",
+        "completion_certificate": {
+          "kind": "model_risk_budget",
+          "risk": {
+            "accepted": true,
+            "risk_upper": 0.0,
+            "mass_upper": 0.0,
+            "cells_checked": 0,
+            "reason": "maximum_count"
+          },
+          "all_detected_cleared": true
+        },
+        "geometry_report": {
+          "tail_probes": 0,
+          "inserted_probes": 0,
+          "risk_planning_calls": 0,
+          "probability_projections": 0
+        },
+        "risk_report": {
+          "accepted": true,
+          "risk_upper": 0.0,
+          "mass_upper": 0.0,
+          "cells_checked": 0,
+          "reason": "maximum_count"
+        }
+      }
+    },
+    {
+      "variant": "risk005",
+      "seed": 1010,
+      "N": 15,
+      "cleared": 15,
+      "missing": 0,
+      "ok": true,
+      "virtual_time_s": 4110.870717,
+      "avg_clear_time_s": 274.0580478,
+      "wall_s": 4.38275650000287,
+      "error": null,
+      "engine_summary": {
+        "problem_no": 3,
+        "jammer_count": 15,
+        "directional_count": 0,
+        "omni_count": 15,
+        "cleared_count": 15,
+        "measure_accepted_count": 140,
+        "channel_switch_count": 131,
+        "clear_failure_count": 3,
+        "clear_success_count": 15,
+        "virtual_time_us": 4110870717,
+        "virtual_time_s": 4110.870717,
+        "position": {
+          "x": 173.64817766693042,
+          "y": 984.807753012208
+        },
+        "receiver_channel": 11,
+        "entered": true,
+        "exited": true,
+        "timed_out": false
+      },
+      "controller_end": {
+        "completion_verified": true,
+        "completion_reason": "bounded_model_risk",
+        "completion_certificate": {
+          "kind": "model_risk_budget",
+          "risk": {
+            "accepted": true,
+            "risk_upper": 0.004440832337940413,
+            "envelope_risk_lower": 0.003313174085326942,
+            "mass_lower": 0.00020776173111639138,
+            "mass_upper": 0.00027879008112905075,
+            "cells_checked": 5555,
+            "depth": 10,
+            "reason": "threshold_separated",
+            "epsilon": 0.005,
+            "density_factor": 1.0341855788566503,
+            "radius_likelihood_margin": 2.000999996e-09,
+            "scope": "conditional probability under the documented independent-source practice model"
+          },
+          "all_detected_cleared": true
+        },
+        "geometry_report": {
+          "tail_probes": 2,
+          "inserted_probes": 0,
+          "risk_planning_calls": 2,
+          "probability_projections": 0
+        },
+        "risk_report": {
+          "accepted": true,
+          "risk_upper": 0.004440832337940413,
+          "envelope_risk_lower": 0.003313174085326942,
+          "mass_lower": 0.00020776173111639138,
+          "mass_upper": 0.00027879008112905075,
+          "cells_checked": 5555,
+          "depth": 10,
+          "reason": "threshold_separated",
+          "epsilon": 0.005,
+          "density_factor": 1.0341855788566503,
+          "radius_likelihood_margin": 2.000999996e-09,
+          "scope": "conditional probability under the documented independent-source practice model"
+        }
+      }
+    },
+    {
+      "variant": "risk005",
+      "seed": 1011,
+      "N": 14,
+      "cleared": 14,
+      "missing": 0,
+      "ok": true,
+      "virtual_time_s": 3551.489899,
+      "avg_clear_time_s": 253.67784992857145,
+      "wall_s": 6.069327600001998,
+      "error": null,
+      "engine_summary": {
+        "problem_no": 3,
+        "jammer_count": 14,
+        "directional_count": 0,
+        "omni_count": 14,
+        "cleared_count": 14,
+        "measure_accepted_count": 149,
+        "channel_switch_count": 146,
+        "clear_failure_count": 0,
+        "clear_success_count": 14,
+        "virtual_time_us": 3551489899,
+        "virtual_time_s": 3551.489899,
+        "position": {
+          "x": -672.7834562904839,
+          "y": 637.3464610310027
+        },
+        "receiver_channel": 12,
+        "entered": true,
+        "exited": true,
+        "timed_out": false
+      },
+      "controller_end": {
+        "completion_verified": true,
+        "completion_reason": "bounded_model_risk",
+        "completion_certificate": {
+          "kind": "model_risk_budget",
+          "risk": {
+            "accepted": true,
+            "risk_upper": 0.004741873834609527,
+            "envelope_risk_lower": 0.002188401729767607,
+            "mass_lower": 0.00014604279437526488,
+            "mass_upper": 0.00031682804875677727,
+            "cells_checked": 2148,
+            "depth": 9,
+            "reason": "threshold_separated",
+            "epsilon": 0.005,
+            "density_factor": 1.0341855788566503,
+            "radius_likelihood_margin": 2.000999996e-09,
+            "scope": "conditional probability under the documented independent-source practice model"
+          },
+          "all_detected_cleared": true
+        },
+        "geometry_report": {
+          "tail_probes": 2,
+          "inserted_probes": 0,
+          "risk_planning_calls": 2,
+          "probability_projections": 2
+        },
+        "risk_report": {
+          "accepted": true,
+          "risk_upper": 0.004741873834609527,
+          "envelope_risk_lower": 0.002188401729767607,
+          "mass_lower": 0.00014604279437526488,
+          "mass_upper": 0.00031682804875677727,
+          "cells_checked": 2148,
+          "depth": 9,
+          "reason": "threshold_separated",
+          "epsilon": 0.005,
+          "density_factor": 1.0341855788566503,
+          "radius_likelihood_margin": 2.000999996e-09,
+          "scope": "conditional probability under the documented independent-source practice model"
+        }
+      }
+    },
+    {
+      "variant": "risk005",
+      "seed": 1012,
+      "N": 15,
+      "cleared": 15,
+      "missing": 0,
+      "ok": true,
+      "virtual_time_s": 3397.181099,
+      "avg_clear_time_s": 226.47873993333332,
+      "wall_s": 4.388828900002409,
+      "error": null,
+      "engine_summary": {
+        "problem_no": 3,
+        "jammer_count": 15,
+        "directional_count": 0,
+        "omni_count": 15,
+        "cleared_count": 15,
+        "measure_accepted_count": 164,
+        "channel_switch_count": 159,
+        "clear_failure_count": 1,
+        "clear_success_count": 15,
+        "virtual_time_us": 3397181099,
+        "virtual_time_s": 3397.181099,
+        "position": {
+          "x": 792.4387231800052,
+          "y": -202.58768920591564
+        },
+        "receiver_channel": 20,
+        "entered": true,
+        "exited": true,
+        "timed_out": false
+      },
+      "controller_end": {
+        "completion_verified": true,
+        "completion_reason": "bounded_model_risk",
+        "completion_certificate": {
+          "kind": "model_risk_budget",
+          "risk": {
+            "accepted": true,
+            "risk_upper": 0.004155664581315289,
+            "envelope_risk_lower": 0.002525370974483511,
+            "mass_lower": 0.00015823528871046786,
+            "mass_upper": 0.00026081288720993445,
+            "cells_checked": 1436,
+            "depth": 9,
+            "reason": "threshold_separated",
+            "epsilon": 0.005,
+            "density_factor": 1.0341855788566503,
+            "radius_likelihood_margin": 2.000999996e-09,
+            "scope": "conditional probability under the documented independent-source practice model"
+          },
+          "all_detected_cleared": true
+        },
+        "geometry_report": {
+          "tail_probes": 1,
+          "inserted_probes": 0,
+          "risk_planning_calls": 1,
+          "probability_projections": 1
+        },
+        "risk_report": {
+          "accepted": true,
+          "risk_upper": 0.004155664581315289,
+          "envelope_risk_lower": 0.002525370974483511,
+          "mass_lower": 0.00015823528871046786,
+          "mass_upper": 0.00026081288720993445,
+          "cells_checked": 1436,
+          "depth": 9,
+          "reason": "threshold_separated",
+          "epsilon": 0.005,
+          "density_factor": 1.0341855788566503,
+          "radius_likelihood_margin": 2.000999996e-09,
+          "scope": "conditional probability under the documented independent-source practice model"
+        }
+      }
+    },
+    {
+      "variant": "risk005",
+      "seed": 1013,
+      "N": 12,
+      "cleared": 12,
+      "missing": 0,
+      "ok": true,
+      "virtual_time_s": 3808.453532,
+      "avg_clear_time_s": 317.37112766666667,
+      "wall_s": 4.932868299998518,
+      "error": null,
+      "engine_summary": {
+        "problem_no": 3,
+        "jammer_count": 12,
+        "directional_count": 0,
+        "omni_count": 12,
+        "cleared_count": 12,
+        "measure_accepted_count": 162,
+        "channel_switch_count": 151,
+        "clear_failure_count": 1,
+        "clear_success_count": 12,
+        "virtual_time_us": 3808453532,
+        "virtual_time_s": 3808.453532,
+        "position": {
+          "x": 936.2611014266529,
+          "y": 176.8777068299721
+        },
+        "receiver_channel": 19,
+        "entered": true,
+        "exited": true,
+        "timed_out": false
+      },
+      "controller_end": {
+        "completion_verified": true,
+        "completion_reason": "bounded_model_risk",
+        "completion_certificate": {
+          "kind": "model_risk_budget",
+          "risk": {
+            "accepted": true,
+            "risk_upper": 0.004467393753525416,
+            "envelope_risk_lower": 0.0024202047966712633,
+            "mass_lower": 0.00018637787765866834,
+            "mass_upper": 0.0003443562631870676,
+            "cells_checked": 1856,
+            "depth": 9,
+            "reason": "threshold_separated",
+            "epsilon": 0.005,
+            "density_factor": 1.0341855788566503,
+            "radius_likelihood_margin": 2.000999996e-09,
+            "scope": "conditional probability under the documented independent-source practice model"
+          },
+          "all_detected_cleared": true
+        },
+        "geometry_report": {
+          "tail_probes": 5,
+          "inserted_probes": 0,
+          "risk_planning_calls": 5,
+          "probability_projections": 1
+        },
+        "risk_report": {
+          "accepted": true,
+          "risk_upper": 0.004467393753525416,
+          "envelope_risk_lower": 0.0024202047966712633,
+          "mass_lower": 0.00018637787765866834,
+          "mass_upper": 0.0003443562631870676,
+          "cells_checked": 1856,
+          "depth": 9,
+          "reason": "threshold_separated",
+          "epsilon": 0.005,
+          "density_factor": 1.0341855788566503,
+          "radius_likelihood_margin": 2.000999996e-09,
+          "scope": "conditional probability under the documented independent-source practice model"
+        }
+      }
+    },
+    {
+      "variant": "risk005",
+      "seed": 1014,
+      "N": 13,
+      "cleared": 13,
+      "missing": 0,
+      "ok": true,
+      "virtual_time_s": 3595.589846,
+      "avg_clear_time_s": 276.5838343076923,
+      "wall_s": 2.8904432999988785,
+      "error": null,
+      "engine_summary": {
+        "problem_no": 3,
+        "jammer_count": 13,
+        "directional_count": 0,
+        "omni_count": 13,
+        "cleared_count": 13,
+        "measure_accepted_count": 148,
+        "channel_switch_count": 140,
+        "clear_failure_count": 0,
+        "clear_success_count": 13,
+        "virtual_time_us": 3595589846,
+        "virtual_time_s": 3595.589846,
+        "position": {
+          "x": 491.24582042123774,
+          "y": -595.4025169986479
+        },
+        "receiver_channel": 16,
+        "entered": true,
+        "exited": true,
+        "timed_out": false
+      },
+      "controller_end": {
+        "completion_verified": true,
+        "completion_reason": "bounded_model_risk",
+        "completion_certificate": {
+          "kind": "model_risk_budget",
+          "risk": {
+            "accepted": true,
+            "risk_upper": 0.004591401146814316,
+            "envelope_risk_lower": 0.002207273839272206,
+            "mass_lower": 0.00015782422017915988,
+            "mass_upper": 0.00032865841084284397,
+            "cells_checked": 2220,
+            "depth": 9,
+            "reason": "threshold_separated",
+            "epsilon": 0.005,
+            "density_factor": 1.0341855788566503,
+            "radius_likelihood_margin": 2.000999996e-09,
+            "scope": "conditional probability under the documented independent-source practice model"
+          },
+          "all_detected_cleared": true
+        },
+        "geometry_report": {
+          "tail_probes": 5,
+          "inserted_probes": 0,
+          "risk_planning_calls": 5,
+          "probability_projections": 1
+        },
+        "risk_report": {
+          "accepted": true,
+          "risk_upper": 0.004591401146814316,
+          "envelope_risk_lower": 0.002207273839272206,
+          "mass_lower": 0.00015782422017915988,
+          "mass_upper": 0.00032865841084284397,
+          "cells_checked": 2220,
+          "depth": 9,
+          "reason": "threshold_separated",
+          "epsilon": 0.005,
+          "density_factor": 1.0341855788566503,
+          "radius_likelihood_margin": 2.000999996e-09,
+          "scope": "conditional probability under the documented independent-source practice model"
+        }
+      }
+    },
+    {
+      "variant": "risk005",
+      "seed": 1015,
+      "N": 11,
+      "cleared": 11,
+      "missing": 0,
+      "ok": true,
+      "virtual_time_s": 3948.674116,
+      "avg_clear_time_s": 358.9703741818182,
+      "wall_s": 4.003690400000778,
+      "error": null,
+      "engine_summary": {
+        "problem_no": 3,
+        "jammer_count": 11,
+        "directional_count": 0,
+        "omni_count": 11,
+        "cleared_count": 11,
+        "measure_accepted_count": 144,
+        "channel_switch_count": 136,
+        "clear_failure_count": 0,
+        "clear_success_count": 11,
+        "virtual_time_us": 3948674116,
+        "virtual_time_s": 3948.674116,
+        "position": {
+          "x": 867.763273076828,
+          "y": -1034.1599982106204
+        },
+        "receiver_channel": 18,
+        "entered": true,
+        "exited": true,
+        "timed_out": false
+      },
+      "controller_end": {
+        "completion_verified": true,
+        "completion_reason": "bounded_model_risk",
+        "completion_certificate": {
+          "kind": "model_risk_budget",
+          "risk": {
+            "accepted": true,
+            "risk_upper": 0.004494615059794625,
+            "envelope_risk_lower": 0.0023557558830688548,
+            "mass_lower": 0.0001965252731694093,
+            "mass_upper": 0.00037532506546394094,
+            "cells_checked": 2463,
+            "depth": 9,
+            "reason": "threshold_separated",
+            "epsilon": 0.005,
+            "density_factor": 1.0341855788566503,
+            "radius_likelihood_margin": 2.000999996e-09,
+            "scope": "conditional probability under the documented independent-source practice model"
+          },
+          "all_detected_cleared": true
+        },
+        "geometry_report": {
+          "tail_probes": 6,
+          "inserted_probes": 0,
+          "risk_planning_calls": 5,
+          "probability_projections": 0
+        },
+        "risk_report": {
+          "accepted": true,
+          "risk_upper": 0.004494615059794625,
+          "envelope_risk_lower": 0.0023557558830688548,
+          "mass_lower": 0.0001965252731694093,
+          "mass_upper": 0.00037532506546394094,
+          "cells_checked": 2463,
+          "depth": 9,
+          "reason": "threshold_separated",
+          "epsilon": 0.005,
+          "density_factor": 1.0341855788566503,
+          "radius_likelihood_margin": 2.000999996e-09,
+          "scope": "conditional probability under the documented independent-source practice model"
+        }
+      }
+    },
+    {
+      "variant": "risk005",
+      "seed": 1016,
+      "N": 13,
+      "cleared": 13,
+      "missing": 0,
+      "ok": true,
+      "virtual_time_s": 3950.681511,
+      "avg_clear_time_s": 303.89857776923077,
+      "wall_s": 3.2361587999985204,
+      "error": null,
+      "engine_summary": {
+        "problem_no": 3,
+        "jammer_count": 13,
+        "directional_count": 0,
+        "omni_count": 13,
+        "cleared_count": 13,
+        "measure_accepted_count": 155,
+        "channel_switch_count": 151,
+        "clear_failure_count": 0,
+        "clear_success_count": 13,
+        "virtual_time_us": 3950681511,
+        "virtual_time_s": 3950.681511,
+        "position": {
+          "x": 766.044443118978,
+          "y": 642.7876096865392
+        },
+        "receiver_channel": 16,
+        "entered": true,
+        "exited": true,
+        "timed_out": false
+      },
+      "controller_end": {
+        "completion_verified": true,
+        "completion_reason": "bounded_model_risk",
+        "completion_certificate": {
+          "kind": "model_risk_budget",
+          "risk": {
+            "accepted": true,
+            "risk_upper": 0.004777837358922124,
+            "envelope_risk_lower": 0.0,
+            "mass_lower": 0.0,
+            "mass_upper": 0.00034203347483811007,
+            "cells_checked": 195,
+            "depth": 6,
+            "reason": "threshold_separated",
+            "epsilon": 0.005,
+            "density_factor": 1.0341855788566503,
+            "radius_likelihood_margin": 2.000999996e-09,
+            "scope": "conditional probability under the documented independent-source practice model"
+          },
+          "all_detected_cleared": true
+        },
+        "geometry_report": {
+          "tail_probes": 2,
+          "inserted_probes": 0,
+          "risk_planning_calls": 2,
+          "probability_projections": 0
+        },
+        "risk_report": {
+          "accepted": true,
+          "risk_upper": 0.004777837358922124,
+          "envelope_risk_lower": 0.0,
+          "mass_lower": 0.0,
+          "mass_upper": 0.00034203347483811007,
+          "cells_checked": 195,
+          "depth": 6,
+          "reason": "threshold_separated",
+          "epsilon": 0.005,
+          "density_factor": 1.0341855788566503,
+          "radius_likelihood_margin": 2.000999996e-09,
+          "scope": "conditional probability under the documented independent-source practice model"
+        }
+      }
+    },
+    {
+      "variant": "risk005",
+      "seed": 1017,
+      "N": 11,
+      "cleared": 11,
+      "missing": 0,
+      "ok": true,
+      "virtual_time_s": 3399.244199,
+      "avg_clear_time_s": 309.02219990909094,
+      "wall_s": 4.481981600001745,
+      "error": null,
+      "engine_summary": {
+        "problem_no": 3,
+        "jammer_count": 11,
+        "directional_count": 0,
+        "omni_count": 11,
+        "cleared_count": 11,
+        "measure_accepted_count": 142,
+        "channel_switch_count": 137,
+        "clear_failure_count": 1,
+        "clear_success_count": 11,
+        "virtual_time_us": 3399244199,
+        "virtual_time_s": 3399.244199,
+        "position": {
+          "x": 576.3807778349077,
+          "y": -599.045217542706
+        },
+        "receiver_channel": 16,
+        "entered": true,
+        "exited": true,
+        "timed_out": false
+      },
+      "controller_end": {
+        "completion_verified": true,
+        "completion_reason": "bounded_model_risk",
+        "completion_certificate": {
+          "kind": "model_risk_budget",
+          "risk": {
+            "accepted": true,
+            "risk_upper": 0.004515469253548215,
+            "envelope_risk_lower": 0.0024900706196979375,
+            "mass_lower": 0.00020774308522417982,
+            "mass_upper": 0.00037707012272520475,
+            "cells_checked": 2314,
+            "depth": 9,
+            "reason": "threshold_separated",
+            "epsilon": 0.005,
+            "density_factor": 1.0341855788566503,
+            "radius_likelihood_margin": 2.000999996e-09,
+            "scope": "conditional probability under the documented independent-source practice model"
+          },
+          "all_detected_cleared": true
+        },
+        "geometry_report": {
+          "tail_probes": 2,
+          "inserted_probes": 0,
+          "risk_planning_calls": 2,
+          "probability_projections": 1
+        },
+        "risk_report": {
+          "accepted": true,
+          "risk_upper": 0.004515469253548215,
+          "envelope_risk_lower": 0.0024900706196979375,
+          "mass_lower": 0.00020774308522417982,
+          "mass_upper": 0.00037707012272520475,
+          "cells_checked": 2314,
+          "depth": 9,
+          "reason": "threshold_separated",
+          "epsilon": 0.005,
+          "density_factor": 1.0341855788566503,
+          "radius_likelihood_margin": 2.000999996e-09,
+          "scope": "conditional probability under the documented independent-source practice model"
+        }
+      }
+    },
+    {
+      "variant": "risk005",
+      "seed": 1018,
+      "N": 15,
+      "cleared": 15,
+      "missing": 0,
+      "ok": true,
+      "virtual_time_s": 3268.880814,
+      "avg_clear_time_s": 217.9253876,
+      "wall_s": 4.476826999998593,
+      "error": null,
+      "engine_summary": {
+        "problem_no": 3,
+        "jammer_count": 15,
+        "directional_count": 0,
+        "omni_count": 15,
+        "cleared_count": 15,
+        "measure_accepted_count": 145,
+        "channel_switch_count": 140,
+        "clear_failure_count": 1,
+        "clear_success_count": 15,
+        "virtual_time_us": 3268880814,
+        "virtual_time_s": 3268.880814,
+        "position": {
+          "x": 480.58599193499805,
+          "y": 1611.9828544036263
+        },
+        "receiver_channel": 6,
+        "entered": true,
+        "exited": true,
+        "timed_out": false
+      },
+      "controller_end": {
+        "completion_verified": true,
+        "completion_reason": "bounded_model_risk",
+        "completion_certificate": {
+          "kind": "model_risk_budget",
+          "risk": {
+            "accepted": true,
+            "risk_upper": 0.0023498380243669333,
+            "envelope_risk_lower": 0.0,
+            "mass_lower": 0.0,
+            "mass_upper": 0.00014721079805379755,
+            "cells_checked": 188,
+            "depth": 6,
+            "reason": "threshold_separated",
+            "epsilon": 0.005,
+            "density_factor": 1.0341855788566503,
+            "radius_likelihood_margin": 2.000999996e-09,
+            "scope": "conditional probability under the documented independent-source practice model"
+          },
+          "all_detected_cleared": true
+        },
+        "geometry_report": {
+          "tail_probes": 0,
+          "inserted_probes": 0,
+          "risk_planning_calls": 0,
+          "probability_projections": 0
+        },
+        "risk_report": {
+          "accepted": true,
+          "risk_upper": 0.0023498380243669333,
+          "envelope_risk_lower": 0.0,
+          "mass_lower": 0.0,
+          "mass_upper": 0.00014721079805379755,
+          "cells_checked": 188,
+          "depth": 6,
+          "reason": "threshold_separated",
+          "epsilon": 0.005,
+          "density_factor": 1.0341855788566503,
+          "radius_likelihood_margin": 2.000999996e-09,
+          "scope": "conditional probability under the documented independent-source practice model"
+        }
+      }
+    },
+    {
+      "variant": "risk005",
+      "seed": 1019,
+      "N": 16,
+      "cleared": 16,
+      "missing": 0,
+      "ok": true,
+      "virtual_time_s": 3154.224034,
+      "avg_clear_time_s": 197.139002125,
+      "wall_s": 4.771719399999711,
+      "error": null,
+      "engine_summary": {
+        "problem_no": 3,
+        "jammer_count": 16,
+        "directional_count": 0,
+        "omni_count": 16,
+        "cleared_count": 16,
+        "measure_accepted_count": 96,
+        "channel_switch_count": 92,
+        "clear_failure_count": 1,
+        "clear_success_count": 16,
+        "virtual_time_us": 3154224034,
+        "virtual_time_s": 3154.224034,
+        "position": {
+          "x": 773.4597766059584,
+          "y": -1160.7772584802376
+        },
+        "receiver_channel": 12,
+        "entered": true,
+        "exited": true,
+        "timed_out": false
+      },
+      "controller_end": {
+        "completion_verified": true,
+        "completion_reason": "maximum_count",
+        "completion_certificate": {
+          "kind": "model_risk_budget",
+          "risk": {
+            "accepted": true,
+            "risk_upper": 0.0,
+            "mass_upper": 0.0,
+            "cells_checked": 0,
+            "reason": "maximum_count"
+          },
+          "all_detected_cleared": true
+        },
+        "geometry_report": {
+          "tail_probes": 0,
+          "inserted_probes": 0,
+          "risk_planning_calls": 0,
+          "probability_projections": 0
+        },
+        "risk_report": {
+          "accepted": true,
+          "risk_upper": 0.0,
+          "mass_upper": 0.0,
+          "cells_checked": 0,
+          "reason": "maximum_count"
+        }
+      }
+    },
+    {
+      "variant": "risk005",
+      "seed": 1021,
+      "N": 14,
+      "cleared": 14,
+      "missing": 0,
+      "ok": true,
+      "virtual_time_s": 3812.928388,
+      "avg_clear_time_s": 272.3520277142857,
+      "wall_s": 3.467645000004268,
+      "error": null,
+      "engine_summary": {
+        "problem_no": 3,
+        "jammer_count": 14,
+        "directional_count": 0,
+        "omni_count": 14,
+        "cleared_count": 14,
+        "measure_accepted_count": 128,
+        "channel_switch_count": 120,
+        "clear_failure_count": 5,
+        "clear_success_count": 14,
+        "virtual_time_us": 3812928388,
+        "virtual_time_s": 3812.928388,
+        "position": {
+          "x": 413.1796621884778,
+          "y": -783.6839818293838
+        },
+        "receiver_channel": 16,
+        "entered": true,
+        "exited": true,
+        "timed_out": false
+      },
+      "controller_end": {
+        "completion_verified": true,
+        "completion_reason": "bounded_model_risk",
+        "completion_certificate": {
+          "kind": "model_risk_budget",
+          "risk": {
+            "accepted": true,
+            "risk_upper": 0.004874976324046738,
+            "envelope_risk_lower": 0.0021317356948494857,
+            "mass_lower": 0.00014225741594468396,
+            "mass_upper": 0.00032574168162159613,
+            "cells_checked": 2242,
+            "depth": 9,
+            "reason": "threshold_separated",
+            "epsilon": 0.005,
+            "density_factor": 1.0341855788566503,
+            "radius_likelihood_margin": 2.000999996e-09,
+            "scope": "conditional probability under the documented independent-source practice model"
+          },
+          "all_detected_cleared": true
+        },
+        "geometry_report": {
+          "tail_probes": 2,
+          "inserted_probes": 0,
+          "risk_planning_calls": 2,
+          "probability_projections": 1
+        },
+        "risk_report": {
+          "accepted": true,
+          "risk_upper": 0.004874976324046738,
+          "envelope_risk_lower": 0.0021317356948494857,
+          "mass_lower": 0.00014225741594468396,
+          "mass_upper": 0.00032574168162159613,
+          "cells_checked": 2242,
+          "depth": 9,
+          "reason": "threshold_separated",
+          "epsilon": 0.005,
+          "density_factor": 1.0341855788566503,
+          "radius_likelihood_margin": 2.000999996e-09,
+          "scope": "conditional probability under the documented independent-source practice model"
+        }
+      }
+    },
+    {
+      "variant": "risk005",
+      "seed": 1022,
+      "N": 12,
+      "cleared": 12,
+      "missing": 0,
+      "ok": true,
+      "virtual_time_s": 2916.776251,
+      "avg_clear_time_s": 243.06468758333332,
+      "wall_s": 4.369168900004297,
+      "error": null,
+      "engine_summary": {
+        "problem_no": 3,
+        "jammer_count": 12,
+        "directional_count": 0,
+        "omni_count": 12,
+        "cleared_count": 12,
+        "measure_accepted_count": 128,
+        "channel_switch_count": 123,
+        "clear_failure_count": 2,
+        "clear_success_count": 12,
+        "virtual_time_us": 2916776251,
+        "virtual_time_s": 2916.776251,
+        "position": {
+          "x": 1101.8619760493682,
+          "y": -638.6114313838858
+        },
+        "receiver_channel": 20,
+        "entered": true,
+        "exited": true,
+        "timed_out": false
+      },
+      "controller_end": {
+        "completion_verified": true,
+        "completion_reason": "bounded_model_risk",
+        "completion_certificate": {
+          "kind": "model_risk_budget",
+          "risk": {
+            "accepted": true,
+            "risk_upper": 0.004274642996251673,
+            "envelope_risk_lower": 0.002600229945432913,
+            "mass_lower": 0.00020025813143168013,
+            "mass_upper": 0.00032946920560844345,
+            "cells_checked": 1682,
+            "depth": 9,
+            "reason": "threshold_separated",
+            "epsilon": 0.005,
+            "density_factor": 1.0341855788566503,
+            "radius_likelihood_margin": 2.000999996e-09,
+            "scope": "conditional probability under the documented independent-source practice model"
+          },
+          "all_detected_cleared": true
+        },
+        "geometry_report": {
+          "tail_probes": 1,
+          "inserted_probes": 0,
+          "risk_planning_calls": 1,
+          "probability_projections": 1
+        },
+        "risk_report": {
+          "accepted": true,
+          "risk_upper": 0.004274642996251673,
+          "envelope_risk_lower": 0.002600229945432913,
+          "mass_lower": 0.00020025813143168013,
+          "mass_upper": 0.00032946920560844345,
+          "cells_checked": 1682,
+          "depth": 9,
+          "reason": "threshold_separated",
+          "epsilon": 0.005,
+          "density_factor": 1.0341855788566503,
+          "radius_likelihood_margin": 2.000999996e-09,
+          "scope": "conditional probability under the documented independent-source practice model"
+        }
+      }
+    },
+    {
+      "variant": "risk005",
+      "seed": 1023,
+      "N": 14,
+      "cleared": 14,
+      "missing": 0,
+      "ok": true,
+      "virtual_time_s": 3247.809773,
+      "avg_clear_time_s": 231.98641235714285,
+      "wall_s": 4.033474199997727,
+      "error": null,
+      "engine_summary": {
+        "problem_no": 3,
+        "jammer_count": 14,
+        "directional_count": 0,
+        "omni_count": 14,
+        "cleared_count": 14,
+        "measure_accepted_count": 146,
+        "channel_switch_count": 143,
+        "clear_failure_count": 0,
+        "clear_success_count": 14,
+        "virtual_time_us": 3247809773,
+        "virtual_time_s": 3247.809773,
+        "position": {
+          "x": -1045.4027779729195,
+          "y": -1058.3903437043934
+        },
+        "receiver_channel": 19,
+        "entered": true,
+        "exited": true,
+        "timed_out": false
+      },
+      "controller_end": {
+        "completion_verified": true,
+        "completion_reason": "bounded_model_risk",
+        "completion_certificate": {
+          "kind": "model_risk_budget",
+          "risk": {
+            "accepted": true,
+            "risk_upper": 0.0044719676445299705,
+            "envelope_risk_lower": 0.0023000094861625672,
+            "mass_lower": 0.00015349895290489853,
+            "mass_upper": 0.00029875635535447475,
+            "cells_checked": 1956,
+            "depth": 9,
+            "reason": "threshold_separated",
+            "epsilon": 0.005,
+            "density_factor": 1.0341855788566503,
+            "radius_likelihood_margin": 2.000999996e-09,
+            "scope": "conditional probability under the documented independent-source practice model"
+          },
+          "all_detected_cleared": true
+        },
+        "geometry_report": {
+          "tail_probes": 2,
+          "inserted_probes": 0,
+          "risk_planning_calls": 2,
+          "probability_projections": 1
+        },
+        "risk_report": {
+          "accepted": true,
+          "risk_upper": 0.0044719676445299705,
+          "envelope_risk_lower": 0.0023000094861625672,
+          "mass_lower": 0.00015349895290489853,
+          "mass_upper": 0.00029875635535447475,
+          "cells_checked": 1956,
+          "depth": 9,
+          "reason": "threshold_separated",
+          "epsilon": 0.005,
+          "density_factor": 1.0341855788566503,
+          "radius_likelihood_margin": 2.000999996e-09,
+          "scope": "conditional probability under the documented independent-source practice model"
+        }
+      }
+    },
+    {
+      "variant": "risk005",
+      "seed": 1024,
+      "N": 10,
+      "cleared": 10,
+      "missing": 0,
+      "ok": true,
+      "virtual_time_s": 3542.359528,
+      "avg_clear_time_s": 354.2359528,
+      "wall_s": 3.2223302999991574,
+      "error": null,
+      "engine_summary": {
+        "problem_no": 3,
+        "jammer_count": 10,
+        "directional_count": 0,
+        "omni_count": 10,
+        "cleared_count": 10,
+        "measure_accepted_count": 139,
+        "channel_switch_count": 131,
+        "clear_failure_count": 1,
+        "clear_success_count": 10,
+        "virtual_time_us": 3542359528,
+        "virtual_time_s": 3542.359528,
+        "position": {
+          "x": 342.0201433256688,
+          "y": 939.6926207859083
+        },
+        "receiver_channel": 16,
+        "entered": true,
+        "exited": true,
+        "timed_out": false
+      },
+      "controller_end": {
+        "completion_verified": true,
+        "completion_reason": "bounded_model_risk",
+        "completion_certificate": {
+          "kind": "model_risk_budget",
+          "risk": {
+            "accepted": true,
+            "risk_upper": 0.0038528205945954986,
+            "envelope_risk_lower": 0.0014668649712448125,
+            "mass_lower": 0.00013344035703495067,
+            "mass_upper": 0.0003508713236335668,
+            "cells_checked": 555,
+            "depth": 8,
+            "reason": "threshold_separated",
+            "epsilon": 0.005,
+            "density_factor": 1.0341855788566503,
+            "radius_likelihood_margin": 2.000999996e-09,
+            "scope": "conditional probability under the documented independent-source practice model"
+          },
+          "all_detected_cleared": true
+        },
+        "geometry_report": {
+          "tail_probes": 1,
+          "inserted_probes": 0,
+          "risk_planning_calls": 1,
+          "probability_projections": 0
+        },
+        "risk_report": {
+          "accepted": true,
+          "risk_upper": 0.0038528205945954986,
+          "envelope_risk_lower": 0.0014668649712448125,
+          "mass_lower": 0.00013344035703495067,
+          "mass_upper": 0.0003508713236335668,
+          "cells_checked": 555,
+          "depth": 8,
+          "reason": "threshold_separated",
+          "epsilon": 0.005,
+          "density_factor": 1.0341855788566503,
+          "radius_likelihood_margin": 2.000999996e-09,
+          "scope": "conditional probability under the documented independent-source practice model"
+        }
+      }
+    },
+    {
+      "variant": "risk005",
+      "seed": 1025,
+      "N": 15,
+      "cleared": 15,
+      "missing": 0,
+      "ok": true,
+      "virtual_time_s": 3399.257809,
+      "avg_clear_time_s": 226.6171872666667,
+      "wall_s": 4.078286399999342,
+      "error": null,
+      "engine_summary": {
+        "problem_no": 3,
+        "jammer_count": 15,
+        "directional_count": 0,
+        "omni_count": 15,
+        "cleared_count": 15,
+        "measure_accepted_count": 131,
+        "channel_switch_count": 130,
+        "clear_failure_count": 3,
+        "clear_success_count": 15,
+        "virtual_time_us": 3399257809,
+        "virtual_time_s": 3399.257809,
+        "position": {
+          "x": -295.20953101501317,
+          "y": 729.5048191118276
+        },
+        "receiver_channel": 17,
+        "entered": true,
+        "exited": true,
+        "timed_out": false
+      },
+      "controller_end": {
+        "completion_verified": true,
+        "completion_reason": "bounded_model_risk",
+        "completion_certificate": {
+          "kind": "model_risk_budget",
+          "risk": {
+            "accepted": true,
+            "risk_upper": 0.004144005320158094,
+            "envelope_risk_lower": 0.0026928671566566367,
+            "mass_lower": 0.00016875864189520135,
+            "mass_upper": 0.00026007809752970053,
+            "cells_checked": 7308,
+            "depth": 10,
+            "reason": "threshold_separated",
+            "epsilon": 0.005,
+            "density_factor": 1.0341855788566503,
+            "radius_likelihood_margin": 2.000999996e-09,
+            "scope": "conditional probability under the documented independent-source practice model"
+          },
+          "all_detected_cleared": true
+        },
+        "geometry_report": {
+          "tail_probes": 1,
+          "inserted_probes": 0,
+          "risk_planning_calls": 1,
+          "probability_projections": 2
+        },
+        "risk_report": {
+          "accepted": true,
+          "risk_upper": 0.004144005320158094,
+          "envelope_risk_lower": 0.0026928671566566367,
+          "mass_lower": 0.00016875864189520135,
+          "mass_upper": 0.00026007809752970053,
+          "cells_checked": 7308,
+          "depth": 10,
+          "reason": "threshold_separated",
+          "epsilon": 0.005,
+          "density_factor": 1.0341855788566503,
+          "radius_likelihood_margin": 2.000999996e-09,
+          "scope": "conditional probability under the documented independent-source practice model"
+        }
+      }
+    },
+    {
+      "variant": "risk005",
+      "seed": 1030,
+      "N": 11,
+      "cleared": 11,
+      "missing": 0,
+      "ok": true,
+      "virtual_time_s": 4246.729286,
+      "avg_clear_time_s": 386.0662987272727,
+      "wall_s": 3.2124363999973866,
+      "error": null,
+      "engine_summary": {
+        "problem_no": 3,
+        "jammer_count": 11,
+        "directional_count": 0,
+        "omni_count": 11,
+        "cleared_count": 11,
+        "measure_accepted_count": 148,
+        "channel_switch_count": 140,
+        "clear_failure_count": 2,
+        "clear_success_count": 11,
+        "virtual_time_us": 4246729286,
+        "virtual_time_s": 4246.729286,
+        "position": {
+          "x": 642.7876096865393,
+          "y": 766.044443118978
+        },
+        "receiver_channel": 18,
+        "entered": true,
+        "exited": true,
+        "timed_out": false
+      },
+      "controller_end": {
+        "completion_verified": true,
+        "completion_reason": "bounded_model_risk",
+        "completion_certificate": {
+          "kind": "model_risk_budget",
+          "risk": {
+            "accepted": true,
+            "risk_upper": 0.004798239667926318,
+            "envelope_risk_lower": 0.0041605344434576304,
+            "mass_lower": 0.0003473741140025496,
+            "mass_upper": 0.00040073536548952926,
+            "cells_checked": 28563,
+            "depth": 11,
+            "reason": "threshold_separated",
+            "epsilon": 0.005,
+            "density_factor": 1.0341855788566503,
+            "radius_likelihood_margin": 2.000999996e-09,
+            "scope": "conditional probability under the documented independent-source practice model"
+          },
+          "all_detected_cleared": true
+        },
+        "geometry_report": {
+          "tail_probes": 6,
+          "inserted_probes": 0,
+          "risk_planning_calls": 5,
+          "probability_projections": 0
+        },
+        "risk_report": {
+          "accepted": true,
+          "risk_upper": 0.004798239667926318,
+          "envelope_risk_lower": 0.0041605344434576304,
+          "mass_lower": 0.0003473741140025496,
+          "mass_upper": 0.00040073536548952926,
+          "cells_checked": 28563,
+          "depth": 11,
+          "reason": "threshold_separated",
+          "epsilon": 0.005,
+          "density_factor": 1.0341855788566503,
+          "radius_likelihood_margin": 2.000999996e-09,
+          "scope": "conditional probability under the documented independent-source practice model"
+        }
+      }
+    },
+    {
+      "variant": "risk005",
+      "seed": 1031,
+      "N": 13,
+      "cleared": 13,
+      "missing": 0,
+      "ok": true,
+      "virtual_time_s": 2953.479955,
+      "avg_clear_time_s": 227.19076576923075,
+      "wall_s": 4.1007708000033745,
+      "error": null,
+      "engine_summary": {
+        "problem_no": 3,
+        "jammer_count": 13,
+        "directional_count": 0,
+        "omni_count": 13,
+        "cleared_count": 13,
+        "measure_accepted_count": 145,
+        "channel_switch_count": 136,
+        "clear_failure_count": 2,
+        "clear_success_count": 13,
+        "virtual_time_us": 2953479955,
+        "virtual_time_s": 2953.479955,
+        "position": {
+          "x": -930.9060412553715,
+          "y": 517.7802823498139
+        },
+        "receiver_channel": 19,
+        "entered": true,
+        "exited": true,
+        "timed_out": false
+      },
+      "controller_end": {
+        "completion_verified": true,
+        "completion_reason": "bounded_model_risk",
+        "completion_certificate": {
+          "kind": "model_risk_budget",
+          "risk": {
+            "accepted": true,
+            "risk_upper": 0.0045183483473520145,
+            "envelope_risk_lower": 0.0024329874971534544,
+            "mass_lower": 0.00017398143653272368,
+            "mass_upper": 0.0003234181863338552,
+            "cells_checked": 2203,
+            "depth": 9,
+            "reason": "threshold_separated",
+            "epsilon": 0.005,
+            "density_factor": 1.0341855788566503,
+            "radius_likelihood_margin": 2.000999996e-09,
+            "scope": "conditional probability under the documented independent-source practice model"
+          },
+          "all_detected_cleared": true
+        },
+        "geometry_report": {
+          "tail_probes": 4,
+          "inserted_probes": 0,
+          "risk_planning_calls": 4,
+          "probability_projections": 1
+        },
+        "risk_report": {
+          "accepted": true,
+          "risk_upper": 0.0045183483473520145,
+          "envelope_risk_lower": 0.0024329874971534544,
+          "mass_lower": 0.00017398143653272368,
+          "mass_upper": 0.0003234181863338552,
+          "cells_checked": 2203,
+          "depth": 9,
+          "reason": "threshold_separated",
+          "epsilon": 0.005,
+          "density_factor": 1.0341855788566503,
+          "radius_likelihood_margin": 2.000999996e-09,
+          "scope": "conditional probability under the documented independent-source practice model"
+        }
+      }
+    },
+    {
+      "variant": "risk005",
+      "seed": 1032,
+      "N": 12,
+      "cleared": 12,
+      "missing": 0,
+      "ok": true,
+      "virtual_time_s": 3977.644408,
+      "avg_clear_time_s": 331.47036733333334,
+      "wall_s": 3.0427822999990894,
+      "error": null,
+      "engine_summary": {
+        "problem_no": 3,
+        "jammer_count": 12,
+        "directional_count": 0,
+        "omni_count": 12,
+        "cleared_count": 12,
+        "measure_accepted_count": 148,
+        "channel_switch_count": 140,
+        "clear_failure_count": 1,
+        "clear_success_count": 12,
+        "virtual_time_us": 3977644408,
+        "virtual_time_s": 3977.644408,
+        "position": {
+          "x": -840.8437908068871,
+          "y": 165.78999442465098
+        },
+        "receiver_channel": 19,
+        "entered": true,
+        "exited": true,
+        "timed_out": false
+      },
+      "controller_end": {
+        "completion_verified": true,
+        "completion_reason": "bounded_model_risk",
+        "completion_certificate": {
+          "kind": "model_risk_budget",
+          "risk": {
+            "accepted": true,
+            "risk_upper": 0.004577036991706467,
+            "envelope_risk_lower": 0.002306563806627295,
+            "mass_lower": 0.00017761714901405763,
+            "mass_upper": 0.00035282571909461374,
+            "cells_checked": 2218,
+            "depth": 9,
+            "reason": "threshold_separated",
+            "epsilon": 0.005,
+            "density_factor": 1.0341855788566503,
+            "radius_likelihood_margin": 2.000999996e-09,
+            "scope": "conditional probability under the documented independent-source practice model"
+          },
+          "all_detected_cleared": true
+        },
+        "geometry_report": {
+          "tail_probes": 5,
+          "inserted_probes": 0,
+          "risk_planning_calls": 3,
+          "probability_projections": 1
+        },
+        "risk_report": {
+          "accepted": true,
+          "risk_upper": 0.004577036991706467,
+          "envelope_risk_lower": 0.002306563806627295,
+          "mass_lower": 0.00017761714901405763,
+          "mass_upper": 0.00035282571909461374,
+          "cells_checked": 2218,
+          "depth": 9,
+          "reason": "threshold_separated",
+          "epsilon": 0.005,
+          "density_factor": 1.0341855788566503,
+          "radius_likelihood_margin": 2.000999996e-09,
+          "scope": "conditional probability under the documented independent-source practice model"
+        }
+      }
+    },
+    {
+      "variant": "risk005",
+      "seed": 1034,
+      "N": 10,
+      "cleared": 10,
+      "missing": 0,
+      "ok": true,
+      "virtual_time_s": 3829.951919,
+      "avg_clear_time_s": 382.9951919,
+      "wall_s": 2.9239841000016895,
+      "error": null,
+      "engine_summary": {
+        "problem_no": 3,
+        "jammer_count": 10,
+        "directional_count": 0,
+        "omni_count": 10,
+        "cleared_count": 10,
+        "measure_accepted_count": 152,
+        "channel_switch_count": 149,
+        "clear_failure_count": 2,
+        "clear_success_count": 10,
+        "virtual_time_us": 3829951919,
+        "virtual_time_s": 3829.951919,
+        "position": {
+          "x": 1350.0,
+          "y": 0.0
+        },
+        "receiver_channel": 19,
+        "entered": true,
+        "exited": true,
+        "timed_out": false
+      },
+      "controller_end": {
+        "completion_verified": true,
+        "completion_reason": "bounded_model_risk",
+        "completion_certificate": {
+          "kind": "model_risk_budget",
+          "risk": {
+            "accepted": true,
+            "risk_upper": 0.004850030451954577,
+            "envelope_risk_lower": 0.004474981082469222,
+            "mass_lower": 0.0004076463243869095,
+            "mass_upper": 0.0004418868862437542,
+            "cells_checked": 139257,
+            "depth": 12,
+            "reason": "threshold_separated",
+            "epsilon": 0.005,
+            "density_factor": 1.0341855788566503,
+            "radius_likelihood_margin": 2.000999996e-09,
+            "scope": "conditional probability under the documented independent-source practice model"
+          },
+          "all_detected_cleared": true
+        },
+        "geometry_report": {
+          "tail_probes": 3,
+          "inserted_probes": 0,
+          "risk_planning_calls": 2,
+          "probability_projections": 0
+        },
+        "risk_report": {
+          "accepted": true,
+          "risk_upper": 0.004850030451954577,
+          "envelope_risk_lower": 0.004474981082469222,
+          "mass_lower": 0.0004076463243869095,
+          "mass_upper": 0.0004418868862437542,
+          "cells_checked": 139257,
+          "depth": 12,
+          "reason": "threshold_separated",
+          "epsilon": 0.005,
+          "density_factor": 1.0341855788566503,
+          "radius_likelihood_margin": 2.000999996e-09,
+          "scope": "conditional probability under the documented independent-source practice model"
+        }
+      }
+    },
+    {
+      "variant": "risk005",
+      "seed": 1040,
+      "N": 12,
+      "cleared": 12,
+      "missing": 0,
+      "ok": true,
+      "virtual_time_s": 3174.425555,
+      "avg_clear_time_s": 264.53546291666663,
+      "wall_s": 4.895626199999242,
+      "error": null,
+      "engine_summary": {
+        "problem_no": 3,
+        "jammer_count": 12,
+        "directional_count": 0,
+        "omni_count": 12,
+        "cleared_count": 12,
+        "measure_accepted_count": 143,
+        "channel_switch_count": 137,
+        "clear_failure_count": 0,
+        "clear_success_count": 12,
+        "virtual_time_us": 3174425555,
+        "virtual_time_s": 3174.425555,
+        "position": {
+          "x": 445.65824186780395,
+          "y": -662.8497977415675
+        },
+        "receiver_channel": 19,
+        "entered": true,
+        "exited": true,
+        "timed_out": false
+      },
+      "controller_end": {
+        "completion_verified": true,
+        "completion_reason": "bounded_model_risk",
+        "completion_certificate": {
+          "kind": "model_risk_budget",
+          "risk": {
+            "accepted": true,
+            "risk_upper": 0.00432028303411192,
+            "envelope_risk_lower": 0.0024117422179343005,
+            "mass_lower": 0.00018572545494111625,
+            "mass_upper": 0.00033299396238551944,
+            "cells_checked": 1709,
+            "depth": 9,
+            "reason": "threshold_separated",
+            "epsilon": 0.005,
+            "density_factor": 1.0341855788566503,
+            "radius_likelihood_margin": 2.000999996e-09,
+            "scope": "conditional probability under the documented independent-source practice model"
+          },
+          "all_detected_cleared": true
+        },
+        "geometry_report": {
+          "tail_probes": 1,
+          "inserted_probes": 0,
+          "risk_planning_calls": 1,
+          "probability_projections": 1
+        },
+        "risk_report": {
+          "accepted": true,
+          "risk_upper": 0.00432028303411192,
+          "envelope_risk_lower": 0.0024117422179343005,
+          "mass_lower": 0.00018572545494111625,
+          "mass_upper": 0.00033299396238551944,
+          "cells_checked": 1709,
+          "depth": 9,
+          "reason": "threshold_separated",
+          "epsilon": 0.005,
+          "density_factor": 1.0341855788566503,
+          "radius_likelihood_margin": 2.000999996e-09,
+          "scope": "conditional probability under the documented independent-source practice model"
+        }
+      }
+    },
+    {
+      "variant": "risk005",
+      "seed": 1041,
+      "N": 11,
+      "cleared": 11,
+      "missing": 0,
+      "ok": true,
+      "virtual_time_s": 4185.776551,
+      "avg_clear_time_s": 380.525141,
+      "wall_s": 2.558621399999538,
+      "error": null,
+      "engine_summary": {
+        "problem_no": 3,
+        "jammer_count": 11,
+        "directional_count": 0,
+        "omni_count": 11,
+        "cleared_count": 11,
+        "measure_accepted_count": 175,
+        "channel_switch_count": 168,
+        "clear_failure_count": 0,
+        "clear_success_count": 11,
+        "virtual_time_us": 4185776551,
+        "virtual_time_s": 4185.776551,
+        "position": {
+          "x": 173.64817766692997,
+          "y": -984.8077530122081
+        },
+        "receiver_channel": 19,
+        "entered": true,
+        "exited": true,
+        "timed_out": false
+      },
+      "controller_end": {
+        "completion_verified": true,
+        "completion_reason": "bounded_model_risk",
+        "completion_certificate": {
+          "kind": "model_risk_budget",
+          "risk": {
+            "accepted": true,
+            "risk_upper": 0.00445859714851235,
+            "envelope_risk_lower": 0.0021555156398456363,
+            "mass_lower": 0.0001798040089414203,
+            "mass_upper": 0.0003723112029939957,
+            "cells_checked": 2272,
+            "depth": 9,
+            "reason": "threshold_separated",
+            "epsilon": 0.005,
+            "density_factor": 1.0341855788566503,
+            "radius_likelihood_margin": 2.000999996e-09,
+            "scope": "conditional probability under the documented independent-source practice model"
+          },
+          "all_detected_cleared": true
+        },
+        "geometry_report": {
+          "tail_probes": 6,
+          "inserted_probes": 0,
+          "risk_planning_calls": 5,
+          "probability_projections": 0
+        },
+        "risk_report": {
+          "accepted": true,
+          "risk_upper": 0.00445859714851235,
+          "envelope_risk_lower": 0.0021555156398456363,
+          "mass_lower": 0.0001798040089414203,
+          "mass_upper": 0.0003723112029939957,
+          "cells_checked": 2272,
+          "depth": 9,
+          "reason": "threshold_separated",
+          "epsilon": 0.005,
+          "density_factor": 1.0341855788566503,
+          "radius_likelihood_margin": 2.000999996e-09,
+          "scope": "conditional probability under the documented independent-source practice model"
+        }
+      }
+    },
+    {
+      "variant": "risk005",
+      "seed": 1042,
+      "N": 12,
+      "cleared": 12,
+      "missing": 0,
+      "ok": true,
+      "virtual_time_s": 3629.24773,
+      "avg_clear_time_s": 302.43731083333336,
+      "wall_s": 4.425623100003577,
+      "error": null,
+      "engine_summary": {
+        "problem_no": 3,
+        "jammer_count": 12,
+        "directional_count": 0,
+        "omni_count": 12,
+        "cleared_count": 12,
+        "measure_accepted_count": 132,
+        "channel_switch_count": 129,
+        "clear_failure_count": 2,
+        "clear_success_count": 12,
+        "virtual_time_us": 3629247730,
+        "virtual_time_s": 3629.24773,
+        "position": {
+          "x": 271.84444829637727,
+          "y": 979.4141761613486
+        },
+        "receiver_channel": 14,
+        "entered": true,
+        "exited": true,
+        "timed_out": false
+      },
+      "controller_end": {
+        "completion_verified": true,
+        "completion_reason": "bounded_model_risk",
+        "completion_certificate": {
+          "kind": "model_risk_budget",
+          "risk": {
+            "accepted": true,
+            "risk_upper": 0.004425782208721648,
+            "envelope_risk_lower": 0.0023673455065083503,
+            "mass_lower": 0.00018230277307637897,
+            "mass_upper": 0.00034114218052522954,
+            "cells_checked": 2043,
+            "depth": 9,
+            "reason": "threshold_separated",
+            "epsilon": 0.005,
+            "density_factor": 1.0341855788566503,
+            "radius_likelihood_margin": 2.000999996e-09,
+            "scope": "conditional probability under the documented independent-source practice model"
+          },
+          "all_detected_cleared": true
+        },
+        "geometry_report": {
+          "tail_probes": 2,
+          "inserted_probes": 0,
+          "risk_planning_calls": 2,
+          "probability_projections": 1
+        },
+        "risk_report": {
+          "accepted": true,
+          "risk_upper": 0.004425782208721648,
+          "envelope_risk_lower": 0.0023673455065083503,
+          "mass_lower": 0.00018230277307637897,
+          "mass_upper": 0.00034114218052522954,
+          "cells_checked": 2043,
+          "depth": 9,
+          "reason": "threshold_separated",
+          "epsilon": 0.005,
+          "density_factor": 1.0341855788566503,
+          "radius_likelihood_margin": 2.000999996e-09,
+          "scope": "conditional probability under the documented independent-source practice model"
+        }
+      }
+    },
+    {
+      "variant": "risk005",
+      "seed": 1046,
+      "N": 13,
+      "cleared": 13,
+      "missing": 0,
+      "ok": true,
+      "virtual_time_s": 3311.026611,
+      "avg_clear_time_s": 254.69435469230768,
+      "wall_s": 4.51702369999839,
+      "error": null,
+      "engine_summary": {
+        "problem_no": 3,
+        "jammer_count": 13,
+        "directional_count": 0,
+        "omni_count": 13,
+        "cleared_count": 13,
+        "measure_accepted_count": 151,
+        "channel_switch_count": 141,
+        "clear_failure_count": 2,
+        "clear_success_count": 13,
+        "virtual_time_us": 3311026611,
+        "virtual_time_s": 3311.026611,
+        "position": {
+          "x": -51.79939088675447,
+          "y": -755.5068588262845
+        },
+        "receiver_channel": 19,
+        "entered": true,
+        "exited": true,
+        "timed_out": false
+      },
+      "controller_end": {
+        "completion_verified": true,
+        "completion_reason": "bounded_model_risk",
+        "completion_certificate": {
+          "kind": "model_risk_budget",
+          "risk": {
+            "accepted": true,
+            "risk_upper": 0.0045630915085236165,
+            "envelope_risk_lower": 0.002252558348487974,
+            "mass_lower": 0.0001610655401195813,
+            "mass_upper": 0.00032662766106441134,
+            "cells_checked": 2075,
+            "depth": 9,
+            "reason": "threshold_separated",
+            "epsilon": 0.005,
+            "density_factor": 1.0341855788566503,
+            "radius_likelihood_margin": 2.000999996e-09,
+            "scope": "conditional probability under the documented independent-source practice model"
+          },
+          "all_detected_cleared": true
+        },
+        "geometry_report": {
+          "tail_probes": 4,
+          "inserted_probes": 0,
+          "risk_planning_calls": 4,
+          "probability_projections": 1
+        },
+        "risk_report": {
+          "accepted": true,
+          "risk_upper": 0.0045630915085236165,
+          "envelope_risk_lower": 0.002252558348487974,
+          "mass_lower": 0.0001610655401195813,
+          "mass_upper": 0.00032662766106441134,
+          "cells_checked": 2075,
+          "depth": 9,
+          "reason": "threshold_separated",
+          "epsilon": 0.005,
+          "density_factor": 1.0341855788566503,
+          "radius_likelihood_margin": 2.000999996e-09,
+          "scope": "conditional probability under the documented independent-source practice model"
+        }
+      }
+    },
+    {
+      "variant": "risk005",
+      "seed": 1051,
+      "N": 10,
+      "cleared": 10,
+      "missing": 0,
+      "ok": true,
+      "virtual_time_s": 4324.474189,
+      "avg_clear_time_s": 432.44741889999995,
+      "wall_s": 6.7356308000016725,
+      "error": null,
+      "engine_summary": {
+        "problem_no": 3,
+        "jammer_count": 10,
+        "directional_count": 0,
+        "omni_count": 10,
+        "cleared_count": 10,
+        "measure_accepted_count": 167,
+        "channel_switch_count": 160,
+        "clear_failure_count": 0,
+        "clear_success_count": 10,
+        "virtual_time_us": 4324474189,
+        "virtual_time_s": 4324.474189,
+        "position": {
+          "x": -1000.0,
+          "y": 1.2246467991473532e-13
+        },
+        "receiver_channel": 15,
+        "entered": true,
+        "exited": true,
+        "timed_out": false
+      },
+      "controller_end": {
+        "completion_verified": true,
+        "completion_reason": "bounded_model_risk",
+        "completion_certificate": {
+          "kind": "model_risk_budget",
+          "risk": {
+            "accepted": true,
+            "risk_upper": 0.004503415833681572,
+            "envelope_risk_lower": 0.0002672230286612075,
+            "mass_lower": 2.4295953857317846e-05,
+            "mass_upper": 0.0004102418966979647,
+            "cells_checked": 323,
+            "depth": 7,
+            "reason": "threshold_separated",
+            "epsilon": 0.005,
+            "density_factor": 1.0341855788566503,
+            "radius_likelihood_margin": 2.000999996e-09,
+            "scope": "conditional probability under the documented independent-source practice model"
+          },
+          "all_detected_cleared": true
+        },
+        "geometry_report": {
+          "tail_probes": 6,
+          "inserted_probes": 0,
+          "risk_planning_calls": 5,
+          "probability_projections": 0
+        },
+        "risk_report": {
+          "accepted": true,
+          "risk_upper": 0.004503415833681572,
+          "envelope_risk_lower": 0.0002672230286612075,
+          "mass_lower": 2.4295953857317846e-05,
+          "mass_upper": 0.0004102418966979647,
+          "cells_checked": 323,
+          "depth": 7,
+          "reason": "threshold_separated",
+          "epsilon": 0.005,
+          "density_factor": 1.0341855788566503,
+          "radius_likelihood_margin": 2.000999996e-09,
+          "scope": "conditional probability under the documented independent-source practice model"
+        }
+      }
+    },
+    {
+      "variant": "risk005",
+      "seed": 1066,
+      "N": 10,
+      "cleared": 10,
+      "missing": 0,
+      "ok": true,
+      "virtual_time_s": 3727.20458,
+      "avg_clear_time_s": 372.720458,
+      "wall_s": 4.0009616000024835,
+      "error": null,
+      "engine_summary": {
+        "problem_no": 3,
+        "jammer_count": 10,
+        "directional_count": 0,
+        "omni_count": 10,
+        "cleared_count": 10,
+        "measure_accepted_count": 156,
+        "channel_switch_count": 150,
+        "clear_failure_count": 0,
+        "clear_success_count": 10,
+        "virtual_time_us": 3727204580,
+        "virtual_time_s": 3727.20458,
+        "position": {
+          "x": -939.6926207859084,
+          "y": -342.02014332566864
+        },
+        "receiver_channel": 20,
+        "entered": true,
+        "exited": true,
+        "timed_out": false
+      },
+      "controller_end": {
+        "completion_verified": true,
+        "completion_reason": "bounded_model_risk",
+        "completion_certificate": {
+          "kind": "model_risk_budget",
+          "risk": {
+            "accepted": true,
+            "risk_upper": 0.004602181161453198,
+            "envelope_risk_lower": 0.0031173006112517037,
+            "mass_lower": 0.0002837933152376914,
+            "mass_upper": 0.0004192578869523886,
+            "cells_checked": 1621,
+            "depth": 9,
+            "reason": "threshold_separated",
+            "epsilon": 0.005,
+            "density_factor": 1.0341855788566503,
+            "radius_likelihood_margin": 2.000999996e-09,
+            "scope": "conditional probability under the documented independent-source practice model"
+          },
+          "all_detected_cleared": true
+        },
+        "geometry_report": {
+          "tail_probes": 4,
+          "inserted_probes": 0,
+          "risk_planning_calls": 3,
+          "probability_projections": 0
+        },
+        "risk_report": {
+          "accepted": true,
+          "risk_upper": 0.004602181161453198,
+          "envelope_risk_lower": 0.0031173006112517037,
+          "mass_lower": 0.0002837933152376914,
+          "mass_upper": 0.0004192578869523886,
+          "cells_checked": 1621,
+          "depth": 9,
+          "reason": "threshold_separated",
+          "epsilon": 0.005,
+          "density_factor": 1.0341855788566503,
+          "radius_likelihood_margin": 2.000999996e-09,
+          "scope": "conditional probability under the documented independent-source practice model"
+        }
+      }
+    },
+    {
+      "variant": "risk010",
+      "seed": 1000,
+      "N": 15,
+      "cleared": 15,
+      "missing": 0,
+      "ok": true,
+      "virtual_time_s": 3887.690199,
+      "avg_clear_time_s": 259.17934660000003,
+      "wall_s": 3.6830129000009038,
+      "error": null,
+      "engine_summary": {
+        "problem_no": 3,
+        "jammer_count": 15,
+        "directional_count": 0,
+        "omni_count": 15,
+        "cleared_count": 15,
+        "measure_accepted_count": 146,
+        "channel_switch_count": 141,
+        "clear_failure_count": 0,
+        "clear_success_count": 15,
+        "virtual_time_us": 3887690199,
+        "virtual_time_s": 3887.690199,
+        "position": {
+          "x": 914.7014154985294,
+          "y": 49.82009428840381
+        },
+        "receiver_channel": 8,
+        "entered": true,
+        "exited": true,
+        "timed_out": false
+      },
+      "controller_end": {
+        "completion_verified": true,
+        "completion_reason": "bounded_model_risk",
+        "completion_certificate": {
+          "kind": "model_risk_budget",
+          "risk": {
+            "accepted": true,
+            "risk_upper": 0.009002777361389434,
+            "envelope_risk_lower": 0.004727802265688024,
+            "mass_lower": 0.00029689128489489064,
+            "mass_upper": 0.0005677852290934535,
+            "cells_checked": 3166,
+            "depth": 9,
+            "reason": "threshold_separated",
+            "epsilon": 0.01,
+            "density_factor": 1.0341855788566503,
+            "radius_likelihood_margin": 2.000999996e-09,
+            "scope": "conditional probability under the documented independent-source practice model"
+          },
+          "all_detected_cleared": true
+        },
+        "geometry_report": {
+          "tail_probes": 3,
+          "inserted_probes": 0,
+          "risk_planning_calls": 3,
+          "probability_projections": 1
+        },
+        "risk_report": {
+          "accepted": true,
+          "risk_upper": 0.009002777361389434,
+          "envelope_risk_lower": 0.004727802265688024,
+          "mass_lower": 0.00029689128489489064,
+          "mass_upper": 0.0005677852290934535,
+          "cells_checked": 3166,
+          "depth": 9,
+          "reason": "threshold_separated",
+          "epsilon": 0.01,
+          "density_factor": 1.0341855788566503,
+          "radius_likelihood_margin": 2.000999996e-09,
+          "scope": "conditional probability under the documented independent-source practice model"
+        }
+      }
+    },
+    {
+      "variant": "risk010",
+      "seed": 1001,
+      "N": 16,
+      "cleared": 16,
+      "missing": 0,
+      "ok": true,
+      "virtual_time_s": 3521.494811,
+      "avg_clear_time_s": 220.0934256875,
+      "wall_s": 4.4527725000007194,
+      "error": null,
+      "engine_summary": {
+        "problem_no": 3,
+        "jammer_count": 16,
+        "directional_count": 0,
+        "omni_count": 16,
+        "cleared_count": 16,
+        "measure_accepted_count": 117,
+        "channel_switch_count": 110,
+        "clear_failure_count": 2,
+        "clear_success_count": 16,
+        "virtual_time_us": 3521494811,
+        "virtual_time_s": 3521.494811,
+        "position": {
+          "x": -548.6440277348341,
+          "y": -1382.8832888093111
+        },
+        "receiver_channel": 1,
+        "entered": true,
+        "exited": true,
+        "timed_out": false
+      },
+      "controller_end": {
+        "completion_verified": true,
+        "completion_reason": "maximum_count",
+        "completion_certificate": {
+          "kind": "model_risk_budget",
+          "risk": {
+            "accepted": true,
+            "risk_upper": 0.0,
+            "mass_upper": 0.0,
+            "cells_checked": 0,
+            "reason": "maximum_count"
+          },
+          "all_detected_cleared": true
+        },
+        "geometry_report": {
+          "tail_probes": 1,
+          "inserted_probes": 0,
+          "risk_planning_calls": 1,
+          "probability_projections": 0
+        },
+        "risk_report": {
+          "accepted": true,
+          "risk_upper": 0.0,
+          "mass_upper": 0.0,
+          "cells_checked": 0,
+          "reason": "maximum_count"
+        }
+      }
+    },
+    {
+      "variant": "risk010",
+      "seed": 1002,
+      "N": 13,
+      "cleared": 13,
+      "missing": 0,
+      "ok": true,
+      "virtual_time_s": 2948.337626,
+      "avg_clear_time_s": 226.795202,
+      "wall_s": 3.6513598000019556,
+      "error": null,
+      "engine_summary": {
+        "problem_no": 3,
+        "jammer_count": 13,
+        "directional_count": 0,
+        "omni_count": 13,
+        "cleared_count": 13,
+        "measure_accepted_count": 129,
+        "channel_switch_count": 123,
+        "clear_failure_count": 1,
+        "clear_success_count": 13,
+        "virtual_time_us": 2948337626,
+        "virtual_time_s": 2948.337626,
+        "position": {
+          "x": -320.9824503536536,
+          "y": -1528.247634210989
+        },
+        "receiver_channel": 14,
+        "entered": true,
+        "exited": true,
+        "timed_out": false
+      },
+      "controller_end": {
+        "completion_verified": true,
+        "completion_reason": "bounded_model_risk",
+        "completion_certificate": {
+          "kind": "model_risk_budget",
+          "risk": {
+            "accepted": true,
+            "risk_upper": 0.008801461561709491,
+            "envelope_risk_lower": 0.004104867078598159,
+            "mass_lower": 0.00029376507044143624,
+            "mass_upper": 0.0006312594990746969,
+            "cells_checked": 784,
+            "depth": 8,
+            "reason": "threshold_separated",
+            "epsilon": 0.01,
+            "density_factor": 1.0341855788566503,
+            "radius_likelihood_margin": 2.000999996e-09,
+            "scope": "conditional probability under the documented independent-source practice model"
+          },
+          "all_detected_cleared": true
+        },
+        "geometry_report": {
+          "tail_probes": 0,
+          "inserted_probes": 0,
+          "risk_planning_calls": 0,
+          "probability_projections": 0
+        },
+        "risk_report": {
+          "accepted": true,
+          "risk_upper": 0.008801461561709491,
+          "envelope_risk_lower": 0.004104867078598159,
+          "mass_lower": 0.00029376507044143624,
+          "mass_upper": 0.0006312594990746969,
+          "cells_checked": 784,
+          "depth": 8,
+          "reason": "threshold_separated",
+          "epsilon": 0.01,
+          "density_factor": 1.0341855788566503,
+          "radius_likelihood_margin": 2.000999996e-09,
+          "scope": "conditional probability under the documented independent-source practice model"
+        }
+      }
+    },
+    {
+      "variant": "risk010",
+      "seed": 1003,
+      "N": 10,
+      "cleared": 10,
+      "missing": 0,
+      "ok": true,
+      "virtual_time_s": 3511.304115,
+      "avg_clear_time_s": 351.1304115,
+      "wall_s": 2.349060400003509,
+      "error": null,
+      "engine_summary": {
+        "problem_no": 3,
+        "jammer_count": 10,
+        "directional_count": 0,
+        "omni_count": 10,
+        "cleared_count": 10,
+        "measure_accepted_count": 125,
+        "channel_switch_count": 118,
+        "clear_failure_count": 1,
+        "clear_success_count": 10,
+        "virtual_time_us": 3511304115,
+        "virtual_time_s": 3511.304115,
+        "position": {
+          "x": -680.5865392436716,
+          "y": 583.6586366292158
+        },
+        "receiver_channel": 17,
+        "entered": true,
+        "exited": true,
+        "timed_out": false
+      },
+      "controller_end": {
+        "completion_verified": true,
+        "completion_reason": "bounded_model_risk",
+        "completion_certificate": {
+          "kind": "model_risk_budget",
+          "risk": {
+            "accepted": true,
+            "risk_upper": 0.008481307860605683,
+            "envelope_risk_lower": 0.005032576307266874,
+            "mass_lower": 0.0004585568639959341,
+            "mass_upper": 0.000774016550467255,
+            "cells_checked": 3601,
+            "depth": 9,
+            "reason": "threshold_separated",
+            "epsilon": 0.01,
+            "density_factor": 1.0341855788566503,
+            "radius_likelihood_margin": 2.000999996e-09,
+            "scope": "conditional probability under the documented independent-source practice model"
+          },
+          "all_detected_cleared": true
+        },
+        "geometry_report": {
+          "tail_probes": 5,
+          "inserted_probes": 0,
+          "risk_planning_calls": 4,
+          "probability_projections": 2
+        },
+        "risk_report": {
+          "accepted": true,
+          "risk_upper": 0.008481307860605683,
+          "envelope_risk_lower": 0.005032576307266874,
+          "mass_lower": 0.0004585568639959341,
+          "mass_upper": 0.000774016550467255,
+          "cells_checked": 3601,
+          "depth": 9,
+          "reason": "threshold_separated",
+          "epsilon": 0.01,
+          "density_factor": 1.0341855788566503,
+          "radius_likelihood_margin": 2.000999996e-09,
+          "scope": "conditional probability under the documented independent-source practice model"
+        }
+      }
+    },
+    {
+      "variant": "risk010",
+      "seed": 1004,
+      "N": 16,
+      "cleared": 16,
+      "missing": 0,
+      "ok": true,
+      "virtual_time_s": 3359.543966,
+      "avg_clear_time_s": 209.971497875,
+      "wall_s": 4.728925099996559,
+      "error": null,
+      "engine_summary": {
+        "problem_no": 3,
+        "jammer_count": 16,
+        "directional_count": 0,
+        "omni_count": 16,
+        "cleared_count": 16,
+        "measure_accepted_count": 123,
+        "channel_switch_count": 118,
+        "clear_failure_count": 1,
+        "clear_success_count": 16,
+        "virtual_time_us": 3359543966,
+        "virtual_time_s": 3359.543966,
+        "position": {
+          "x": 1589.9197965780543,
+          "y": -28.967884278062428
+        },
+        "receiver_channel": 12,
+        "entered": true,
+        "exited": true,
+        "timed_out": false
+      },
+      "controller_end": {
+        "completion_verified": true,
+        "completion_reason": "maximum_count",
+        "completion_certificate": {
+          "kind": "model_risk_budget",
+          "risk": {
+            "accepted": true,
+            "risk_upper": 0.0,
+            "mass_upper": 0.0,
+            "cells_checked": 0,
+            "reason": "maximum_count"
+          },
+          "all_detected_cleared": true
+        },
+        "geometry_report": {
+          "tail_probes": 1,
+          "inserted_probes": 0,
+          "risk_planning_calls": 1,
+          "probability_projections": 0
+        },
+        "risk_report": {
+          "accepted": true,
+          "risk_upper": 0.0,
+          "mass_upper": 0.0,
+          "cells_checked": 0,
+          "reason": "maximum_count"
+        }
+      }
+    },
+    {
+      "variant": "risk010",
+      "seed": 1005,
+      "N": 16,
+      "cleared": 16,
+      "missing": 0,
+      "ok": true,
+      "virtual_time_s": 3085.755651,
+      "avg_clear_time_s": 192.8597281875,
+      "wall_s": 4.809103799998411,
+      "error": null,
+      "engine_summary": {
+        "problem_no": 3,
+        "jammer_count": 16,
+        "directional_count": 0,
+        "omni_count": 16,
+        "cleared_count": 16,
+        "measure_accepted_count": 133,
+        "channel_switch_count": 128,
+        "clear_failure_count": 0,
+        "clear_success_count": 16,
+        "virtual_time_us": 3085755651,
+        "virtual_time_s": 3085.755651,
+        "position": {
+          "x": 1511.9232341594484,
+          "y": -422.46737970950886
+        },
+        "receiver_channel": 1,
+        "entered": true,
+        "exited": true,
+        "timed_out": false
+      },
+      "controller_end": {
+        "completion_verified": true,
+        "completion_reason": "maximum_count",
+        "completion_certificate": {
+          "kind": "model_risk_budget",
+          "risk": {
+            "accepted": true,
+            "risk_upper": 0.0,
+            "mass_upper": 0.0,
+            "cells_checked": 0,
+            "reason": "maximum_count"
+          },
+          "all_detected_cleared": true
+        },
+        "geometry_report": {
+          "tail_probes": 0,
+          "inserted_probes": 0,
+          "risk_planning_calls": 0,
+          "probability_projections": 0
+        },
+        "risk_report": {
+          "accepted": true,
+          "risk_upper": 0.0,
+          "mass_upper": 0.0,
+          "cells_checked": 0,
+          "reason": "maximum_count"
+        }
+      }
+    },
+    {
+      "variant": "risk010",
+      "seed": 1006,
+      "N": 14,
+      "cleared": 14,
+      "missing": 0,
+      "ok": true,
+      "virtual_time_s": 3331.374867,
+      "avg_clear_time_s": 237.95534764285713,
+      "wall_s": 3.4057532000006177,
+      "error": null,
+      "engine_summary": {
+        "problem_no": 3,
+        "jammer_count": 14,
+        "directional_count": 0,
+        "omni_count": 14,
+        "cleared_count": 14,
+        "measure_accepted_count": 141,
+        "channel_switch_count": 135,
+        "clear_failure_count": 1,
+        "clear_success_count": 14,
+        "virtual_time_us": 3331374867,
+        "virtual_time_s": 3331.374867,
+        "position": {
+          "x": -499.9999999999998,
+          "y": 866.0254037844387
+        },
+        "receiver_channel": 20,
+        "entered": true,
+        "exited": true,
+        "timed_out": false
+      },
+      "controller_end": {
+        "completion_verified": true,
+        "completion_reason": "bounded_model_risk",
+        "completion_certificate": {
+          "kind": "model_risk_budget",
+          "risk": {
+            "accepted": true,
+            "risk_upper": 0.009900643275595412,
+            "envelope_risk_lower": 0.003410020416441731,
+            "mass_lower": 0.00022769779264805978,
+            "mass_upper": 0.0006631252001222895,
+            "cells_checked": 867,
+            "depth": 8,
+            "reason": "threshold_separated",
+            "epsilon": 0.01,
+            "density_factor": 1.0341855788566503,
+            "radius_likelihood_margin": 2.000999996e-09,
+            "scope": "conditional probability under the documented independent-source practice model"
+          },
+          "all_detected_cleared": true
+        },
+        "geometry_report": {
+          "tail_probes": 2,
+          "inserted_probes": 0,
+          "risk_planning_calls": 2,
+          "probability_projections": 0
+        },
+        "risk_report": {
+          "accepted": true,
+          "risk_upper": 0.009900643275595412,
+          "envelope_risk_lower": 0.003410020416441731,
+          "mass_lower": 0.00022769779264805978,
+          "mass_upper": 0.0006631252001222895,
+          "cells_checked": 867,
+          "depth": 8,
+          "reason": "threshold_separated",
+          "epsilon": 0.01,
+          "density_factor": 1.0341855788566503,
+          "radius_likelihood_margin": 2.000999996e-09,
+          "scope": "conditional probability under the documented independent-source practice model"
+        }
+      }
+    },
+    {
+      "variant": "risk010",
+      "seed": 1007,
+      "N": 11,
+      "cleared": 11,
+      "missing": 0,
+      "ok": true,
+      "virtual_time_s": 3760.883901,
+      "avg_clear_time_s": 341.8985364545455,
+      "wall_s": 4.2558838999975706,
+      "error": null,
+      "engine_summary": {
+        "problem_no": 3,
+        "jammer_count": 11,
+        "directional_count": 0,
+        "omni_count": 11,
+        "cleared_count": 11,
+        "measure_accepted_count": 133,
+        "channel_switch_count": 125,
+        "clear_failure_count": 2,
+        "clear_success_count": 11,
+        "virtual_time_us": 3760883901,
+        "virtual_time_s": 3760.883901,
+        "position": {
+          "x": -342.0201433256694,
+          "y": -939.6926207859082
+        },
+        "receiver_channel": 16,
+        "entered": true,
+        "exited": true,
+        "timed_out": false
+      },
+      "controller_end": {
+        "completion_verified": true,
+        "completion_reason": "bounded_model_risk",
+        "completion_certificate": {
+          "kind": "model_risk_budget",
+          "risk": {
+            "accepted": true,
+            "risk_upper": 0.008642026599817308,
+            "envelope_risk_lower": 0.006085610955035328,
+            "mass_lower": 0.0005085542887532568,
+            "mass_upper": 0.0007230372706556075,
+            "cells_checked": 2498,
+            "depth": 9,
+            "reason": "threshold_separated",
+            "epsilon": 0.01,
+            "density_factor": 1.0341855788566503,
+            "radius_likelihood_margin": 2.000999996e-09,
+            "scope": "conditional probability under the documented independent-source practice model"
+          },
+          "all_detected_cleared": true
+        },
+        "geometry_report": {
+          "tail_probes": 3,
+          "inserted_probes": 0,
+          "risk_planning_calls": 1,
+          "probability_projections": 0
+        },
+        "risk_report": {
+          "accepted": true,
+          "risk_upper": 0.008642026599817308,
+          "envelope_risk_lower": 0.006085610955035328,
+          "mass_lower": 0.0005085542887532568,
+          "mass_upper": 0.0007230372706556075,
+          "cells_checked": 2498,
+          "depth": 9,
+          "reason": "threshold_separated",
+          "epsilon": 0.01,
+          "density_factor": 1.0341855788566503,
+          "radius_likelihood_margin": 2.000999996e-09,
+          "scope": "conditional probability under the documented independent-source practice model"
+        }
+      }
+    },
+    {
+      "variant": "risk010",
+      "seed": 1008,
+      "N": 14,
+      "cleared": 14,
+      "missing": 0,
+      "ok": true,
+      "virtual_time_s": 3462.463375,
+      "avg_clear_time_s": 247.31881249999998,
+      "wall_s": 4.1006907999981195,
+      "error": null,
+      "engine_summary": {
+        "problem_no": 3,
+        "jammer_count": 14,
+        "directional_count": 0,
+        "omni_count": 14,
+        "cleared_count": 14,
+        "measure_accepted_count": 145,
+        "channel_switch_count": 139,
+        "clear_failure_count": 1,
+        "clear_success_count": 14,
+        "virtual_time_us": 3462463375,
+        "virtual_time_s": 3462.463375,
+        "position": {
+          "x": -906.3846679113458,
+          "y": -344.3746014026182
+        },
+        "receiver_channel": 12,
+        "entered": true,
+        "exited": true,
+        "timed_out": false
+      },
+      "controller_end": {
+        "completion_verified": true,
+        "completion_reason": "bounded_model_risk",
+        "completion_certificate": {
+          "kind": "model_risk_budget",
+          "risk": {
+            "accepted": true,
+            "risk_upper": 0.00927050201675658,
+            "envelope_risk_lower": 0.004428570648440654,
+            "mass_lower": 0.00029585111872182504,
+            "mass_upper": 0.0006207340741392748,
+            "cells_checked": 608,
+            "depth": 8,
+            "reason": "threshold_separated",
+            "epsilon": 0.01,
+            "density_factor": 1.0341855788566503,
+            "radius_likelihood_margin": 2.000999996e-09,
+            "scope": "conditional probability under the documented independent-source practice model"
+          },
+          "all_detected_cleared": true
+        },
+        "geometry_report": {
+          "tail_probes": 3,
+          "inserted_probes": 0,
+          "risk_planning_calls": 3,
+          "probability_projections": 2
+        },
+        "risk_report": {
+          "accepted": true,
+          "risk_upper": 0.00927050201675658,
+          "envelope_risk_lower": 0.004428570648440654,
+          "mass_lower": 0.00029585111872182504,
+          "mass_upper": 0.0006207340741392748,
+          "cells_checked": 608,
+          "depth": 8,
+          "reason": "threshold_separated",
+          "epsilon": 0.01,
+          "density_factor": 1.0341855788566503,
+          "radius_likelihood_margin": 2.000999996e-09,
+          "scope": "conditional probability under the documented independent-source practice model"
+        }
+      }
+    },
+    {
+      "variant": "risk010",
+      "seed": 1009,
+      "N": 16,
+      "cleared": 16,
+      "missing": 0,
+      "ok": true,
+      "virtual_time_s": 2936.564931,
+      "avg_clear_time_s": 183.5353081875,
+      "wall_s": 6.393081499998516,
+      "error": null,
+      "engine_summary": {
+        "problem_no": 3,
+        "jammer_count": 16,
+        "directional_count": 0,
+        "omni_count": 16,
+        "cleared_count": 16,
+        "measure_accepted_count": 101,
+        "channel_switch_count": 97,
+        "clear_failure_count": 2,
+        "clear_success_count": 16,
+        "virtual_time_us": 2936564931,
+        "virtual_time_s": 2936.564931,
+        "position": {
+          "x": 923.1592806438371,
+          "y": 616.8967160066798
+        },
+        "receiver_channel": 3,
+        "entered": true,
+        "exited": true,
+        "timed_out": false
+      },
+      "controller_end": {
+        "completion_verified": true,
+        "completion_reason": "maximum_count",
+        "completion_certificate": {
+          "kind": "model_risk_budget",
+          "risk": {
+            "accepted": true,
+            "risk_upper": 0.0,
+            "mass_upper": 0.0,
+            "cells_checked": 0,
+            "reason": "maximum_count"
+          },
+          "all_detected_cleared": true
+        },
+        "geometry_report": {
+          "tail_probes": 0,
+          "inserted_probes": 0,
+          "risk_planning_calls": 0,
+          "probability_projections": 0
+        },
+        "risk_report": {
+          "accepted": true,
+          "risk_upper": 0.0,
+          "mass_upper": 0.0,
+          "cells_checked": 0,
+          "reason": "maximum_count"
+        }
+      }
+    },
+    {
+      "variant": "risk010",
+      "seed": 1010,
+      "N": 15,
+      "cleared": 15,
+      "missing": 0,
+      "ok": true,
+      "virtual_time_s": 4083.121497,
+      "avg_clear_time_s": 272.2080998,
+      "wall_s": 4.340330699997139,
+      "error": null,
+      "engine_summary": {
+        "problem_no": 3,
+        "jammer_count": 15,
+        "directional_count": 0,
+        "omni_count": 15,
+        "cleared_count": 15,
+        "measure_accepted_count": 140,
+        "channel_switch_count": 131,
+        "clear_failure_count": 3,
+        "clear_success_count": 15,
+        "virtual_time_us": 4083121497,
+        "virtual_time_s": 4083.121497,
+        "position": {
+          "x": 52.11748616036277,
+          "y": 916.3481772717253
+        },
+        "receiver_channel": 11,
+        "entered": true,
+        "exited": true,
+        "timed_out": false
+      },
+      "controller_end": {
+        "completion_verified": true,
+        "completion_reason": "bounded_model_risk",
+        "completion_certificate": {
+          "kind": "model_risk_budget",
+          "risk": {
+            "accepted": true,
+            "risk_upper": 0.008587076199463209,
+            "envelope_risk_lower": 0.004925854298857512,
+            "mass_lower": 0.0003093899032636087,
+            "mass_upper": 0.0005413407971413817,
+            "cells_checked": 2751,
+            "depth": 9,
+            "reason": "threshold_separated",
+            "epsilon": 0.01,
+            "density_factor": 1.0341855788566503,
+            "radius_likelihood_margin": 2.000999996e-09,
+            "scope": "conditional probability under the documented independent-source practice model"
+          },
+          "all_detected_cleared": true
+        },
+        "geometry_report": {
+          "tail_probes": 2,
+          "inserted_probes": 0,
+          "risk_planning_calls": 2,
+          "probability_projections": 1
+        },
+        "risk_report": {
+          "accepted": true,
+          "risk_upper": 0.008587076199463209,
+          "envelope_risk_lower": 0.004925854298857512,
+          "mass_lower": 0.0003093899032636087,
+          "mass_upper": 0.0005413407971413817,
+          "cells_checked": 2751,
+          "depth": 9,
+          "reason": "threshold_separated",
+          "epsilon": 0.01,
+          "density_factor": 1.0341855788566503,
+          "radius_likelihood_margin": 2.000999996e-09,
+          "scope": "conditional probability under the documented independent-source practice model"
+        }
+      }
+    },
+    {
+      "variant": "risk010",
+      "seed": 1011,
+      "N": 14,
+      "cleared": 14,
+      "missing": 0,
+      "ok": true,
+      "virtual_time_s": 3103.521815,
+      "avg_clear_time_s": 221.68012964285714,
+      "wall_s": 6.1290203999960795,
+      "error": null,
+      "engine_summary": {
+        "problem_no": 3,
+        "jammer_count": 14,
+        "directional_count": 0,
+        "omni_count": 14,
+        "cleared_count": 14,
+        "measure_accepted_count": 143,
+        "channel_switch_count": 141,
+        "clear_failure_count": 0,
+        "clear_success_count": 14,
+        "virtual_time_us": 3103521815,
+        "virtual_time_s": 3103.521815,
+        "position": {
+          "x": 1385.640646055102,
+          "y": 799.9999999999999
+        },
+        "receiver_channel": 17,
+        "entered": true,
+        "exited": true,
+        "timed_out": false
+      },
+      "controller_end": {
+        "completion_verified": true,
+        "completion_reason": "bounded_model_risk",
+        "completion_certificate": {
+          "kind": "model_risk_budget",
+          "risk": {
+            "accepted": true,
+            "risk_upper": 0.009954626812450258,
+            "envelope_risk_lower": 0.005243007620717411,
+            "mass_lower": 0.00035039390190643154,
+            "mass_upper": 0.0006667579886506295,
+            "cells_checked": 3499,
+            "depth": 9,
+            "reason": "threshold_separated",
+            "epsilon": 0.01,
+            "density_factor": 1.0341855788566503,
+            "radius_likelihood_margin": 2.000999996e-09,
+            "scope": "conditional probability under the documented independent-source practice model"
+          },
+          "all_detected_cleared": true
+        },
+        "geometry_report": {
+          "tail_probes": 1,
+          "inserted_probes": 0,
+          "risk_planning_calls": 1,
+          "probability_projections": 0
+        },
+        "risk_report": {
+          "accepted": true,
+          "risk_upper": 0.009954626812450258,
+          "envelope_risk_lower": 0.005243007620717411,
+          "mass_lower": 0.00035039390190643154,
+          "mass_upper": 0.0006667579886506295,
+          "cells_checked": 3499,
+          "depth": 9,
+          "reason": "threshold_separated",
+          "epsilon": 0.01,
+          "density_factor": 1.0341855788566503,
+          "radius_likelihood_margin": 2.000999996e-09,
+          "scope": "conditional probability under the documented independent-source practice model"
+        }
+      }
+    },
+    {
+      "variant": "risk010",
+      "seed": 1012,
+      "N": 15,
+      "cleared": 15,
+      "missing": 0,
+      "ok": true,
+      "virtual_time_s": 3390.591101,
+      "avg_clear_time_s": 226.03940673333332,
+      "wall_s": 4.476925399998436,
+      "error": null,
+      "engine_summary": {
+        "problem_no": 3,
+        "jammer_count": 15,
+        "directional_count": 0,
+        "omni_count": 15,
+        "cleared_count": 15,
+        "measure_accepted_count": 164,
+        "channel_switch_count": 159,
+        "clear_failure_count": 1,
+        "clear_success_count": 15,
+        "virtual_time_us": 3390591101,
+        "virtual_time_s": 3390.591101,
+        "position": {
+          "x": 771.4698374383693,
+          "y": -240.38079527573348
+        },
+        "receiver_channel": 20,
+        "entered": true,
+        "exited": true,
+        "timed_out": false
+      },
+      "controller_end": {
+        "completion_verified": true,
+        "completion_reason": "bounded_model_risk",
+        "completion_certificate": {
+          "kind": "model_risk_budget",
+          "risk": {
+            "accepted": true,
+            "risk_upper": 0.009244832369546437,
+            "envelope_risk_lower": 0.00412451408786802,
+            "mass_lower": 0.00025884975997340285,
+            "mass_upper": 0.000583193549702654,
+            "cells_checked": 769,
+            "depth": 8,
+            "reason": "threshold_separated",
+            "epsilon": 0.01,
+            "density_factor": 1.0341855788566503,
+            "radius_likelihood_margin": 2.000999996e-09,
+            "scope": "conditional probability under the documented independent-source practice model"
+          },
+          "all_detected_cleared": true
+        },
+        "geometry_report": {
+          "tail_probes": 1,
+          "inserted_probes": 0,
+          "risk_planning_calls": 1,
+          "probability_projections": 1
+        },
+        "risk_report": {
+          "accepted": true,
+          "risk_upper": 0.009244832369546437,
+          "envelope_risk_lower": 0.00412451408786802,
+          "mass_lower": 0.00025884975997340285,
+          "mass_upper": 0.000583193549702654,
+          "cells_checked": 769,
+          "depth": 8,
+          "reason": "threshold_separated",
+          "epsilon": 0.01,
+          "density_factor": 1.0341855788566503,
+          "radius_likelihood_margin": 2.000999996e-09,
+          "scope": "conditional probability under the documented independent-source practice model"
+        }
+      }
+    },
+    {
+      "variant": "risk010",
+      "seed": 1013,
+      "N": 12,
+      "cleared": 12,
+      "missing": 0,
+      "ok": true,
+      "virtual_time_s": 3793.715919,
+      "avg_clear_time_s": 316.14299325,
+      "wall_s": 5.104128099999798,
+      "error": null,
+      "engine_summary": {
+        "problem_no": 3,
+        "jammer_count": 12,
+        "directional_count": 0,
+        "omni_count": 12,
+        "cleared_count": 12,
+        "measure_accepted_count": 162,
+        "channel_switch_count": 151,
+        "clear_failure_count": 1,
+        "clear_success_count": 12,
+        "virtual_time_us": 3793715919,
+        "virtual_time_s": 3793.715919,
+        "position": {
+          "x": 946.5362990001084,
+          "y": 90.06247834907099
+        },
+        "receiver_channel": 19,
+        "entered": true,
+        "exited": true,
+        "timed_out": false
+      },
+      "controller_end": {
+        "completion_verified": true,
+        "completion_reason": "bounded_model_risk",
+        "completion_certificate": {
+          "kind": "model_risk_budget",
+          "risk": {
+            "accepted": true,
+            "risk_upper": 0.008235840168038334,
+            "envelope_risk_lower": 0.005147760057885645,
+            "mass_lower": 0.0003969254674616279,
+            "mass_upper": 0.000635947089716521,
+            "cells_checked": 2528,
+            "depth": 9,
+            "reason": "threshold_separated",
+            "epsilon": 0.01,
+            "density_factor": 1.0341855788566503,
+            "radius_likelihood_margin": 2.000999996e-09,
+            "scope": "conditional probability under the documented independent-source practice model"
+          },
+          "all_detected_cleared": true
+        },
+        "geometry_report": {
+          "tail_probes": 5,
+          "inserted_probes": 0,
+          "risk_planning_calls": 5,
+          "probability_projections": 1
+        },
+        "risk_report": {
+          "accepted": true,
+          "risk_upper": 0.008235840168038334,
+          "envelope_risk_lower": 0.005147760057885645,
+          "mass_lower": 0.0003969254674616279,
+          "mass_upper": 0.000635947089716521,
+          "cells_checked": 2528,
+          "depth": 9,
+          "reason": "threshold_separated",
+          "epsilon": 0.01,
+          "density_factor": 1.0341855788566503,
+          "radius_likelihood_margin": 2.000999996e-09,
+          "scope": "conditional probability under the documented independent-source practice model"
+        }
+      }
+    },
+    {
+      "variant": "risk010",
+      "seed": 1014,
+      "N": 13,
+      "cleared": 13,
+      "missing": 0,
+      "ok": true,
+      "virtual_time_s": 3517.866899,
+      "avg_clear_time_s": 270.60514607692306,
+      "wall_s": 3.0164577000032295,
+      "error": null,
+      "engine_summary": {
+        "problem_no": 3,
+        "jammer_count": 13,
+        "directional_count": 0,
+        "omni_count": 13,
+        "cleared_count": 13,
+        "measure_accepted_count": 141,
+        "channel_switch_count": 134,
+        "clear_failure_count": 0,
+        "clear_success_count": 13,
+        "virtual_time_us": 3517866899,
+        "virtual_time_s": 3517.866899,
+        "position": {
+          "x": 540.2709989337293,
+          "y": -552.7751035237711
+        },
+        "receiver_channel": 17,
+        "entered": true,
+        "exited": true,
+        "timed_out": false
+      },
+      "controller_end": {
+        "completion_verified": true,
+        "completion_reason": "bounded_model_risk",
+        "completion_certificate": {
+          "kind": "model_risk_budget",
+          "risk": {
+            "accepted": true,
+            "risk_upper": 0.008460281449532684,
+            "envelope_risk_lower": 0.00499206923419294,
+            "mass_lower": 0.0003574054922275777,
+            "mass_upper": 0.0006066925370860928,
+            "cells_checked": 3099,
+            "depth": 9,
+            "reason": "threshold_separated",
+            "epsilon": 0.01,
+            "density_factor": 1.0341855788566503,
+            "radius_likelihood_margin": 2.000999996e-09,
+            "scope": "conditional probability under the documented independent-source practice model"
+          },
+          "all_detected_cleared": true
+        },
+        "geometry_report": {
+          "tail_probes": 4,
+          "inserted_probes": 0,
+          "risk_planning_calls": 4,
+          "probability_projections": 1
+        },
+        "risk_report": {
+          "accepted": true,
+          "risk_upper": 0.008460281449532684,
+          "envelope_risk_lower": 0.00499206923419294,
+          "mass_lower": 0.0003574054922275777,
+          "mass_upper": 0.0006066925370860928,
+          "cells_checked": 3099,
+          "depth": 9,
+          "reason": "threshold_separated",
+          "epsilon": 0.01,
+          "density_factor": 1.0341855788566503,
+          "radius_likelihood_margin": 2.000999996e-09,
+          "scope": "conditional probability under the documented independent-source practice model"
+        }
+      }
+    },
+    {
+      "variant": "risk010",
+      "seed": 1015,
+      "N": 11,
+      "cleared": 11,
+      "missing": 0,
+      "ok": true,
+      "virtual_time_s": 3917.724456,
+      "avg_clear_time_s": 356.1567687272727,
+      "wall_s": 4.050888599995233,
+      "error": null,
+      "engine_summary": {
+        "problem_no": 3,
+        "jammer_count": 11,
+        "directional_count": 0,
+        "omni_count": 11,
+        "cleared_count": 11,
+        "measure_accepted_count": 144,
+        "channel_switch_count": 136,
+        "clear_failure_count": 0,
+        "clear_success_count": 11,
+        "virtual_time_us": 3917724456,
+        "virtual_time_s": 3917.724456,
+        "position": {
+          "x": 727.6821555113055,
+          "y": -882.0113484977281
+        },
+        "receiver_channel": 18,
+        "entered": true,
+        "exited": true,
+        "timed_out": false
+      },
+      "controller_end": {
+        "completion_verified": true,
+        "completion_reason": "bounded_model_risk",
+        "completion_certificate": {
+          "kind": "model_risk_budget",
+          "risk": {
+            "accepted": true,
+            "risk_upper": 0.007870093915007183,
+            "envelope_risk_lower": 0.002501244641140771,
+            "mass_lower": 0.0002086763890061249,
+            "mass_upper": 0.0006582188252375508,
+            "cells_checked": 1168,
+            "depth": 8,
+            "reason": "threshold_separated",
+            "epsilon": 0.01,
+            "density_factor": 1.0341855788566503,
+            "radius_likelihood_margin": 2.000999996e-09,
+            "scope": "conditional probability under the documented independent-source practice model"
+          },
+          "all_detected_cleared": true
+        },
+        "geometry_report": {
+          "tail_probes": 6,
+          "inserted_probes": 0,
+          "risk_planning_calls": 5,
+          "probability_projections": 0
+        },
+        "risk_report": {
+          "accepted": true,
+          "risk_upper": 0.007870093915007183,
+          "envelope_risk_lower": 0.002501244641140771,
+          "mass_lower": 0.0002086763890061249,
+          "mass_upper": 0.0006582188252375508,
+          "cells_checked": 1168,
+          "depth": 8,
+          "reason": "threshold_separated",
+          "epsilon": 0.01,
+          "density_factor": 1.0341855788566503,
+          "radius_likelihood_margin": 2.000999996e-09,
+          "scope": "conditional probability under the documented independent-source practice model"
+        }
+      }
+    },
+    {
+      "variant": "risk010",
+      "seed": 1016,
+      "N": 13,
+      "cleared": 13,
+      "missing": 0,
+      "ok": true,
+      "virtual_time_s": 3363.978988,
+      "avg_clear_time_s": 258.76761446153847,
+      "wall_s": 3.705248099999153,
+      "error": null,
+      "engine_summary": {
+        "problem_no": 3,
+        "jammer_count": 13,
+        "directional_count": 0,
+        "omni_count": 13,
+        "cleared_count": 13,
+        "measure_accepted_count": 130,
+        "channel_switch_count": 127,
+        "clear_failure_count": 0,
+        "clear_success_count": 13,
+        "virtual_time_us": 3363978988,
+        "virtual_time_s": 3363.978988,
+        "position": {
+          "x": -1723.308274329646,
+          "y": 122.38371781876552
+        },
+        "receiver_channel": 17,
+        "entered": true,
+        "exited": true,
+        "timed_out": false
+      },
+      "controller_end": {
+        "completion_verified": true,
+        "completion_reason": "bounded_model_risk",
+        "completion_certificate": {
+          "kind": "model_risk_budget",
+          "risk": {
+            "accepted": true,
+            "risk_upper": 0.009430398843743497,
+            "envelope_risk_lower": 0.00739230476683132,
+            "mass_lower": 0.0005298426868310463,
+            "mass_upper": 0.0006765672464147178,
+            "cells_checked": 11233,
+            "depth": 10,
+            "reason": "threshold_separated",
+            "epsilon": 0.01,
+            "density_factor": 1.0341855788566503,
+            "radius_likelihood_margin": 2.000999996e-09,
+            "scope": "conditional probability under the documented independent-source practice model"
+          },
+          "all_detected_cleared": true
+        },
+        "geometry_report": {
+          "tail_probes": 1,
+          "inserted_probes": 0,
+          "risk_planning_calls": 1,
+          "probability_projections": 1
+        },
+        "risk_report": {
+          "accepted": true,
+          "risk_upper": 0.009430398843743497,
+          "envelope_risk_lower": 0.00739230476683132,
+          "mass_lower": 0.0005298426868310463,
+          "mass_upper": 0.0006765672464147178,
+          "cells_checked": 11233,
+          "depth": 10,
+          "reason": "threshold_separated",
+          "epsilon": 0.01,
+          "density_factor": 1.0341855788566503,
+          "radius_likelihood_margin": 2.000999996e-09,
+          "scope": "conditional probability under the documented independent-source practice model"
+        }
+      }
+    },
+    {
+      "variant": "risk010",
+      "seed": 1017,
+      "N": 11,
+      "cleared": 11,
+      "missing": 0,
+      "ok": true,
+      "virtual_time_s": 3389.895049,
+      "avg_clear_time_s": 308.1722771818182,
+      "wall_s": 4.454364299999725,
+      "error": null,
+      "engine_summary": {
+        "problem_no": 3,
+        "jammer_count": 11,
+        "directional_count": 0,
+        "omni_count": 11,
+        "cleared_count": 11,
+        "measure_accepted_count": 142,
+        "channel_switch_count": 137,
+        "clear_failure_count": 1,
+        "clear_success_count": 11,
+        "virtual_time_us": 3389895049,
+        "virtual_time_s": 3389.895049,
+        "position": {
+          "x": 607.1427634537464,
+          "y": -547.3075151258719
+        },
+        "receiver_channel": 16,
+        "entered": true,
+        "exited": true,
+        "timed_out": false
+      },
+      "controller_end": {
+        "completion_verified": true,
+        "completion_reason": "bounded_model_risk",
+        "completion_certificate": {
+          "kind": "model_risk_budget",
+          "risk": {
+            "accepted": true,
+            "risk_upper": 0.008258499246708469,
+            "envelope_risk_lower": 0.005225142070973772,
+            "mass_lower": 0.00043647478926959484,
+            "mass_upper": 0.000690827066794935,
+            "cells_checked": 3082,
+            "depth": 9,
+            "reason": "threshold_separated",
+            "epsilon": 0.01,
+            "density_factor": 1.0341855788566503,
+            "radius_likelihood_margin": 2.000999996e-09,
+            "scope": "conditional probability under the documented independent-source practice model"
+          },
+          "all_detected_cleared": true
+        },
+        "geometry_report": {
+          "tail_probes": 2,
+          "inserted_probes": 0,
+          "risk_planning_calls": 2,
+          "probability_projections": 1
+        },
+        "risk_report": {
+          "accepted": true,
+          "risk_upper": 0.008258499246708469,
+          "envelope_risk_lower": 0.005225142070973772,
+          "mass_lower": 0.00043647478926959484,
+          "mass_upper": 0.000690827066794935,
+          "cells_checked": 3082,
+          "depth": 9,
+          "reason": "threshold_separated",
+          "epsilon": 0.01,
+          "density_factor": 1.0341855788566503,
+          "radius_likelihood_margin": 2.000999996e-09,
+          "scope": "conditional probability under the documented independent-source practice model"
+        }
+      }
+    },
+    {
+      "variant": "risk010",
+      "seed": 1018,
+      "N": 15,
+      "cleared": 15,
+      "missing": 0,
+      "ok": true,
+      "virtual_time_s": 3238.880814,
+      "avg_clear_time_s": 215.9253876,
+      "wall_s": 4.587828600000648,
+      "error": null,
+      "engine_summary": {
+        "problem_no": 3,
+        "jammer_count": 15,
+        "directional_count": 0,
+        "omni_count": 15,
+        "cleared_count": 15,
+        "measure_accepted_count": 140,
+        "channel_switch_count": 135,
+        "clear_failure_count": 1,
+        "clear_success_count": 15,
+        "virtual_time_us": 3238880814,
+        "virtual_time_s": 3238.880814,
+        "position": {
+          "x": 480.58599193499805,
+          "y": 1611.9828544036263
+        },
+        "receiver_channel": 6,
+        "entered": true,
+        "exited": true,
+        "timed_out": false
+      },
+      "controller_end": {
+        "completion_verified": true,
+        "completion_reason": "bounded_model_risk",
+        "completion_certificate": {
+          "kind": "model_risk_budget",
+          "risk": {
+            "accepted": true,
+            "risk_upper": 0.009798444065921149,
+            "envelope_risk_lower": 0.00467636898816553,
+            "mass_lower": 0.00029364626002421364,
+            "mass_upper": 0.000618462726553059,
+            "cells_checked": 747,
+            "depth": 8,
+            "reason": "threshold_separated",
+            "epsilon": 0.01,
+            "density_factor": 1.0341855788566503,
+            "radius_likelihood_margin": 2.000999996e-09,
+            "scope": "conditional probability under the documented independent-source practice model"
+          },
+          "all_detected_cleared": true
+        },
+        "geometry_report": {
+          "tail_probes": 0,
+          "inserted_probes": 0,
+          "risk_planning_calls": 0,
+          "probability_projections": 0
+        },
+        "risk_report": {
+          "accepted": true,
+          "risk_upper": 0.009798444065921149,
+          "envelope_risk_lower": 0.00467636898816553,
+          "mass_lower": 0.00029364626002421364,
+          "mass_upper": 0.000618462726553059,
+          "cells_checked": 747,
+          "depth": 8,
+          "reason": "threshold_separated",
+          "epsilon": 0.01,
+          "density_factor": 1.0341855788566503,
+          "radius_likelihood_margin": 2.000999996e-09,
+          "scope": "conditional probability under the documented independent-source practice model"
+        }
+      }
+    },
+    {
+      "variant": "risk010",
+      "seed": 1019,
+      "N": 16,
+      "cleared": 16,
+      "missing": 0,
+      "ok": true,
+      "virtual_time_s": 3154.224034,
+      "avg_clear_time_s": 197.139002125,
+      "wall_s": 4.831759000000602,
+      "error": null,
+      "engine_summary": {
+        "problem_no": 3,
+        "jammer_count": 16,
+        "directional_count": 0,
+        "omni_count": 16,
+        "cleared_count": 16,
+        "measure_accepted_count": 96,
+        "channel_switch_count": 92,
+        "clear_failure_count": 1,
+        "clear_success_count": 16,
+        "virtual_time_us": 3154224034,
+        "virtual_time_s": 3154.224034,
+        "position": {
+          "x": 773.4597766059584,
+          "y": -1160.7772584802376
+        },
+        "receiver_channel": 12,
+        "entered": true,
+        "exited": true,
+        "timed_out": false
+      },
+      "controller_end": {
+        "completion_verified": true,
+        "completion_reason": "maximum_count",
+        "completion_certificate": {
+          "kind": "model_risk_budget",
+          "risk": {
+            "accepted": true,
+            "risk_upper": 0.0,
+            "mass_upper": 0.0,
+            "cells_checked": 0,
+            "reason": "maximum_count"
+          },
+          "all_detected_cleared": true
+        },
+        "geometry_report": {
+          "tail_probes": 0,
+          "inserted_probes": 0,
+          "risk_planning_calls": 0,
+          "probability_projections": 0
+        },
+        "risk_report": {
+          "accepted": true,
+          "risk_upper": 0.0,
+          "mass_upper": 0.0,
+          "cells_checked": 0,
+          "reason": "maximum_count"
+        }
+      }
+    },
+    {
+      "variant": "risk010",
+      "seed": 1021,
+      "N": 14,
+      "cleared": 14,
+      "missing": 0,
+      "ok": true,
+      "virtual_time_s": 3795.457757,
+      "avg_clear_time_s": 271.1041255,
+      "wall_s": 3.6075807999950484,
+      "error": null,
+      "engine_summary": {
+        "problem_no": 3,
+        "jammer_count": 14,
+        "directional_count": 0,
+        "omni_count": 14,
+        "cleared_count": 14,
+        "measure_accepted_count": 128,
+        "channel_switch_count": 120,
+        "clear_failure_count": 5,
+        "clear_success_count": 14,
+        "virtual_time_us": 3795457757,
+        "virtual_time_s": 3795.457757,
+        "position": {
+          "x": 297.5085469974529,
+          "y": -845.6693166887515
+        },
+        "receiver_channel": 16,
+        "entered": true,
+        "exited": true,
+        "timed_out": false
+      },
+      "controller_end": {
+        "completion_verified": true,
+        "completion_reason": "bounded_model_risk",
+        "completion_certificate": {
+          "kind": "model_risk_budget",
+          "risk": {
+            "accepted": true,
+            "risk_upper": 0.00889357048575346,
+            "envelope_risk_lower": 0.004794663707250582,
+            "mass_lower": 0.0003203631570417221,
+            "mass_upper": 0.0005953891498319848,
+            "cells_checked": 2977,
+            "depth": 9,
+            "reason": "threshold_separated",
+            "epsilon": 0.01,
+            "density_factor": 1.0341855788566503,
+            "radius_likelihood_margin": 2.000999996e-09,
+            "scope": "conditional probability under the documented independent-source practice model"
+          },
+          "all_detected_cleared": true
+        },
+        "geometry_report": {
+          "tail_probes": 2,
+          "inserted_probes": 0,
+          "risk_planning_calls": 2,
+          "probability_projections": 1
+        },
+        "risk_report": {
+          "accepted": true,
+          "risk_upper": 0.00889357048575346,
+          "envelope_risk_lower": 0.004794663707250582,
+          "mass_lower": 0.0003203631570417221,
+          "mass_upper": 0.0005953891498319848,
+          "cells_checked": 2977,
+          "depth": 9,
+          "reason": "threshold_separated",
+          "epsilon": 0.01,
+          "density_factor": 1.0341855788566503,
+          "radius_likelihood_margin": 2.000999996e-09,
+          "scope": "conditional probability under the documented independent-source practice model"
+        }
+      }
+    },
+    {
+      "variant": "risk010",
+      "seed": 1022,
+      "N": 12,
+      "cleared": 12,
+      "missing": 0,
+      "ok": true,
+      "virtual_time_s": 2898.986706,
+      "avg_clear_time_s": 241.58222550000002,
+      "wall_s": 4.384037100004207,
+      "error": null,
+      "engine_summary": {
+        "problem_no": 3,
+        "jammer_count": 12,
+        "directional_count": 0,
+        "omni_count": 12,
+        "cleared_count": 12,
+        "measure_accepted_count": 128,
+        "channel_switch_count": 123,
+        "clear_failure_count": 2,
+        "clear_success_count": 12,
+        "virtual_time_us": 2898986706,
+        "virtual_time_s": 2898.986706,
+        "position": {
+          "x": 1070.4369362281723,
+          "y": -541.5508514583979
+        },
+        "receiver_channel": 20,
+        "entered": true,
+        "exited": true,
+        "timed_out": false
+      },
+      "controller_end": {
+        "completion_verified": true,
+        "completion_reason": "bounded_model_risk",
+        "completion_certificate": {
+          "kind": "model_risk_budget",
+          "risk": {
+            "accepted": true,
+            "risk_upper": 0.009399496907701064,
+            "envelope_risk_lower": 0.004533743959365451,
+            "mass_lower": 0.00034948142067510007,
+            "mass_upper": 0.0007261939598365736,
+            "cells_checked": 811,
+            "depth": 8,
+            "reason": "threshold_separated",
+            "epsilon": 0.01,
+            "density_factor": 1.0341855788566503,
+            "radius_likelihood_margin": 2.000999996e-09,
+            "scope": "conditional probability under the documented independent-source practice model"
+          },
+          "all_detected_cleared": true
+        },
+        "geometry_report": {
+          "tail_probes": 1,
+          "inserted_probes": 0,
+          "risk_planning_calls": 1,
+          "probability_projections": 2
+        },
+        "risk_report": {
+          "accepted": true,
+          "risk_upper": 0.009399496907701064,
+          "envelope_risk_lower": 0.004533743959365451,
+          "mass_lower": 0.00034948142067510007,
+          "mass_upper": 0.0007261939598365736,
+          "cells_checked": 811,
+          "depth": 8,
+          "reason": "threshold_separated",
+          "epsilon": 0.01,
+          "density_factor": 1.0341855788566503,
+          "radius_likelihood_margin": 2.000999996e-09,
+          "scope": "conditional probability under the documented independent-source practice model"
+        }
+      }
+    },
+    {
+      "variant": "risk010",
+      "seed": 1023,
+      "N": 14,
+      "cleared": 14,
+      "missing": 0,
+      "ok": true,
+      "virtual_time_s": 3312.449837,
+      "avg_clear_time_s": 236.60355978571428,
+      "wall_s": 3.67816319999838,
+      "error": null,
+      "engine_summary": {
+        "problem_no": 3,
+        "jammer_count": 14,
+        "directional_count": 0,
+        "omni_count": 14,
+        "cleared_count": 14,
+        "measure_accepted_count": 140,
+        "channel_switch_count": 137,
+        "clear_failure_count": 0,
+        "clear_success_count": 14,
+        "virtual_time_us": 3312449837,
+        "virtual_time_s": 3312.449837,
+        "position": {
+          "x": -1350.8671444236757,
+          "y": -792.1604837848744
+        },
+        "receiver_channel": 10,
+        "entered": true,
+        "exited": true,
+        "timed_out": false
+      },
+      "controller_end": {
+        "completion_verified": true,
+        "completion_reason": "bounded_model_risk",
+        "completion_certificate": {
+          "kind": "model_risk_budget",
+          "risk": {
+            "accepted": true,
+            "risk_upper": 0.009019435697962633,
+            "envelope_risk_lower": 0.0029958873903111216,
+            "mass_lower": 0.00020000596102291257,
+            "mass_upper": 0.0006038513305279152,
+            "cells_checked": 1005,
+            "depth": 8,
+            "reason": "threshold_separated",
+            "epsilon": 0.01,
+            "density_factor": 1.0341855788566503,
+            "radius_likelihood_margin": 2.000999996e-09,
+            "scope": "conditional probability under the documented independent-source practice model"
+          },
+          "all_detected_cleared": true
+        },
+        "geometry_report": {
+          "tail_probes": 1,
+          "inserted_probes": 0,
+          "risk_planning_calls": 1,
+          "probability_projections": 0
+        },
+        "risk_report": {
+          "accepted": true,
+          "risk_upper": 0.009019435697962633,
+          "envelope_risk_lower": 0.0029958873903111216,
+          "mass_lower": 0.00020000596102291257,
+          "mass_upper": 0.0006038513305279152,
+          "cells_checked": 1005,
+          "depth": 8,
+          "reason": "threshold_separated",
+          "epsilon": 0.01,
+          "density_factor": 1.0341855788566503,
+          "radius_likelihood_margin": 2.000999996e-09,
+          "scope": "conditional probability under the documented independent-source practice model"
+        }
+      }
+    },
+    {
+      "variant": "risk010",
+      "seed": 1024,
+      "N": 10,
+      "cleared": 10,
+      "missing": 0,
+      "ok": true,
+      "virtual_time_s": 3502.837423,
+      "avg_clear_time_s": 350.2837423,
+      "wall_s": 3.2650370999981533,
+      "error": null,
+      "engine_summary": {
+        "problem_no": 3,
+        "jammer_count": 10,
+        "directional_count": 0,
+        "omni_count": 10,
+        "cleared_count": 10,
+        "measure_accepted_count": 139,
+        "channel_switch_count": 131,
+        "clear_failure_count": 1,
+        "clear_success_count": 10,
+        "virtual_time_us": 3502837423,
+        "virtual_time_s": 3502.837423,
+        "position": {
+          "x": 462.34226231119635,
+          "y": 775.9624356620986
+        },
+        "receiver_channel": 16,
+        "entered": true,
+        "exited": true,
+        "timed_out": false
+      },
+      "controller_end": {
+        "completion_verified": true,
+        "completion_reason": "bounded_model_risk",
+        "completion_certificate": {
+          "kind": "model_risk_budget",
+          "risk": {
+            "accepted": true,
+            "risk_upper": 0.00919447421222975,
+            "envelope_risk_lower": 0.003965050314108433,
+            "mass_lower": 0.0003611104173057602,
+            "mass_upper": 0.0008393751897048366,
+            "cells_checked": 976,
+            "depth": 8,
+            "reason": "threshold_separated",
+            "epsilon": 0.01,
+            "density_factor": 1.0341855788566503,
+            "radius_likelihood_margin": 2.000999996e-09,
+            "scope": "conditional probability under the documented independent-source practice model"
+          },
+          "all_detected_cleared": true
+        },
+        "geometry_report": {
+          "tail_probes": 1,
+          "inserted_probes": 0,
+          "risk_planning_calls": 1,
+          "probability_projections": 1
+        },
+        "risk_report": {
+          "accepted": true,
+          "risk_upper": 0.00919447421222975,
+          "envelope_risk_lower": 0.003965050314108433,
+          "mass_lower": 0.0003611104173057602,
+          "mass_upper": 0.0008393751897048366,
+          "cells_checked": 976,
+          "depth": 8,
+          "reason": "threshold_separated",
+          "epsilon": 0.01,
+          "density_factor": 1.0341855788566503,
+          "radius_likelihood_margin": 2.000999996e-09,
+          "scope": "conditional probability under the documented independent-source practice model"
+        }
+      }
+    },
+    {
+      "variant": "risk010",
+      "seed": 1025,
+      "N": 15,
+      "cleared": 15,
+      "missing": 0,
+      "ok": true,
+      "virtual_time_s": 3392.348077,
+      "avg_clear_time_s": 226.15653846666666,
+      "wall_s": 4.059031799995864,
+      "error": null,
+      "engine_summary": {
+        "problem_no": 3,
+        "jammer_count": 15,
+        "directional_count": 0,
+        "omni_count": 15,
+        "cleared_count": 15,
+        "measure_accepted_count": 131,
+        "channel_switch_count": 130,
+        "clear_failure_count": 3,
+        "clear_success_count": 15,
+        "virtual_time_us": 3392348077,
+        "virtual_time_s": 3392.348077,
+        "position": {
+          "x": -272.2905096132198,
+          "y": 701.8022710151095
+        },
+        "receiver_channel": 17,
+        "entered": true,
+        "exited": true,
+        "timed_out": false
+      },
+      "controller_end": {
+        "completion_verified": true,
+        "completion_reason": "bounded_model_risk",
+        "completion_certificate": {
+          "kind": "model_risk_budget",
+          "risk": {
+            "accepted": true,
+            "risk_upper": 0.00910720045322139,
+            "envelope_risk_lower": 0.004640992113596349,
+            "mass_lower": 0.0002914144593072045,
+            "mass_upper": 0.0005744314910620821,
+            "cells_checked": 3135,
+            "depth": 9,
+            "reason": "threshold_separated",
+            "epsilon": 0.01,
+            "density_factor": 1.0341855788566503,
+            "radius_likelihood_margin": 2.000999996e-09,
+            "scope": "conditional probability under the documented independent-source practice model"
+          },
+          "all_detected_cleared": true
+        },
+        "geometry_report": {
+          "tail_probes": 1,
+          "inserted_probes": 0,
+          "risk_planning_calls": 1,
+          "probability_projections": 2
+        },
+        "risk_report": {
+          "accepted": true,
+          "risk_upper": 0.00910720045322139,
+          "envelope_risk_lower": 0.004640992113596349,
+          "mass_lower": 0.0002914144593072045,
+          "mass_upper": 0.0005744314910620821,
+          "cells_checked": 3135,
+          "depth": 9,
+          "reason": "threshold_separated",
+          "epsilon": 0.01,
+          "density_factor": 1.0341855788566503,
+          "radius_likelihood_margin": 2.000999996e-09,
+          "scope": "conditional probability under the documented independent-source practice model"
+        }
+      }
+    },
+    {
+      "variant": "risk010",
+      "seed": 1030,
+      "N": 11,
+      "cleared": 11,
+      "missing": 0,
+      "ok": true,
+      "virtual_time_s": 4209.017718,
+      "avg_clear_time_s": 382.6379743636364,
+      "wall_s": 3.001371000005747,
+      "error": null,
+      "engine_summary": {
+        "problem_no": 3,
+        "jammer_count": 11,
+        "directional_count": 0,
+        "omni_count": 11,
+        "cleared_count": 11,
+        "measure_accepted_count": 148,
+        "channel_switch_count": 140,
+        "clear_failure_count": 2,
+        "clear_success_count": 11,
+        "virtual_time_us": 4209017718,
+        "virtual_time_s": 4209.017718,
+        "position": {
+          "x": 541.9938606820882,
+          "y": 552.8324637397592
+        },
+        "receiver_channel": 18,
+        "entered": true,
+        "exited": true,
+        "timed_out": false
+      },
+      "controller_end": {
+        "completion_verified": true,
+        "completion_reason": "bounded_model_risk",
+        "completion_certificate": {
+          "kind": "model_risk_budget",
+          "risk": {
+            "accepted": true,
+            "risk_upper": 0.008821177567810198,
+            "envelope_risk_lower": 0.0047940324401672205,
+            "mass_lower": 0.0004003832146499462,
+            "mass_upper": 0.0007380870197059029,
+            "cells_checked": 3830,
+            "depth": 9,
+            "reason": "threshold_separated",
+            "epsilon": 0.01,
+            "density_factor": 1.0341855788566503,
+            "radius_likelihood_margin": 2.000999996e-09,
+            "scope": "conditional probability under the documented independent-source practice model"
+          },
+          "all_detected_cleared": true
+        },
+        "geometry_report": {
+          "tail_probes": 6,
+          "inserted_probes": 0,
+          "risk_planning_calls": 5,
+          "probability_projections": 1
+        },
+        "risk_report": {
+          "accepted": true,
+          "risk_upper": 0.008821177567810198,
+          "envelope_risk_lower": 0.0047940324401672205,
+          "mass_lower": 0.0004003832146499462,
+          "mass_upper": 0.0007380870197059029,
+          "cells_checked": 3830,
+          "depth": 9,
+          "reason": "threshold_separated",
+          "epsilon": 0.01,
+          "density_factor": 1.0341855788566503,
+          "radius_likelihood_margin": 2.000999996e-09,
+          "scope": "conditional probability under the documented independent-source practice model"
+        }
+      }
+    },
+    {
+      "variant": "risk010",
+      "seed": 1031,
+      "N": 13,
+      "cleared": 13,
+      "missing": 0,
+      "ok": true,
+      "virtual_time_s": 2799.679216,
+      "avg_clear_time_s": 215.3599396923077,
+      "wall_s": 4.022702900001605,
+      "error": null,
+      "engine_summary": {
+        "problem_no": 3,
+        "jammer_count": 13,
+        "directional_count": 0,
+        "omni_count": 13,
+        "cleared_count": 13,
+        "measure_accepted_count": 131,
+        "channel_switch_count": 124,
+        "clear_failure_count": 2,
+        "clear_success_count": 13,
+        "virtual_time_us": 2799679216,
+        "virtual_time_s": 2799.679216,
+        "position": {
+          "x": -932.0009516908996,
+          "y": 604.10277966118
+        },
+        "receiver_channel": 19,
+        "entered": true,
+        "exited": true,
+        "timed_out": false
+      },
+      "controller_end": {
+        "completion_verified": true,
+        "completion_reason": "bounded_model_risk",
+        "completion_certificate": {
+          "kind": "model_risk_budget",
+          "risk": {
+            "accepted": true,
+            "risk_upper": 0.008351783075977144,
+            "envelope_risk_lower": 0.0051936480392441205,
+            "mass_lower": 0.0003718724065245282,
+            "mass_upper": 0.0005988816651980284,
+            "cells_checked": 2933,
+            "depth": 9,
+            "reason": "threshold_separated",
+            "epsilon": 0.01,
+            "density_factor": 1.0341855788566503,
+            "radius_likelihood_margin": 2.000999996e-09,
+            "scope": "conditional probability under the documented independent-source practice model"
+          },
+          "all_detected_cleared": true
+        },
+        "geometry_report": {
+          "tail_probes": 2,
+          "inserted_probes": 0,
+          "risk_planning_calls": 2,
+          "probability_projections": 1
+        },
+        "risk_report": {
+          "accepted": true,
+          "risk_upper": 0.008351783075977144,
+          "envelope_risk_lower": 0.0051936480392441205,
+          "mass_lower": 0.0003718724065245282,
+          "mass_upper": 0.0005988816651980284,
+          "cells_checked": 2933,
+          "depth": 9,
+          "reason": "threshold_separated",
+          "epsilon": 0.01,
+          "density_factor": 1.0341855788566503,
+          "radius_likelihood_margin": 2.000999996e-09,
+          "scope": "conditional probability under the documented independent-source practice model"
+        }
+      }
+    },
+    {
+      "variant": "risk010",
+      "seed": 1032,
+      "N": 12,
+      "cleared": 12,
+      "missing": 0,
+      "ok": true,
+      "virtual_time_s": 3960.267783,
+      "avg_clear_time_s": 330.02231524999996,
+      "wall_s": 2.9104833000019426,
+      "error": null,
+      "engine_summary": {
+        "problem_no": 3,
+        "jammer_count": 12,
+        "directional_count": 0,
+        "omni_count": 12,
+        "cleared_count": 12,
+        "measure_accepted_count": 148,
+        "channel_switch_count": 140,
+        "clear_failure_count": 1,
+        "clear_success_count": 12,
+        "virtual_time_us": 3960267783,
+        "virtual_time_s": 3960.267783,
+        "position": {
+          "x": -850.3002360165016,
+          "y": 37.735617853487106
+        },
+        "receiver_channel": 19,
+        "entered": true,
+        "exited": true,
+        "timed_out": false
+      },
+      "controller_end": {
+        "completion_verified": true,
+        "completion_reason": "bounded_model_risk",
+        "completion_certificate": {
+          "kind": "model_risk_budget",
+          "risk": {
+            "accepted": true,
+            "risk_upper": 0.00856137082918662,
+            "envelope_risk_lower": 0.0049731124152477685,
+            "mass_lower": 0.0003834279719656422,
+            "mass_upper": 0.0006611836211016023,
+            "cells_checked": 3061,
+            "depth": 9,
+            "reason": "threshold_separated",
+            "epsilon": 0.01,
+            "density_factor": 1.0341855788566503,
+            "radius_likelihood_margin": 2.000999996e-09,
+            "scope": "conditional probability under the documented independent-source practice model"
+          },
+          "all_detected_cleared": true
+        },
+        "geometry_report": {
+          "tail_probes": 5,
+          "inserted_probes": 0,
+          "risk_planning_calls": 3,
+          "probability_projections": 1
+        },
+        "risk_report": {
+          "accepted": true,
+          "risk_upper": 0.00856137082918662,
+          "envelope_risk_lower": 0.0049731124152477685,
+          "mass_lower": 0.0003834279719656422,
+          "mass_upper": 0.0006611836211016023,
+          "cells_checked": 3061,
+          "depth": 9,
+          "reason": "threshold_separated",
+          "epsilon": 0.01,
+          "density_factor": 1.0341855788566503,
+          "radius_likelihood_margin": 2.000999996e-09,
+          "scope": "conditional probability under the documented independent-source practice model"
+        }
+      }
+    },
+    {
+      "variant": "risk010",
+      "seed": 1034,
+      "N": 10,
+      "cleared": 10,
+      "missing": 0,
+      "ok": true,
+      "virtual_time_s": 3786.008662,
+      "avg_clear_time_s": 378.60086620000004,
+      "wall_s": 3.100168400000257,
+      "error": null,
+      "engine_summary": {
+        "problem_no": 3,
+        "jammer_count": 10,
+        "directional_count": 0,
+        "omni_count": 10,
+        "cleared_count": 10,
+        "measure_accepted_count": 152,
+        "channel_switch_count": 149,
+        "clear_failure_count": 2,
+        "clear_success_count": 10,
+        "virtual_time_us": 3786008662,
+        "virtual_time_s": 3786.008662,
+        "position": {
+          "x": 899.6754366324819,
+          "y": -97.28358892848622
+        },
+        "receiver_channel": 19,
+        "entered": true,
+        "exited": true,
+        "timed_out": false
+      },
+      "controller_end": {
+        "completion_verified": true,
+        "completion_reason": "bounded_model_risk",
+        "completion_certificate": {
+          "kind": "model_risk_budget",
+          "risk": {
+            "accepted": true,
+            "risk_upper": 0.008746514788121836,
+            "envelope_risk_lower": 0.004827968711049579,
+            "mass_lower": 0.0004398724096164404,
+            "mass_upper": 0.0007983166358164213,
+            "cells_checked": 4177,
+            "depth": 9,
+            "reason": "threshold_separated",
+            "epsilon": 0.01,
+            "density_factor": 1.0341855788566503,
+            "radius_likelihood_margin": 2.000999996e-09,
+            "scope": "conditional probability under the documented independent-source practice model"
+          },
+          "all_detected_cleared": true
+        },
+        "geometry_report": {
+          "tail_probes": 3,
+          "inserted_probes": 0,
+          "risk_planning_calls": 2,
+          "probability_projections": 1
+        },
+        "risk_report": {
+          "accepted": true,
+          "risk_upper": 0.008746514788121836,
+          "envelope_risk_lower": 0.004827968711049579,
+          "mass_lower": 0.0004398724096164404,
+          "mass_upper": 0.0007983166358164213,
+          "cells_checked": 4177,
+          "depth": 9,
+          "reason": "threshold_separated",
+          "epsilon": 0.01,
+          "density_factor": 1.0341855788566503,
+          "radius_likelihood_margin": 2.000999996e-09,
+          "scope": "conditional probability under the documented independent-source practice model"
+        }
+      }
+    },
+    {
+      "variant": "risk010",
+      "seed": 1040,
+      "N": 12,
+      "cleared": 12,
+      "missing": 0,
+      "ok": true,
+      "virtual_time_s": 3167.327196,
+      "avg_clear_time_s": 263.943933,
+      "wall_s": 4.7787796999982675,
+      "error": null,
+      "engine_summary": {
+        "problem_no": 3,
+        "jammer_count": 12,
+        "directional_count": 0,
+        "omni_count": 12,
+        "cleared_count": 12,
+        "measure_accepted_count": 143,
+        "channel_switch_count": 137,
+        "clear_failure_count": 0,
+        "clear_success_count": 12,
+        "virtual_time_us": 3167327196,
+        "virtual_time_s": 3167.327196,
+        "position": {
+          "x": 406.6618167647277,
+          "y": -660.7033496946127
+        },
+        "receiver_channel": 19,
+        "entered": true,
+        "exited": true,
+        "timed_out": false
+      },
+      "controller_end": {
+        "completion_verified": true,
+        "completion_reason": "bounded_model_risk",
+        "completion_certificate": {
+          "kind": "model_risk_budget",
+          "risk": {
+            "accepted": true,
+            "risk_upper": 0.009810180024846826,
+            "envelope_risk_lower": 0.0039041235678014957,
+            "mass_lower": 0.00030085969820149814,
+            "mass_upper": 0.0007580676664622881,
+            "cells_checked": 827,
+            "depth": 8,
+            "reason": "threshold_separated",
+            "epsilon": 0.01,
+            "density_factor": 1.0341855788566503,
+            "radius_likelihood_margin": 2.000999996e-09,
+            "scope": "conditional probability under the documented independent-source practice model"
+          },
+          "all_detected_cleared": true
+        },
+        "geometry_report": {
+          "tail_probes": 1,
+          "inserted_probes": 0,
+          "risk_planning_calls": 1,
+          "probability_projections": 2
+        },
+        "risk_report": {
+          "accepted": true,
+          "risk_upper": 0.009810180024846826,
+          "envelope_risk_lower": 0.0039041235678014957,
+          "mass_lower": 0.00030085969820149814,
+          "mass_upper": 0.0007580676664622881,
+          "cells_checked": 827,
+          "depth": 8,
+          "reason": "threshold_separated",
+          "epsilon": 0.01,
+          "density_factor": 1.0341855788566503,
+          "radius_likelihood_margin": 2.000999996e-09,
+          "scope": "conditional probability under the documented independent-source practice model"
+        }
+      }
+    },
+    {
+      "variant": "risk010",
+      "seed": 1041,
+      "N": 11,
+      "cleared": 11,
+      "missing": 0,
+      "ok": true,
+      "virtual_time_s": 4144.020834,
+      "avg_clear_time_s": 376.72916672727274,
+      "wall_s": 2.9674019000012777,
+      "error": null,
+      "engine_summary": {
+        "problem_no": 3,
+        "jammer_count": 11,
+        "directional_count": 0,
+        "omni_count": 11,
+        "cleared_count": 11,
+        "measure_accepted_count": 175,
+        "channel_switch_count": 168,
+        "clear_failure_count": 0,
+        "clear_success_count": 11,
+        "virtual_time_us": 4144020834,
+        "virtual_time_s": 4144.020834,
+        "position": {
+          "x": -59.14735156726826,
+          "y": -961.8031854182339
+        },
+        "receiver_channel": 19,
+        "entered": true,
+        "exited": true,
+        "timed_out": false
+      },
+      "controller_end": {
+        "completion_verified": true,
+        "completion_reason": "bounded_model_risk",
+        "completion_certificate": {
+          "kind": "model_risk_budget",
+          "risk": {
+            "accepted": true,
+            "risk_upper": 0.008628088325688663,
+            "envelope_risk_lower": 0.004893567857486513,
+            "mass_lower": 0.00040871483388558235,
+            "mass_upper": 0.0007218664770861394,
+            "cells_checked": 3522,
+            "depth": 9,
+            "reason": "threshold_separated",
+            "epsilon": 0.01,
+            "density_factor": 1.0341855788566503,
+            "radius_likelihood_margin": 2.000999996e-09,
+            "scope": "conditional probability under the documented independent-source practice model"
+          },
+          "all_detected_cleared": true
+        },
+        "geometry_report": {
+          "tail_probes": 6,
+          "inserted_probes": 0,
+          "risk_planning_calls": 5,
+          "probability_projections": 1
+        },
+        "risk_report": {
+          "accepted": true,
+          "risk_upper": 0.008628088325688663,
+          "envelope_risk_lower": 0.004893567857486513,
+          "mass_lower": 0.00040871483388558235,
+          "mass_upper": 0.0007218664770861394,
+          "cells_checked": 3522,
+          "depth": 9,
+          "reason": "threshold_separated",
+          "epsilon": 0.01,
+          "density_factor": 1.0341855788566503,
+          "radius_likelihood_margin": 2.000999996e-09,
+          "scope": "conditional probability under the documented independent-source practice model"
+        }
+      }
+    },
+    {
+      "variant": "risk010",
+      "seed": 1042,
+      "N": 12,
+      "cleared": 12,
+      "missing": 0,
+      "ok": true,
+      "virtual_time_s": 3616.20961,
+      "avg_clear_time_s": 301.3508008333333,
+      "wall_s": 4.448552800000471,
+      "error": null,
+      "engine_summary": {
+        "problem_no": 3,
+        "jammer_count": 12,
+        "directional_count": 0,
+        "omni_count": 12,
+        "cleared_count": 12,
+        "measure_accepted_count": 132,
+        "channel_switch_count": 129,
+        "clear_failure_count": 2,
+        "clear_success_count": 12,
+        "virtual_time_us": 3616209610,
+        "virtual_time_s": 3616.20961,
+        "position": {
+          "x": 201.77396921396817,
+          "y": 990.9694115478402
+        },
+        "receiver_channel": 14,
+        "entered": true,
+        "exited": true,
+        "timed_out": false
+      },
+      "controller_end": {
+        "completion_verified": true,
+        "completion_reason": "bounded_model_risk",
+        "completion_certificate": {
+          "kind": "model_risk_budget",
+          "risk": {
+            "accepted": true,
+            "risk_upper": 0.009960334927341408,
+            "envelope_risk_lower": 0.003990753862877321,
+            "mass_lower": 0.0003075479413132323,
+            "mass_upper": 0.0007697244506338336,
+            "cells_checked": 1006,
+            "depth": 8,
+            "reason": "threshold_separated",
+            "epsilon": 0.01,
+            "density_factor": 1.0341855788566503,
+            "radius_likelihood_margin": 2.000999996e-09,
+            "scope": "conditional probability under the documented independent-source practice model"
+          },
+          "all_detected_cleared": true
+        },
+        "geometry_report": {
+          "tail_probes": 2,
+          "inserted_probes": 0,
+          "risk_planning_calls": 2,
+          "probability_projections": 2
+        },
+        "risk_report": {
+          "accepted": true,
+          "risk_upper": 0.009960334927341408,
+          "envelope_risk_lower": 0.003990753862877321,
+          "mass_lower": 0.0003075479413132323,
+          "mass_upper": 0.0007697244506338336,
+          "cells_checked": 1006,
+          "depth": 8,
+          "reason": "threshold_separated",
+          "epsilon": 0.01,
+          "density_factor": 1.0341855788566503,
+          "radius_likelihood_margin": 2.000999996e-09,
+          "scope": "conditional probability under the documented independent-source practice model"
+        }
+      }
+    },
+    {
+      "variant": "risk010",
+      "seed": 1046,
+      "N": 13,
+      "cleared": 13,
+      "missing": 0,
+      "ok": true,
+      "virtual_time_s": 3304.847203,
+      "avg_clear_time_s": 254.2190156153846,
+      "wall_s": 4.490524400003778,
+      "error": null,
+      "engine_summary": {
+        "problem_no": 3,
+        "jammer_count": 13,
+        "directional_count": 0,
+        "omni_count": 13,
+        "cleared_count": 13,
+        "measure_accepted_count": 151,
+        "channel_switch_count": 141,
+        "clear_failure_count": 2,
+        "clear_success_count": 13,
+        "virtual_time_us": 3304847203,
+        "virtual_time_s": 3304.847203,
+        "position": {
+          "x": -26.403797267482368,
+          "y": -729.9896475262007
+        },
+        "receiver_channel": 19,
+        "entered": true,
+        "exited": true,
+        "timed_out": false
+      },
+      "controller_end": {
+        "completion_verified": true,
+        "completion_reason": "bounded_model_risk",
+        "completion_certificate": {
+          "kind": "model_risk_budget",
+          "risk": {
+            "accepted": true,
+            "risk_upper": 0.009941841170135211,
+            "envelope_risk_lower": 0.003695157783902062,
+            "mass_lower": 0.0002643937386636459,
+            "mass_upper": 0.0007134305229253129,
+            "cells_checked": 913,
+            "depth": 8,
+            "reason": "threshold_separated",
+            "epsilon": 0.01,
+            "density_factor": 1.0341855788566503,
+            "radius_likelihood_margin": 2.000999996e-09,
+            "scope": "conditional probability under the documented independent-source practice model"
+          },
+          "all_detected_cleared": true
+        },
+        "geometry_report": {
+          "tail_probes": 4,
+          "inserted_probes": 0,
+          "risk_planning_calls": 4,
+          "probability_projections": 1
+        },
+        "risk_report": {
+          "accepted": true,
+          "risk_upper": 0.009941841170135211,
+          "envelope_risk_lower": 0.003695157783902062,
+          "mass_lower": 0.0002643937386636459,
+          "mass_upper": 0.0007134305229253129,
+          "cells_checked": 913,
+          "depth": 8,
+          "reason": "threshold_separated",
+          "epsilon": 0.01,
+          "density_factor": 1.0341855788566503,
+          "radius_likelihood_margin": 2.000999996e-09,
+          "scope": "conditional probability under the documented independent-source practice model"
+        }
+      }
+    },
+    {
+      "variant": "risk010",
+      "seed": 1051,
+      "N": 10,
+      "cleared": 10,
+      "missing": 0,
+      "ok": true,
+      "virtual_time_s": 3881.271262,
+      "avg_clear_time_s": 388.1271262,
+      "wall_s": 7.033863800003019,
+      "error": null,
+      "engine_summary": {
+        "problem_no": 3,
+        "jammer_count": 10,
+        "directional_count": 0,
+        "omni_count": 10,
+        "cleared_count": 10,
+        "measure_accepted_count": 147,
+        "channel_switch_count": 142,
+        "clear_failure_count": 0,
+        "clear_success_count": 10,
+        "virtual_time_us": 3881271262,
+        "virtual_time_s": 3881.271262,
+        "position": {
+          "x": -840.4552356607853,
+          "y": -193.00079171012226
+        },
+        "receiver_channel": 15,
+        "entered": true,
+        "exited": true,
+        "timed_out": false
+      },
+      "controller_end": {
+        "completion_verified": true,
+        "completion_reason": "bounded_model_risk",
+        "completion_certificate": {
+          "kind": "model_risk_budget",
+          "risk": {
+            "accepted": true,
+            "risk_upper": 0.009208921548505647,
+            "envelope_risk_lower": 0.0039832962540394725,
+            "mass_lower": 0.00036277515471024296,
+            "mass_upper": 0.0008406996680611507,
+            "cells_checked": 1142,
+            "depth": 8,
+            "reason": "threshold_separated",
+            "epsilon": 0.01,
+            "density_factor": 1.0341855788566503,
+            "radius_likelihood_margin": 2.000999996e-09,
+            "scope": "conditional probability under the documented independent-source practice model"
+          },
+          "all_detected_cleared": true
+        },
+        "geometry_report": {
+          "tail_probes": 4,
+          "inserted_probes": 0,
+          "risk_planning_calls": 3,
+          "probability_projections": 1
+        },
+        "risk_report": {
+          "accepted": true,
+          "risk_upper": 0.009208921548505647,
+          "envelope_risk_lower": 0.0039832962540394725,
+          "mass_lower": 0.00036277515471024296,
+          "mass_upper": 0.0008406996680611507,
+          "cells_checked": 1142,
+          "depth": 8,
+          "reason": "threshold_separated",
+          "epsilon": 0.01,
+          "density_factor": 1.0341855788566503,
+          "radius_likelihood_margin": 2.000999996e-09,
+          "scope": "conditional probability under the documented independent-source practice model"
+        }
+      }
+    },
+    {
+      "variant": "risk010",
+      "seed": 1066,
+      "N": 10,
+      "cleared": 10,
+      "missing": 0,
+      "ok": true,
+      "virtual_time_s": 3685.832973,
+      "avg_clear_time_s": 368.5832973,
+      "wall_s": 3.7266908999954467,
+      "error": null,
+      "engine_summary": {
+        "problem_no": 3,
+        "jammer_count": 10,
+        "directional_count": 0,
+        "omni_count": 10,
+        "cleared_count": 10,
+        "measure_accepted_count": 156,
+        "channel_switch_count": 150,
+        "clear_failure_count": 0,
+        "clear_success_count": 10,
+        "virtual_time_us": 3685832973,
+        "virtual_time_s": 3685.832973,
+        "position": {
+          "x": -722.4623574554425,
+          "y": -297.9750120550422
+        },
+        "receiver_channel": 20,
+        "entered": true,
+        "exited": true,
+        "timed_out": false
+      },
+      "controller_end": {
+        "completion_verified": true,
+        "completion_reason": "bounded_model_risk",
+        "completion_certificate": {
+          "kind": "model_risk_budget",
+          "risk": {
+            "accepted": true,
+            "risk_upper": 0.008472649876151657,
+            "envelope_risk_lower": 0.004915338946045516,
+            "mass_lower": 0.0004478504992685288,
+            "mass_upper": 0.00077322334590122,
+            "cells_checked": 3698,
+            "depth": 9,
+            "reason": "threshold_separated",
+            "epsilon": 0.01,
+            "density_factor": 1.0341855788566503,
+            "radius_likelihood_margin": 2.000999996e-09,
+            "scope": "conditional probability under the documented independent-source practice model"
+          },
+          "all_detected_cleared": true
+        },
+        "geometry_report": {
+          "tail_probes": 4,
+          "inserted_probes": 0,
+          "risk_planning_calls": 3,
+          "probability_projections": 1
+        },
+        "risk_report": {
+          "accepted": true,
+          "risk_upper": 0.008472649876151657,
+          "envelope_risk_lower": 0.004915338946045516,
+          "mass_lower": 0.0004478504992685288,
+          "mass_upper": 0.00077322334590122,
+          "cells_checked": 3698,
+          "depth": 9,
+          "reason": "threshold_separated",
+          "epsilon": 0.01,
+          "density_factor": 1.0341855788566503,
+          "radius_likelihood_margin": 2.000999996e-09,
+          "scope": "conditional probability under the documented independent-source practice model"
+        }
+      }
+    }
+  ],
+  "fingerprints_unchanged": true
+}

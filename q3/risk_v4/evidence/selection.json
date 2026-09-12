@@ -1,0 +1,98 @@
+{
+  "candidate": "risk005",
+  "frozen_at": "2026-09-12T19:35:21.861583+00:00",
+  "rule": "Among the two finalists, prefer the smaller model budget that meets development gain and risk screening. Final risk certification uses the untouched confirmation set.",
+  "hashes": {
+    "benchmark.py": "0b350f9f9a25370b658769bca64996079731291f4fc4d852d3749858c0eb7f56",
+    "src/risk_controller.py": "f97d50ea99b5444005462e5e7c0b5e977416129391d3ea5f3899529d899ea523",
+    "src/risk_geometry.py": "85f0bb354809d6ae92d1df26e68b081241f763016c5b7b620143a29eef14f8ec",
+    "../geometry_v3/src/baseline_commit10.py": "95de95622bcfd67b75fb28f6809a2cbf06e3bcae34e77c4c71896fb0fd6f45b9",
+    "../geometry_v3/src/baseline_complete.py": "88f60c99a138aeccdd62ca4230dd6490dc18e211ce0046099edb8264fc7dba1b",
+    "../geometry_v3/src/baseline_efficient.py": "39b0fbafbd051f604a59103f95711eb743d86e1d20f6d42df141a219003c93c2",
+    "../geometry_v3/src/baseline_latest.py": "78ebc9f04d5110cf11508bcd74a3e70290b71e3c1231daa2d8f3c4469313b66c",
+    "../geometry_v3/src/baseline_planned.py": "ac723bf37651211fb65560293845bb6bb7603715005d54e7df5f74772ba227a2",
+    "../geometry_v3/src/controller.py": "b6af9bc9e2533901290bad0db1168d636fc2a22b830e74052a0d27a1e118a5e9",
+    "../geometry_v3/src/coverage_geometry.py": "91a3c641db68a30e54524f2f6278505438906368303445dadee34ddfd92131d6",
+    "../geometry_v3/simulator/jammers_offline_sim.py": "a677095911df518d8442cc7d35b2a623f527e4f2b4462326375a9056f3f1c3ec",
+    "configs/protocol.json": "02940e07653edc12a04503d62ac66776ec7388bcecac03413e9cdca0b248b02a",
+    "configs/variants.json": "c1dc3a42b4fd7d95f25be469ca682f3d74fd0a7ba3fcd0a2efc0f10c8ad9dc13"
+  },
+  "choices": [
+    {
+      "variant": "risk005",
+      "epsilon": 0.005,
+      "summary": {
+        "variant": "risk005",
+        "runs": 300,
+        "fullclear": 300,
+        "failure_rate": 0.0,
+        "failure_rate_upper95": 0.009936081944457708,
+        "all_case_mean_s_per_cleared_source": 279.54887877844305,
+        "missing": 0,
+        "mean_fullclear_s_per_source": 279.54887877844305,
+        "max_fullclear_s_per_source": 512.4892624,
+        "errors": 0,
+        "mean_wall_s": 4.734150543333308
+      },
+      "paired": {
+        "valid": true,
+        "candidate": "risk005",
+        "reference": "certified_reference",
+        "cases": 300,
+        "candidate_all_case_mean": 279.54887877844305,
+        "reference_all_case_mean": 316.2284055057011,
+        "saved_s_per_source": 36.67952672725809,
+        "relative_gain": 0.1159906133941431,
+        "saved_bootstrap95": [
+          32.277289131636586,
+          41.24216576871287
+        ],
+        "wins": 249,
+        "ties": 25,
+        "losses": 26,
+        "failed_cases_included": true
+      },
+      "eligible": true
+    },
+    {
+      "variant": "risk010",
+      "epsilon": 0.01,
+      "summary": {
+        "variant": "risk010",
+        "runs": 300,
+        "fullclear": 299,
+        "failure_rate": 0.0033333333333333335,
+        "failure_rate_upper95": 0.01571455489158399,
+        "all_case_mean_s_per_cleared_source": 272.5969434187692,
+        "missing": 1,
+        "mean_fullclear_s_per_source": 272.65789092351423,
+        "max_fullclear_s_per_source": 512.4892624,
+        "errors": 0,
+        "mean_wall_s": 4.72716103166628
+      },
+      "paired": {
+        "valid": true,
+        "candidate": "risk010",
+        "reference": "certified_reference",
+        "cases": 300,
+        "candidate_all_case_mean": 272.59694341876923,
+        "reference_all_case_mean": 316.2284055057011,
+        "saved_s_per_source": 43.63146208693198,
+        "relative_gain": 0.13797451882021197,
+        "saved_bootstrap95": [
+          38.95122614037876,
+          48.581184040070205
+        ],
+        "wins": 258,
+        "ties": 25,
+        "losses": 17,
+        "failed_cases_included": true
+      },
+      "eligible": true
+    }
+  ],
+  "confirmation_seeds_half_open": [
+    70000,
+    70600
+  ]
+}
