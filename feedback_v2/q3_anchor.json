@@ -1,0 +1,21 @@
+{
+  "geometry_mode": 1,
+  "particle_n": 32000,
+  "particle_rebuild_n": 64000,
+  "bootstrap_info_limit": 20,
+  "probe_info_limit": 5,
+  "route_info_limit_low": 0,
+  "route_info_limit_high": 1,
+  "service_iters": 1,
+  "service_uncertainty_trigger": 65.0,
+  "exact_tsp_limit": 16,
+  "coverage_preclear_min_known": 10,
+  "finish_choose_cheapest": 1,
+  "commit_probe_enabled": 1,
+  "stop_thr_10": 0.90,
+  "stop_thr_11": 0.91,
+  "stop_thr_12": 0.92,
+  "stop_thr_13": 0.93,
+  "stop_thr_14": 0.94,
+  "stop_thr_15": 0.95
+}
