@@ -1,0 +1,89 @@
+{
+  "remote_root": "/root/autodl-tmp/b0_iteration_20260912",
+  "true_hybrid_dirs": {
+    "q3": "feedback_v2_q3",
+    "q4": "feedback_v2_q4"
+  },
+  "excluded_as_evidence": [
+    "hybrid_20260912"
+  ],
+  "recovery_check": {
+    "checked_at_beijing": "2026-09-13T02:47:22",
+    "q3_main_pid_at_check": 28309,
+    "q3_worker_count_at_check": 10,
+    "q4_main_pid_at_check": 29810,
+    "q4_worker_count_at_check": 12,
+    "duplicate_main_processes_found": false,
+    "active_logs": [
+      "feedback_v2_q3/feedback_q3_v2.log",
+      "feedback_v2_q4/feedback_q4_v2.log"
+    ]
+  },
+  "round8": {
+    "q3_archive": "/root/autodl-tmp/b0_iteration_20260912/feedback_v2_q3/round8_before_sparse_bootstrap_20260913_025809",
+    "q4_archive": "/root/autodl-tmp/b0_iteration_20260912/feedback_v2_q4/round8_before_speed_rebalance_20260913_025809",
+    "q3_started_pid": 31741,
+    "q4_started_pid": 31742,
+    "q3_change": "Use second-station radii [650,800,950] when first census finds at most 3 sources; otherwise keep [700,900,1100].",
+    "q4_change": "Increase N10 speed pressure and reopen high STOP_RISK count-posterior candidates."
+  },
+  "round9": {
+    "q3_archive": "/root/autodl-tmp/b0_iteration_20260912/feedback_v2_q3/round9_before_reliable_seed_20260913_030253",
+    "q4_archive": "/root/autodl-tmp/b0_iteration_20260912/feedback_v2_q4/round9_before_reliable_seed_20260913_030253",
+    "q3_started_pid": 32246,
+    "q4_started_pid": 32247,
+    "q3_change": "Seed tuner initialization from existing best_fullclear, best_safe, and best_score configs.",
+    "q4_change": "Seed tuner initialization from HOF full-clear entries and existing feedback best config."
+  },
+  "metrics": {
+    "main_q3_historical": {
+      "candidate_id": "8133a6e798120f26",
+      "overall_s_per_source": 246.8206825225,
+      "clear_rate": 1.0,
+      "source_clear_rate": 1.0,
+      "n10": {"s_per_source": 293.715216525, "clear_rate": 1.0, "samples": 4},
+      "n16": {"s_per_source": 197.382270015625, "clear_rate": 1.0, "samples": 4},
+      "evidence_role": "historical_only"
+    },
+    "main_q4_historical": {
+      "candidate_id": "aac07011ea3d",
+      "overall_s_per_source": 364.4526424874038,
+      "clear_rate": 0.5595238095238095,
+      "source_clear_rate": 0.9441391941391941,
+      "n10": {"s_per_source": null, "clear_rate": null, "samples": 12},
+      "n16": {"s_per_source": null, "clear_rate": null, "samples": 12},
+      "evidence_role": "historical_only_unreliable"
+    },
+    "true_hybrid_q3_reliable_best": {
+      "candidate_id": "8ae0b63b77cad3c5",
+      "overall_s_per_source": 269.9697568754694,
+      "clear_rate": 1.0,
+      "source_clear_rate": 1.0,
+      "n10": {"s_per_source": 330.28502348, "clear_rate": 1.0, "samples": 5},
+      "n16": {"s_per_source": 211.5068912875, "clear_rate": 1.0, "samples": 5},
+      "evidence_role": "current_reliable_hybrid_baseline"
+    },
+    "true_hybrid_q4_pre_round8_best_seen": {
+      "candidate_id": "95d19bd9642b",
+      "overall_s_per_source": 511.7,
+      "clear_rate": 0.929,
+      "source_clear_rate": 0.9945,
+      "n10": {"s_per_source": 668.9, "clear_rate": 0.9, "samples": null},
+      "n16": {"s_per_source": 298.1, "clear_rate": 1.0, "samples": null},
+      "evidence_role": "too_slow_not_fully_reliable"
+    },
+    "true_hybrid_q4_round9_validation": {
+      "candidate_id": "80ecbfbc84f9",
+      "overall_s_per_source": 386.8,
+      "clear_rate": 0.714,
+      "source_clear_rate": 0.9714,
+      "n10": {"s_per_source": 460.1, "clear_rate": 0.8, "samples": null},
+      "n16": {"s_per_source": 293.4, "clear_rate": 0.9, "samples": null},
+      "evidence_role": "rejected_leaks_sources"
+    }
+  },
+  "validation_policy": {
+    "fixed_repeated_validation": "participates in model selection only",
+    "formal_test_started": false
+  }
+}
