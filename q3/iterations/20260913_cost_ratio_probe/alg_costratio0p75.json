@@ -1,0 +1,43 @@
+{
+  "controller": "tunable",
+  "tune": {
+    "particle_n": 32000,
+    "particle_rebuild_n": 64000,
+    "adaptive_route_scan": 1,
+    "route_scan_value_s": 900,
+    "stop_thr_13": 0.9,
+    "service_waypoint": 1,
+    "service_waypoint_min_prob": 0.4,
+    "service_waypoint_cross_weight": 300,
+    "service_waypoint_prob_weight": 100,
+    "adaptive_bootstrap_info": 1,
+    "scan_info_score_thr": 0.3,
+    "service_uncertainty_trigger": 80,
+    "stop_thr_10": 0.58,
+    "stop_thr_11": 0.68,
+    "stop_thr_12": 0.75,
+    "service_waypoint_detour_weight": 1.5,
+    "service_aware_route": 1,
+    "service_aware_uncertainty_scale": 0.8,
+    "hard_done_info_limit": 1,
+    "bootstrap_sparse_radii": [
+      650,
+      800,
+      950
+    ],
+    "bootstrap_sparse_max_known": 3,
+    "dynamic_route_enabled": 1,
+    "dynamic_route_discovery_value_s": 100,
+    "dynamic_route_tail_weight": 1,
+    "dynamic_route_max_p16": 0.15,
+    "dynamic_route_max_known": 8,
+    "dynamic_route_min_same": 0,
+    "direct_probe_max_detour_m": 600,
+    "route_scan_lowp16_enabled": 1,
+    "route_scan_lowp16_min_known": 13,
+    "route_scan_lowp16_cut": 0.05,
+    "route_scan_lowp16_value_s": 650,
+    "explore_cost_ratio_before10": 1,
+    "explore_cost_ratio_pd_power": 0.75
+  }
+}
