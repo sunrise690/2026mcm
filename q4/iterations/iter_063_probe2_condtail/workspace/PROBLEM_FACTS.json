@@ -1,0 +1,11 @@
+{
+  "domain": {"spatial": {"region_radius_m": 1800, "coord_abs_limit_m": 2000000}, "temporal": {"max_virtual_duration_s": 360000, "max_real_duration_s": 1200}},
+  "entities": [
+    {"id":"jammer","effective_radius_range_m":[1000,1500],"count_range":[10,16],"channel_range":[1,20],"directional_half_angle_deg":90},
+    {"id":"robot_dog","speed_mps":5}
+  ],
+  "measurement": {"svd_error_deg":[-1,1],"near_threshold_m":5,"clear_radius_m":20},
+  "action_costs_s": [
+    {"action":"measure","cost":5}, {"action":"channel_switch","cost":1}, {"action":"clear_no_target","cost":3}, {"action":"clear_success","cost":5}, {"action":"optical_locate","cost":0}, {"action":"laser_clear","cost":5}
+  ]
+}
