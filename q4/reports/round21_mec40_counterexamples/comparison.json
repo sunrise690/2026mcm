@@ -1,0 +1,115 @@
+{
+  "scope": "本地练习分布离线模拟；同一批种子配对；均值分母为已清源数，必须与全清率一起阅读",
+  "variants": {
+    "q4_iterations\\iter_066_adaptive_probe4_guard11\\workspace\\code": {
+      "overall": {
+        "runs": 2,
+        "all_clear_runs": 2,
+        "all_clear_rate": 1.0,
+        "source_clear_rate": 1.0,
+        "mean_s_per_cleared_source": 421.4284425642857,
+        "all_clear_only_mean_s_per_source": 421.4284425642857,
+        "p95_s_per_cleared_source": 429.13381833642853,
+        "max_s_per_cleared_source": 429.98997119999996,
+        "mean_move_s": 4462.9931815,
+        "mean_measure_count": 235.5,
+        "mean_clear_failures": 60.0,
+        "errors": 0,
+        "all_accounting_checks_pass": true
+      },
+      "by_n": {
+        "14": {
+          "runs": 1,
+          "all_clear_runs": 1,
+          "all_clear_rate": 1.0,
+          "source_clear_rate": 1.0,
+          "mean_s_per_cleared_source": 412.8669139285715,
+          "all_clear_only_mean_s_per_source": 412.8669139285715,
+          "p95_s_per_cleared_source": 412.8669139285715,
+          "max_s_per_cleared_source": 412.8669139285715,
+          "mean_move_s": 4315.136795,
+          "mean_measure_count": 213.0,
+          "mean_clear_failures": 44.0,
+          "errors": 0,
+          "all_accounting_checks_pass": true
+        },
+        "15": {
+          "runs": 1,
+          "all_clear_runs": 1,
+          "all_clear_rate": 1.0,
+          "source_clear_rate": 1.0,
+          "mean_s_per_cleared_source": 429.98997119999996,
+          "all_clear_only_mean_s_per_source": 429.98997119999996,
+          "p95_s_per_cleared_source": 429.98997119999996,
+          "max_s_per_cleared_source": 429.98997119999996,
+          "mean_move_s": 4610.849568,
+          "mean_measure_count": 258.0,
+          "mean_clear_failures": 76.0,
+          "errors": 0,
+          "all_accounting_checks_pass": true
+        }
+      },
+      "missed_seeds": []
+    },
+    "q4_iterations\\iter_069_mec40_rescan_gate\\workspace\\code": {
+      "overall": {
+        "runs": 2,
+        "all_clear_runs": 2,
+        "all_clear_rate": 1.0,
+        "source_clear_rate": 1.0,
+        "mean_s_per_cleared_source": 420.3087031,
+        "all_clear_only_mean_s_per_source": 420.3087031,
+        "p95_s_per_cleared_source": 427.40184439,
+        "max_s_per_cleared_source": 428.1899712,
+        "mean_move_s": 4462.916829,
+        "mean_measure_count": 233.0,
+        "mean_clear_failures": 60.0,
+        "errors": 0,
+        "all_accounting_checks_pass": true
+      },
+      "by_n": {
+        "14": {
+          "runs": 1,
+          "all_clear_runs": 1,
+          "all_clear_rate": 1.0,
+          "source_clear_rate": 1.0,
+          "mean_s_per_cleared_source": 412.427435,
+          "all_clear_only_mean_s_per_source": 412.427435,
+          "p95_s_per_cleared_source": 412.427435,
+          "max_s_per_cleared_source": 412.427435,
+          "mean_move_s": 4314.98409,
+          "mean_measure_count": 212.0,
+          "mean_clear_failures": 44.0,
+          "errors": 0,
+          "all_accounting_checks_pass": true
+        },
+        "15": {
+          "runs": 1,
+          "all_clear_runs": 1,
+          "all_clear_rate": 1.0,
+          "source_clear_rate": 1.0,
+          "mean_s_per_cleared_source": 428.1899712,
+          "all_clear_only_mean_s_per_source": 428.1899712,
+          "p95_s_per_cleared_source": 428.1899712,
+          "max_s_per_cleared_source": 428.1899712,
+          "mean_move_s": 4610.849568,
+          "mean_measure_count": 254.0,
+          "mean_clear_failures": 76.0,
+          "errors": 0,
+          "all_accounting_checks_pass": true
+        }
+      },
+      "missed_seeds": []
+    }
+  },
+  "paired": {
+    "q4_iterations\\iter_069_mec40_rescan_gate\\workspace\\code": {
+      "mean_time_delta_s_per_source": -1.1197394642857148,
+      "shared_full_clear_cases": 2,
+      "shared_full_clear_mean_delta_s_per_source": -1.1197394642857148,
+      "new_failures": [],
+      "rescued_cases": [],
+      "faster_cases": 2
+    }
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "argv": [
+    "q4_iterations\\tools\\offline_benchmark.py",
+    "compare",
+    "--bank",
+    "q4_iterations\\datasets\\round21_counterexamples2.json",
+    "--versions",
+    "q4_iterations\\iter_066_adaptive_probe4_guard11\\workspace\\code",
+    "q4_iterations\\iter_069_mec40_rescan_gate\\workspace\\code",
+    "--out",
+    "q4_iterations\\reports\\round21_mec40_counterexamples",
+    "--workers",
+    "4"
+  ],
+  "python": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+  "dependencies": {
+    "numpy": "2.3.5",
+    "scipy": "1.17.1",
+    "requests": "2.34.2",
+    "shapely": "2.1.2"
+  },
+  "dataset": {
+    "selection": "counterexample gate check",
+    "seed_start": 26091300,
+    "per_n": 20,
+    "cases": [
+      {
+        "seed": 26091361,
+        "generator_seed_hex": "599be21bce9b3c9ceefde6feed22fcd6cad9897feefc9c84edd909a3b81172e9",
+        "jammer_count": 15
+      },
+      {
+        "seed": 26091364,
+        "generator_seed_hex": "cb9f5745ed41ad275a1b8be2bc3e927ad74569b6ee510c8900cfab1d4b841c58",
+        "jammer_count": 14
+      }
+    ]
+  },
+  "case_bank_sha256": "d5a6d51c59d627f5662f91e7852e4fd59f517aa0726798737e1fdec50abeaff1",
+  "started": "2026-09-13 02:03:02"
+}

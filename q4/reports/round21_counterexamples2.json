@@ -1,0 +1,17 @@
+{
+  "selection": "counterexample gate check",
+  "seed_start": 26091300,
+  "per_n": 20,
+  "cases": [
+    {
+      "seed": 26091361,
+      "generator_seed_hex": "599be21bce9b3c9ceefde6feed22fcd6cad9897feefc9c84edd909a3b81172e9",
+      "jammer_count": 15
+    },
+    {
+      "seed": 26091364,
+      "generator_seed_hex": "cb9f5745ed41ad275a1b8be2bc3e927ad74569b6ee510c8900cfab1d4b841c58",
+      "jammer_count": 14
+    }
+  ]
+}

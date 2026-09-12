@@ -60,5 +60,15 @@
   "round20_holdout_source_clear_rate": 0.9675824175824176,
   "round20_holdout_new_failures": 3,
   "round20_holdout_rescued_cases": 1,
-  "github_remote_head": "6508e6b8fb23f854d69882a277a877512aaff4b3"
+  "round21_status": "mec40_equal_aggregate_one_case_swap",
+  "round21_latest_iteration": "iter_070_mec80_rescan_gate",
+  "round21_mec40_holdout_mean_s_per_source": 400.43732677160347,
+  "round21_mec40_holdout_all_clear": "101/140",
+  "round21_mec40_new_failures": 1,
+  "round21_mec40_rescued_cases": 1,
+  "round21_mec80_holdout_mean_s_per_source": 401.1861246269573,
+  "round21_mec80_holdout_all_clear": "100/140",
+  "round21_report": "reports/round21_progress_CN.md",
+  "github_versions_committed_through": "iter_070_on_github",
+  "github_remote_head": "3992c78"
 }
