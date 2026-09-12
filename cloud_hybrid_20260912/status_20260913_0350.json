@@ -1,0 +1,73 @@
+{
+  "timestamp_beijing": "2026-09-13 03:50",
+  "remote_root": "/root/autodl-tmp/b0_iteration_20260912",
+  "evidence_scope": "Only feedback_v2_q3 and feedback_v2_q4 are treated as true hybrid evidence.",
+  "targets": {
+    "q3_seconds_per_source": "<200 with full clear preserved",
+    "q4_seconds_per_source": "<350 with high/full clear preserved"
+  },
+  "processes": {
+    "q3": {
+      "pid": 34711,
+      "workers": 10,
+      "status": "running Round10 search"
+    },
+    "q4": {
+      "pid": 36067,
+      "workers": 12,
+      "status": "running Round11 dynamic-route search",
+      "stale_workers_cleaned": [35697, 35763, 35764, 35765, 35766, 35767, 35768, 35769, 35770, 35771, 35772, 35773, 35774]
+    }
+  },
+  "latest_reliable_metrics": {
+    "q3_true_hybrid_best": {
+      "candidate_id": "55d21aa07712f13a",
+      "mean_s_per_source": 252.61833330600604,
+      "full_clear_rate": 1.0,
+      "source_clear_rate": 1.0,
+      "n10_s_per_source": 340.8,
+      "n10_full_clear_rate": 1.0,
+      "n16_s_per_source": 195.5,
+      "n16_full_clear_rate": 1.0,
+      "note": "Reliable mixed-source best before/through current Q3 Round10 monitoring; still above target because N10 is slow."
+    },
+    "q4_pre_round11_best": {
+      "candidate_id": "95d19bd9642b",
+      "mean_s_per_source": 511.7,
+      "full_clear_rate": 0.929,
+      "source_clear_rate": 0.9945,
+      "n10_s_per_source": 668.9,
+      "n10_full_clear_rate": 0.90,
+      "n16_s_per_source": 298.1,
+      "n16_full_clear_rate": 1.0,
+      "note": "Too slow and not accepted as final; used as a safety baseline for interpreting Round11."
+    },
+    "q4_round11_first_screen": {
+      "candidate_id": "a96c83c4f42f",
+      "mean_s_per_source": 565.1,
+      "full_clear_rate": 0.786,
+      "source_clear_rate": 0.978,
+      "n10_s_per_source": 675.9,
+      "n10_full_clear_rate": 1.0,
+      "n16_s_per_source": 440.8,
+      "n16_full_clear_rate": 1.0,
+      "note": "First dynamic-route screen only; not accepted."
+    }
+  },
+  "round11_q4_changes": [
+    "Stopped using a fixed initial ring as the default route; bootstrap now dynamically selects the next probe from current posterior risk and travel cost.",
+    "Kept ring and none modes in the search space as controls, but adaptive is the default anchor.",
+    "First joint probe, second joint probe, and tail probe target the unknown channel with highest posterior survival risk instead of unknown[0].",
+    "Added searchable gates for first probe, post-clear scan, bootstrap mode, bootstrap travel penalty, and bootstrap radius.",
+    "Reduced dynamic posterior-probe particle count from 200000 to 80000, and tail particles to 24000, to improve search throughput without changing virtual-time scoring."
+  ],
+  "round11_status": {
+    "log_marker": "=== ROUND11: dynamic-route speed restart ===",
+    "latest_observation": "Generation 0 emitted first SCREEN rows; no Round11 VALID metric has been emitted yet at this snapshot.",
+    "backup_dirs": [
+      "/root/autodl-tmp/b0_iteration_20260912/feedback_v2_q4/round11_before_risk_targeted_20260913_034539",
+      "/root/autodl-tmp/b0_iteration_20260912/feedback_v2_q4/round11_before_dynamic_speed_20260913_034932"
+    ]
+  },
+  "validation_policy": "Fixed repeated validation is used only for model selection, not as a formal independent holdout test."
+}
