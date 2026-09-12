@@ -1,0 +1,15 @@
+{
+  "elapsed_wall_s": 193.49029803276062,
+  "results": [
+    {
+      "variant": "iter_086_low10_skipboot7",
+      "mean_s_per_source": 323.2557806590807,
+      "all_clear": "70/70",
+      "source_clear_rate": 1.0,
+      "n10_mean_s_per_source": 438.03149300593077,
+      "n10_all_clear": "10/10",
+      "n16_mean_s_per_source": 224.3468941536757,
+      "n16_all_clear": "10/10"
+    }
+  ]
+}

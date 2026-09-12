@@ -83,5 +83,19 @@
   "stable_speed_holdout_n16_mean_s_per_source": 300.28061659958337,
   "stable_speed_fresh70_source_clear_rate": 0.9714285714285714,
   "stable_speed_fresh70_n10_mean_s_per_source": 497.31533592222223,
-  "stable_speed_fresh70_n16_mean_s_per_source": 312.6857183183333
+  "stable_speed_fresh70_n16_mean_s_per_source": 312.6857183183333,
+  "round24_status": "fresh70_screen_passed_not_formal_test",
+  "round24_latest_iteration": "iter_086_low10_skipboot7",
+  "round24_baseline_iteration": "iter_084_dynamic_early_late_rescue9",
+  "round24_candidate_mean_s_per_source": 323.2557806590807,
+  "round24_candidate_all_clear": "70/70",
+  "round24_candidate_source_clear_rate": 1.0,
+  "round24_candidate_n10_mean_s_per_source": 438.03149300593077,
+  "round24_candidate_n10_all_clear": "10/10",
+  "round24_candidate_n16_mean_s_per_source": 224.3468941536757,
+  "round24_candidate_n16_all_clear": "10/10",
+  "round24_baseline_mean_s_per_source": 340.3324939215928,
+  "round24_delta_vs_iter084_s_per_source": -17.0767132625121,
+  "round24_report": "reports/round24_fast085_screen/round24_progress_CN.md",
+  "current_fast_experimental_candidate": "iter_086_low10_skipboot7"
 }
