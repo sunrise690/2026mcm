@@ -93,6 +93,8 @@ DEFAULT_TUNE = {
     "risk_empty_probe_limit": 1,
     "risk_empty_probe_max_known": 12,
     "bootstrap_radii": [700,900,1100],
+    "bootstrap_sparse_radii": [700,900,1100],
+    "bootstrap_sparse_max_known": -1,
     "bootstrap_unknown_scan": 1,
     "bootstrap_first_source_w": 0.0,
     "route_end_explore": 0,
@@ -338,7 +340,8 @@ class Q3ParticleController:
     def bootstrap_point(self):
         best=None;cur=np.asarray(self.c.position,float)
         source_est=[b.estimate()[0] for b in self.B.values() if b.status=='detected' and b.estimate()[0] is not None]
-        for r in self.g("bootstrap_radii"):
+        radii=self.g("bootstrap_sparse_radii") if self.known()<=int(self.g("bootstrap_sparse_max_known")) else self.g("bootstrap_radii")
+        for r in radii:
             n=24
             for k in range(n):
                 p=r*np.array([math.cos(2*math.pi*k/n),math.sin(2*math.pi*k/n)])
@@ -867,5 +870,4 @@ class Q3ParticleController:
             print(f"[退出] 已发送 /exit"+(f"，原因={reason}" if reason is not None else ""),flush=True)
 
 def run_q3_particle(client):return Q3ParticleController(client).run()
-
 
