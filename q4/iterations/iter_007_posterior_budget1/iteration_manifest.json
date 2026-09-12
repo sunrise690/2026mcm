@@ -1,0 +1,1 @@
+{"iteration":"iter_007_posterior_budget1","parent":"iter_003_full_posterior","version":"v392-posterior-budget1","change":"完整后验保留，但最多1次补查；用于速度-可靠性折中评估","status":"experimental"}
