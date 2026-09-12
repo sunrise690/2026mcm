@@ -1,0 +1,59 @@
+{
+  "runs": [
+    {
+      "label": "train",
+      "variants": [
+        "planned_legacy",
+        "v3_flow"
+      ],
+      "cases": 70,
+      "manifest_sha256": "805f48ddea091b3267a6d22a5a61226e4defafa76f5dd56490c0cbd7b709aa75",
+      "results_sha256": "04275af5f53a22f111b59fd7ca80aff4eea4bf93d869f0520eedeaa81f2c38dd",
+      "actions_sha256": "f846025aa37c7eb8263074be81567a2d3de9e28c20a627f1e72ba4145818fb9b"
+    },
+    {
+      "label": "validation",
+      "variants": [
+        "latest",
+        "planned_legacy",
+        "v3_flow"
+      ],
+      "cases": 105,
+      "manifest_sha256": "44125b11577e45627e7932f31bede7ac8dd08a5bfa73a7d8d14a6174a4d9db3f",
+      "results_sha256": "1d532eb4885c2ea333193935c8d80d54762fcea2ab8c7ad56fac58be40ca46dc",
+      "actions_sha256": "8692c369f17f30de943597f03862d12bd07dd7d1a2b258972a03bb7b796dab76"
+    },
+    {
+      "label": "development",
+      "variants": [
+        "v3_flow"
+      ],
+      "cases": 300,
+      "manifest_sha256": "6e5556c9221f601bdd0d66fd6566801e09ece78069b9219c96ff4e2cc3f5fcb0",
+      "results_sha256": "544254809b26a1da433f68d562ae367f62735054ad10fa9dcb3df6854fd7072d",
+      "actions_sha256": "f4562ecab036d2a7c7dc3baea48e9a97ef82a25a308b98ea6f5e2cb930435960"
+    },
+    {
+      "label": "regression",
+      "variants": [
+        "v3_flow"
+      ],
+      "cases": 70,
+      "manifest_sha256": "79b26ef1c48c515c97bb272279e53cd626f3632030dc4188013e51e85fc8af6c",
+      "results_sha256": "ba00cae64fa417ab6c40dc85750d43a72adf70cf4e80de3beeb83acba0f1fdbc",
+      "actions_sha256": "1662703c9bc0ccf38a4c908b6a0ab155c0b21297c6b98728168d786110521e05"
+    },
+    {
+      "label": "confirmation",
+      "variants": [
+        "latest",
+        "planned_legacy",
+        "v3_flow"
+      ],
+      "cases": 420,
+      "manifest_sha256": "0e2a8d27d10c2ca5686291d4da8626bfc76bbf02444f88aca53dbecc440cca8d",
+      "results_sha256": "61d7ffbef76bc62750963cd82e9465f3aa44db3f66f604ab2a15fe1d921adefd",
+      "actions_sha256": "3343f83bc212bc3c285023f5abee1812b36f1d7c17d3a853cc16593d8f2d6024"
+    }
+  ]
+}

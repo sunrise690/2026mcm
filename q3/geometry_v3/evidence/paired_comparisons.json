@@ -1,0 +1,55 @@
+{
+  "train": {
+    "candidate": "v3_flow",
+    "baseline": "planned_legacy",
+    "paired_cases": 35,
+    "common_fullclear_cases": 35,
+    "both_all_clear": true,
+    "mean_saved_s_per_source": 26.578609815868894,
+    "relative_mean_reduction": 0.07419871424023225,
+    "saved_s_per_source_bootstrap95": [
+      11.264798897710104,
+      41.92196235611829
+    ],
+    "wins": 26,
+    "ties": 0,
+    "losses": 9,
+    "scope": "paired simulated scenes; bootstrap describes scene variation, not formal simulator performance"
+  },
+  "validation": {
+    "candidate": "v3_flow",
+    "baseline": "planned_legacy",
+    "paired_cases": 35,
+    "common_fullclear_cases": 35,
+    "both_all_clear": true,
+    "mean_saved_s_per_source": 34.8593929872694,
+    "relative_mean_reduction": 0.09728101890001076,
+    "saved_s_per_source_bootstrap95": [
+      13.321052268544847,
+      56.03111124851167
+    ],
+    "wins": 24,
+    "ties": 0,
+    "losses": 11,
+    "scope": "paired simulated scenes; bootstrap describes scene variation, not formal simulator performance"
+  },
+  "development": null,
+  "regression": null,
+  "confirmation": {
+    "candidate": "v3_flow",
+    "baseline": "planned_legacy",
+    "paired_cases": 140,
+    "common_fullclear_cases": 140,
+    "both_all_clear": true,
+    "mean_saved_s_per_source": 24.54753714160232,
+    "relative_mean_reduction": 0.0705112154371875,
+    "saved_s_per_source_bootstrap95": [
+      16.324749252546198,
+      32.702080639598805
+    ],
+    "wins": 101,
+    "ties": 0,
+    "losses": 39,
+    "scope": "paired simulated scenes; bootstrap describes scene variation, not formal simulator performance"
+  }
+}

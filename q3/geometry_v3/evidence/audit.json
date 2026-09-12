@@ -1,0 +1,43 @@
+{
+  "status": "PASS",
+  "checked_cases": 965,
+  "checked_actions": 164095,
+  "generated_at": "2026-09-12T18:58:13.213340+00:00",
+  "runs": [
+    {
+      "label": "train",
+      "cases": 70,
+      "passed": true
+    },
+    {
+      "label": "validation",
+      "cases": 105,
+      "passed": true
+    },
+    {
+      "label": "development",
+      "cases": 300,
+      "passed": true
+    },
+    {
+      "label": "regression",
+      "cases": 70,
+      "passed": true
+    },
+    {
+      "label": "confirmation",
+      "cases": 420,
+      "passed": true
+    }
+  ],
+  "evidence_index_sha256": "1fb1305c33588926087bd53abbb495620ec0fdf122ac0a64c32a213105bf4725",
+  "checks": [
+    "source_hashes",
+    "simulator_replay",
+    "action_responses",
+    "virtual_time",
+    "full_clear_metrics",
+    "accepted_exit",
+    "independent_closed_cell_coverage"
+  ]
+}

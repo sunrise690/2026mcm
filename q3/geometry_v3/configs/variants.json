@@ -1,0 +1,10 @@
+{
+  "latest": {"module": "baseline_latest", "latest_tune": true},
+  "complete_legacy": {"module": "baseline_complete"},
+  "planned_legacy": {"module": "baseline_planned"},
+  "v3_tail": {"module": "controller", "tune": {"joint_geometry": 0}},
+  "v3_joint400": {"module": "controller", "tune": {"joint_geometry": 1, "joint_detour_m": 400}},
+  "v3_joint800": {"module": "controller", "tune": {"joint_geometry": 1, "joint_detour_m": 800}},
+  "v3_scan": {"module": "controller", "tune": {"geometric_route_scan": 1}},
+  "v3_flow": {"module": "controller", "tune": {"geometric_route_scan": 1, "joint_geometry": 1, "joint_detour_m": 800}}
+}

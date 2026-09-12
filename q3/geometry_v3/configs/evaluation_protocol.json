@@ -1,0 +1,15 @@
+{
+  "candidate": "v3_flow",
+  "frozen_base_commit": "4be1da2bee63b0a86e208205e4176aa0f8454471",
+  "primary_comparator": "planned_legacy",
+  "additional_comparators": ["complete_legacy", "latest", "v3_tail", "v3_scan"],
+  "metric": "mean of per-case virtual_time_s / cleared_count, subject to full-clear AND accepted exit AND valid completion evidence",
+  "development": {"train": "train_seeds.json", "extended_range_half_open": [2000, 2300]},
+  "previously_used_validation": "validation_seeds.json",
+  "previously_opened_holdout_now_regression": "regression_seeds.json",
+  "fresh_confirmation_range_half_open": [50000, 50140],
+  "confirmation_rule": "Candidate fixed before confirmation; failures invalidate promotion. No retuning on confirmation.",
+  "publication_rule": "Publish a separate certified-geometry branch only if all required cases clear and the candidate improves on the best historical certified baseline. Do not replace the faster probabilistic current controller or claim it was beaten on time.",
+  "truth_boundary": "Controller receives accepted measure/clear responses, position and channel only. N and seed are evaluator-only.",
+  "status": "pre_confirmation"
+}
