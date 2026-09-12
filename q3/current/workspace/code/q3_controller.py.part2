@@ -1,0 +1,125 @@
+    def best_posterior_probe(self,current,max_candidates=420):
+        w=self.miss_weight();idx=np.where(w>1e-5)[0]
+        if not len(idx):return None,0.0
+        if len(idx)>max_candidates:
+            order=idx[np.argsort(w[idx])[::-1]]
+            step=max(1,len(order)//max_candidates);idx=order[::step][:max_candidates]
+        cand=[self.p[i] for i in idx]
+        cen=np.average(self.p,axis=0,weights=w);cand.append(cen)
+        cur=np.asarray(current,float);best=None
+        for p in cand:
+            pd=self.conditional_detect(p);dist=float(np.linalg.norm(np.asarray(p)-cur))
+            score=pd-dist/9000.0
+            if best is None or score>best[0]:best=(score,np.asarray(p,float),pd,dist)
+        return best[1],best[2]
+
+class Q3ParticleController:
+    def __init__(self,client):
+        self.c=client;self.B={ch:ParticleBelief(ch) for ch in range(1,21)};self.cleared=set();self.cover=Coverage();self.used=[]
+        self._scan_seq=0; self.committed_probe=None
+    def _vt(self):
+        body=getattr(self.c,'last_response',None) or {}
+        v=body.get('virtual_time_s')
+        return f"{float(v):.1f}s" if isinstance(v,(int,float)) else "--"
+    def _pos(self,p):
+        p=np.asarray(p,float);return f"({p[0]:.0f},{p[1]:.0f})"
+    def _progress(self):
+        det=sum(1 for b in self.B.values() if b.status=='detected')
+        return f"已发现={self.known()}  待清={det}  已清={len(self.cleared)}  t={self._vt()}"
+    def known(self):return sum(b.status in ('detected','cleared') for b in self.B.values())
+    def unknown(self):return [ch for ch,b in self.B.items() if b.status=='unknown']
+    def measure(self,p,ch):
+        p=np.asarray(p,float);was_unknown=(self.B[ch].status=='unknown')
+        z=self.c.measure(float(p[0]),float(p[1]),int(ch));r=z.get('measure_result')
+        self.B[ch].add(p,r,z.get('svd_deg'))
+        if r=='direction':
+            self.B[ch].status='detected'
+            if was_unknown:
+                deg=z.get('svd_deg')
+                dtext=f"{float(deg):.2f}°" if isinstance(deg,(int,float)) else "--"
+                print(f"  [发现] CH{ch:02d} 位置{self._pos(p)} 示向={dtext} | {self._progress()}",flush=True)
+        elif r=='near':
+            q=self.c.clear(float(p[0]),float(p[1]),int(ch))
+            if q.get('clear_result')=='success':
+                self.B[ch].status='cleared';self.cleared.add(ch)
+                print(f"  [近场直清] CH{ch:02d} 位置{self._pos(p)} 成功 | {self._progress()}",flush=True)
+        return r
+    def scan_unknown(self,p):
+        p=np.asarray(p,float)
+        if any(float(np.linalg.norm(p-q))<2.0 for q in self.used): return 0
+        chs=self.unknown();rc=getattr(self.c,'receiver_channel',None)
+        if rc in chs:chs.remove(rc);chs.insert(0,rc)
+        before=self.known();self._scan_seq+=1
+        print(f"[普查{self._scan_seq}] 到达 {self._pos(p)}，扫描未知频道 {len(chs)} 个...",flush=True)
+        for ch in chs:
+            if self.known()>=16:break
+            self.measure(p,ch)
+        if self.known()<16:self.cover.add(p);self.used.append(p.copy())
+        gain=self.known()-before
+        print(f"[普查{self._scan_seq}] 完成，新发现 {gain} 个 | {self._progress()}",flush=True)
+        return gain
+    def scan_info(self,p,limit=3):
+        p=np.asarray(p,float);cand=[]
+        for ch,b in self.B.items():
+            if ch in self.cleared or b.status!='detected':continue
+            if any(np.linalg.norm(h[0]-p)<1 for h in b.hist):continue
+            est,r=b.estimate()
+            if est is None or r<25:continue
+            prob=b.signal_prob(p);cross=b.expected_cross(p)
+            score=prob*(0.8*cross+min(1.5,r/250))
+            if score>0.22:cand.append((score,ch))
+        cand.sort(reverse=True);chosen=cand[:limit]
+        if chosen:
+            print(f"[补测] 位置{self._pos(p)}，补测 {len(chosen)} 个频道："+','.join(f"CH{ch:02d}" for _,ch in chosen),flush=True)
+        for _,ch in chosen:self.measure(p,ch)
+    def bootstrap_point(self):
+        best=None;cur=np.asarray(self.c.position,float)
+        for r,n in [(700,24),(900,24),(1100,24)]:
+            for k in range(n):
+                p=r*np.array([math.cos(2*math.pi*k/n),math.sin(2*math.pi*k/n)])
+                gain=self.cover.gain(p);info=0
+                for b in self.B.values():
+                    if b.status=='detected':info+=b.signal_prob(p)*b.expected_cross(p)
+                score=220*info+0.025*gain-0.08*np.linalg.norm(p-cur)
+                if best is None or score>best[0]:best=(score,p)
+        return best[1]
+    def route_first(self,items,route_target=None,endpoint_weight=0.85):
+        if not items:return None
+        chs=[ch for ch,p in items];pts=np.asarray([p for ch,p in items],float);n=len(chs)
+        size=1<<n;D=np.linalg.norm(pts[:,None,:]-pts[None,:,:],axis=2);d0=np.linalg.norm(pts-np.asarray(self.c.position,float),axis=1)
+        dp=np.full((size,n),np.inf);par=np.full((size,n),-1,np.int16)
+        for i in range(n):dp[1<<i,i]=d0[i]
+        for mask in range(1,size):
+            for i in range(n):
+                if not (mask>>i)&1:continue
+                prev=mask^(1<<i)
+                if prev==0:continue
+                js=[j for j in range(n) if (prev>>j)&1]
+                vals=[dp[prev,j]+D[j,i] for j in js]
+                k=int(np.argmin(vals));v=vals[k]
+                if v<dp[mask,i]:dp[mask,i]=v;par[mask,i]=js[k]
+        full=size-1
+        if route_target is None:
+            last=int(np.argmin(dp[full]))
+        else:
+            rt=np.asarray(route_target,float);tail=np.linalg.norm(pts-rt,axis=1);last=int(np.argmin(dp[full]+endpoint_weight*tail))
+        order=[];mask=full
+        while mask:
+            order.append(last);q=int(par[mask,last]);mask^=1<<last;last=q
+        first=list(reversed(order))[0]
+        return chs[first],pts[first]
+    def exact_order(self,items,route_target=None,endpoint_weight=0.0):
+        if not items:return []
+        if len(items)<=15:
+            chs=[ch for ch,p in items];pts=np.asarray([p for ch,p in items],float);n=len(chs)
+            size=1<<n;D=np.linalg.norm(pts[:,None,:]-pts[None,:,:],axis=2);d0=np.linalg.norm(pts-np.asarray(self.c.position,float),axis=1)
+            dp=np.full((size,n),np.inf);par=np.full((size,n),-1,np.int16)
+            for i in range(n):dp[1<<i,i]=d0[i]
+            for mask in range(1,size):
+                for i in range(n):
+                    if not (mask>>i)&1:continue
+                    prev=mask^(1<<i)
+                    if prev==0:continue
+                    js=[j for j in range(n) if (prev>>j)&1]
+                    vals=[dp[prev,j]+D[j,i] for j in js];k=int(np.argmin(vals));dp[mask,i]=vals[k];par[mask,i]=js[k]
+            mask=size-1
