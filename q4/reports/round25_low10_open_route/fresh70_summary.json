@@ -1,0 +1,25 @@
+{
+  "elapsed_wall_s": 419.6030035018921,
+  "results": [
+    {
+      "variant": "iter_086_low10_skipboot7",
+      "mean_s_per_source": 323.42139669091443,
+      "all_clear": "70/70",
+      "source_clear_rate": 1.0,
+      "n10_mean_s_per_source": 428.2907214359786,
+      "n10_all_clear": "10/10",
+      "n16_mean_s_per_source": 215.83365716651707,
+      "n16_all_clear": "10/10"
+    },
+    {
+      "variant": "iter_089_low10_center6_boot4",
+      "mean_s_per_source": 309.32151314354087,
+      "all_clear": "70/70",
+      "source_clear_rate": 1.0,
+      "n10_mean_s_per_source": 393.66228695447114,
+      "n10_all_clear": "10/10",
+      "n16_mean_s_per_source": 212.83840090227483,
+      "n16_all_clear": "10/10"
+    }
+  ]
+}

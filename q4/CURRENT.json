@@ -97,5 +97,18 @@
   "round24_baseline_mean_s_per_source": 340.3324939215928,
   "round24_delta_vs_iter084_s_per_source": -17.0767132625121,
   "round24_report": "reports/round24_fast085_screen/round24_progress_CN.md",
-  "current_fast_experimental_candidate": "iter_086_low10_skipboot7"
+  "current_fast_experimental_candidate": "iter_089_low10_center6_boot4",
+  "round25_status": "fresh70_screen_passed_not_formal_test",
+  "round25_latest_iteration": "iter_089_low10_center6_boot4",
+  "round25_baseline_iteration": "iter_086_low10_skipboot7",
+  "round25_candidate_mean_s_per_source": 309.32151314354087,
+  "round25_candidate_all_clear": "70/70",
+  "round25_candidate_source_clear_rate": 1.0,
+  "round25_candidate_n10_mean_s_per_source": 393.66228695447114,
+  "round25_candidate_n10_all_clear": "10/10",
+  "round25_candidate_n16_mean_s_per_source": 212.83840090227483,
+  "round25_candidate_n16_all_clear": "10/10",
+  "round25_baseline_mean_s_per_source": 323.42139669091443,
+  "round25_delta_vs_iter086_s_per_source": -14.099883547373565,
+  "round25_report": "reports/round25_low10_open_route/round25_progress_CN.md"
 }
