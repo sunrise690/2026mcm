@@ -1,0 +1,125 @@
+from __future__ import annotations
+import math
+import numpy as np
+
+REGION=1800.0
+RMIN=1000.0; RMAX=1500.0
+MAXN=16
+
+def angle_diff(a,b):
+    return np.abs((a-b+180.0)%360.0-180.0)
+
+class ParticleBelief:
+    def __init__(self,ch:int,n:int=24000):
+        self.ch=ch; self.n=n; self.rng=np.random.default_rng(880301+ch*10007)
+        self.hist=[]; self.X=None; self.status='unknown'; self.clear_fail=[]
+    def add(self,p,res,bearing=None):
+        p=np.asarray(p,float); self.hist.append((p,res,bearing))
+        if res=='direction': self.status='detected'
+        if self.X is None:
+            if any(h[1]=='direction' for h in self.hist): self.rebuild(self.n)
+        else:
+            self._apply(self.hist[-1])
+            if len(self.X)<250: self.rebuild(max(self.n,50000))
+    def add_clear_fail(self,p):
+        p=np.asarray(p,float); self.clear_fail.append(p)
+        if self.X is not None and len(self.X):
+            d=np.linalg.norm(self.X[:,:2]-p,axis=1); self.X=self.X[d>19.9]
+            if len(self.X)<250:self.rebuild(max(self.n,50000))
+    def rebuild(self,n=None):
+        n=self.n if n is None else n
+        first=next((h for h in self.hist if h[1]=='direction'),None)
+        if first is None:return
+        s,_,th=first; chunks=[]; total=0; tries=0
+        while total<n and tries<30:
+            tries+=1; m=max(20000,n-total)
+            t=RMAX*np.sqrt(self.rng.random(m)); loR=np.maximum(RMIN,t)
+            acc=self.rng.random(m) <= np.maximum(0.0,(RMAX-loR)/(RMAX-RMIN))
+            ang=np.radians(th+self.rng.uniform(-1.0,1.0,m))
+            x=s[0]+t*np.cos(ang); y=s[1]+t*np.sin(ang)
+            acc &= x*x+y*y <= REGION**2
+            ii=np.where(acc)[0]
+            if len(ii):
+                lr=loR[ii];rr=lr+self.rng.random(len(ii))*(RMAX-lr)
+                z=np.c_[x[ii],y[ii],rr];chunks.append(z);total+=len(z)
+        if not chunks:
+            self.X=np.empty((0,3));return
+        self.X=np.vstack(chunks)[:n]
+        skipped=False
+        for h in self.hist:
+            if not skipped and h is first:
+                skipped=True;continue
+            self._apply(h,rebuild=False)
+            if self.X is None or len(self.X)==0:break
+        for q in self.clear_fail:
+            if self.X is not None and len(self.X):
+                d=np.linalg.norm(self.X[:,:2]-q,axis=1);self.X=self.X[d>19.9]
+    def _apply(self,h,rebuild=False):
+        if self.X is None or len(self.X)==0:return
+        p,res,th=h;d=np.linalg.norm(self.X[:,:2]-p,axis=1)
+        if res=='no_signal': m=d>self.X[:,2]
+        elif res=='near': m=d<=20
+        elif res=='direction':
+            pred=np.degrees(np.arctan2(self.X[:,1]-p[1],self.X[:,0]-p[0]))%360;m=(d<=self.X[:,2])&(angle_diff(pred,th)<=1.02)
+        else:return
+        self.X=self.X[m]
+    def estimate(self):
+        if self.X is None or len(self.X)==0:
+            dirs=[h for h in self.hist if h[1]=='direction']
+            if not dirs:return None,9999.0
+            if len(dirs)>=2:
+                A=[];y=[]
+                for p,_,th in dirs:
+                    a=math.radians(float(th));e=np.array([math.cos(a),math.sin(a)]);n=np.array([-e[1],e[0]])
+                    A.append(n);y.append(float(np.dot(n,p)))
+                A=np.asarray(A,float);y=np.asarray(y,float)
+                try:
+                    est=np.linalg.lstsq(A,y,rcond=None)[0]
+                    nr=float(np.linalg.norm(est))
+                    if nr>REGION:est*=REGION/nr
+                    cross=0.0
+                    for i in range(len(dirs)):
+                        ai=math.radians(float(dirs[i][2]));ei=np.array([math.cos(ai),math.sin(ai)])
+                        for j in range(i):
+                            aj=math.radians(float(dirs[j][2]));ej=np.array([math.cos(aj),math.sin(aj)])
+                            cross=max(cross,abs(float(ei[0]*ej[1]-ei[1]*ej[0])))
+                    return np.asarray(est,float), max(35.0,120.0*(0.35/max(0.12,cross)))
+                except Exception:
+                    pass
+            p,_,th=dirs[0];a=math.radians(float(th));return p+850*np.array([math.cos(a),math.sin(a)]),600.0
+        xy=self.X[:,:2];c=np.median(xy,axis=0);r=np.percentile(np.linalg.norm(xy-c,axis=1),90);return c,float(r)
+    def signal_prob(self,p):
+        if self.X is None or len(self.X)==0:return 0.4
+        p=np.asarray(p,float);d=np.linalg.norm(self.X[:,:2]-p,axis=1);return float(np.mean(d<=self.X[:,2]))
+    def expected_cross(self,p):
+        if not self.hist:return 0.0
+        dirs=[h for h in self.hist if h[1]=='direction']
+        if not dirs:return 0.0
+        est,_=self.estimate();p=np.asarray(p,float);v=est-p;nv=np.linalg.norm(v)
+        if nv<1:return 1.0
+        u=v/nv;best=0
+        for s,_,th in dirs:
+            a=math.radians(float(th));e=np.array([math.cos(a),math.sin(a)])
+            best=max(best,abs(float(e[0]*u[1]-e[1]*u[0])))
+        return best
+
+class Coverage:
+    def __init__(self,h=45.0):
+        xs=np.arange(-REGION,REGION+h,h);xx,yy=np.meshgrid(xs,xs,indexing='xy');p=np.c_[xx.ravel(),yy.ravel()]
+        self.p=p[np.linalg.norm(p,axis=1)<=REGION];self.c=np.zeros(len(self.p),bool);self.points=[];self.d2=np.full(len(self.p),np.inf)
+    def add(self,p):
+        p=np.asarray(p,float);self.points.append(p.copy());dd=np.sum((self.p-p)**2,axis=1);self.d2=np.minimum(self.d2,dd);self.c|=(dd<=1000.0**2)
+    def gain(self,p):
+        p=np.asarray(p,float);h=np.sum((self.p-p)**2,axis=1)<=1000.0**2;return int(np.count_nonzero(h&~self.c))
+    def frac(self):return float(np.mean(self.c))
+    def expected_detect(self):
+        d=np.sqrt(self.d2);q=np.zeros(len(d));q[d<=1000]=1.0;m=(d>1000)&(d<1500);q[m]=(1500-d[m])/500.0;return float(np.mean(q))
+    def miss_weight(self):
+        d=np.sqrt(self.d2);w=np.ones(len(d));w[d<=1000]=0.0;m=(d>1000)&(d<1500);w[m]=(d[m]-1000.0)/500.0;return w
+    def conditional_detect(self,p):
+        p=np.asarray(p,float);dprev=np.sqrt(self.d2);w=self.miss_weight();den=float(np.sum(w))
+        if den<=1e-9:return 0.0
+        dn=np.linalg.norm(self.p-p,axis=1)
+        hi=np.minimum(dprev,1500.0);lo=np.maximum(dn,1000.0)
+        joint=np.maximum(0.0,hi-lo)/500.0
+        return float(np.sum(joint)/den)
