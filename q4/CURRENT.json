@@ -1,0 +1,31 @@
+{
+  "status": "experimental_target_not_met",
+  "current_reliability_candidate": "iter_009_no_outward_budget2",
+  "speed_candidate": "iter_001_outer_route",
+  "baseline": "iter_000_base",
+  "default_offline_version": "outer_route",
+  "validation_cases": 140,
+  "formal_submission_ready": false,
+  "remaining_failures": [
+    50020,
+    50025,
+    50057
+  ],
+  "speed_target_s_per_source": 350.0,
+  "speed_target_met": false,
+  "round2_status": "evaluated_target_not_met",
+  "round3_status": "screened_target_not_met",
+  "round3_latest_iteration": "iter_028_batch2_risk85",
+  "round3_best_screen_mean_s_per_source": 385.7371944659512,
+  "round3_best_screen_all_clear": "19/30",
+  "round3_report": "reports/round3_progress_CN.md",
+  "github_versions_committed_through": "iter_028_batch2_risk85",
+  "github_branch": "main",
+  "default_change_reason": "用户明确要求恢复速度优先；迭代003可靠性版不再作为默认。",
+  "round2_report": "reports/round2_report_CN.md",
+  "new_balanced_candidate": "iter_009_no_outward_budget2",
+  "previous_reliability_candidate": "iter_003_full_posterior",
+  "reliability_candidate_mean_s_per_source": 509.26872379843365,
+  "reliability_candidate_all_clear": "133/140",
+  "remaining_failures_note": "各版本新140失败列表见round2报告；旧列表仅第一轮记录"
+}
