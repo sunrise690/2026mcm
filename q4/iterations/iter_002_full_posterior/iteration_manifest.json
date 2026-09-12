@@ -1,0 +1,97 @@
+{
+  "iteration": "iter_002_full_posterior",
+  "parent": "iter_001_outer_route",
+  "status": "稀疏后验实验；尾部粒子不足，未选为最终冻结候选",
+  "code_sha256": {
+    "__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "live_q4.py": "6f21e853bb6ae0b62cf64b8061f5f93e90e29baf1c69fc5d63cb56d4fc49494d",
+    "live_runner.py": "c50c9037565828ea5f44891e6453799572b250f1b34e9f4df6558ef6497eb230",
+    "params.py": "2460bab32b2cba2149818903e5eb779311ed54f71e59aae8a6d293b130bde0ad",
+    "q4_targeted_rescue_v3.py": "697b7a8b38c8491e846dc9a48eb45eee6e53aeaffcb9d88cb99f30d3ae4355c2",
+    "sim_engine.py": "bf11e2c698b8a34472c5448f880c236f88280981384b6d6228416220d388ee0a",
+    "utils.py": "b0e16bb7e7666c7a786c84d5b9956f45c10664da1e202b95851fb7b68cd50090"
+  },
+  "matches_tested_hashes": {
+    "1005": true,
+    "1006": true,
+    "1008": true,
+    "1011": true,
+    "1015": true,
+    "1021": true,
+    "1023": true
+  },
+  "changes": [
+    "完整圆盘统一补查代替观测计数13/14的外圈先验",
+    "最多4次条件化后验探针",
+    "travel_penalty固定0.00015"
+  ],
+  "particle_count": 20000,
+  "tested_reports": "C:\\Users\\1\\Desktop\\B0\\q4_iterations\\reports\\iter002_anomalies4",
+  "cases": [
+    {
+      "seed": 1005,
+      "n": 16,
+      "cleared": 16,
+      "all_clear": true,
+      "average_clear_time_s": 353.261569125,
+      "measure_count": 142,
+      "clear_failure_count": 34
+    },
+    {
+      "seed": 1006,
+      "n": 14,
+      "cleared": 14,
+      "all_clear": true,
+      "average_clear_time_s": 536.0022428571428,
+      "measure_count": 221,
+      "clear_failure_count": 9
+    },
+    {
+      "seed": 1008,
+      "n": 14,
+      "cleared": 14,
+      "all_clear": true,
+      "average_clear_time_s": 564.6649151428571,
+      "measure_count": 240,
+      "clear_failure_count": 19
+    },
+    {
+      "seed": 1011,
+      "n": 14,
+      "cleared": 13,
+      "all_clear": false,
+      "average_clear_time_s": 660.6365026153846,
+      "measure_count": 238,
+      "clear_failure_count": 37
+    },
+    {
+      "seed": 1015,
+      "n": 11,
+      "cleared": 11,
+      "all_clear": true,
+      "average_clear_time_s": 736.4765020909091,
+      "measure_count": 279,
+      "clear_failure_count": 14
+    },
+    {
+      "seed": 1021,
+      "n": 14,
+      "cleared": 14,
+      "all_clear": true,
+      "average_clear_time_s": 602.6895085,
+      "measure_count": 221,
+      "clear_failure_count": 9
+    },
+    {
+      "seed": 1023,
+      "n": 14,
+      "cleared": 14,
+      "all_clear": true,
+      "average_clear_time_s": 595.6106818571428,
+      "measure_count": 241,
+      "clear_failure_count": 43
+    }
+  ],
+  "known_cost": "四次尾部补查增加部分已全清样本的移动与测量耗时；有限后验补查不证明完备性。",
+  "leakage_audit": "仅开发异常样本用于调试；代码不读取真值、种子、真实N；独立70未读取。"
+}
