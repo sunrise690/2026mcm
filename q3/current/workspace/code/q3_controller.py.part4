@@ -1,0 +1,121 @@
+        if not len(idx):return []
+        pts=self.cover.p;cur=np.asarray(current,float);cand=[]
+        # Always retain the original v142 greedy point: this prevents lookahead
+        # from throwing away a strong one-step finishing action.
+        g,_=self.cover.best_posterior_probe(cur)
+        if g is not None:cand.append(np.asarray(g,float))
+        # Posterior-hot candidates, spread through the ordered support.
+        order=idx[np.argsort(w[idx])[::-1]]
+        if len(order)>max_pool:
+            step=max(1,len(order)//max_pool);order=order[::step][:max_pool]
+        cand.extend(pts[i].copy() for i in order)
+        # Nearby high-posterior actions matter because a survey has a fixed scan cost.
+        near=idx[np.argsort(np.sum((pts[idx]-cur)**2,axis=1))[:24]]
+        cand.extend(pts[i].copy() for i in near)
+        den=float(np.sum(w))
+        if den>1e-9:
+            cen=np.average(pts,axis=0,weights=w)
+            if np.linalg.norm(cen)<=REGION:cand.append(np.asarray(cen,float))
+        out=[];seen=set()
+        for q in cand:
+            key=(int(round(float(q[0])/15)),int(round(float(q[1])/15)))
+            if key not in seen:seen.add(key);out.append(np.asarray(q,float))
+        return out
+    def _q_after_probe(self,p):
+        d2=np.minimum(self.cover.d2,np.sum((self.cover.p-np.asarray(p,float))**2,axis=1))
+        d=np.sqrt(d2);q=np.zeros(len(d));q[d<=1000.0]=1.0;m=(d>1000.0)&(d<1500.0);q[m]=(1500.0-d[m])/500.0
+        return float(np.mean(q))
+    def exploration_point(self):
+        cur=np.asarray(self.c.position,float);k=self.known()
+        # Before ten discoveries the count posterior is intentionally inactive;
+        # keep the original strong maximum-detection geometry.
+        if k<10:
+            p,_=self.cover.best_posterior_probe(cur);return p
+        cand=self._explore_candidates(cur)
+        if not cand:return None
+        thr=self.stop_threshold(k);ps0=self.posterior_same_count();m=len(self.unknown())
+        scan_s=5.0*m+max(0,m-1)
+        rec=[]
+        for p in cand:
+            dist=float(np.linalg.norm(p-cur));cost=dist/5.0+scan_s
+            q1=self._q_after_probe(p);ps1=self._posterior_same_at_q(k,q1)
+            pd=self.cover.conditional_detect(p)
+            rec.append((p,dist,cost,q1,ps1,pd))
+        # If one survey can finish, do not choose a cheap but low-detection point:
+        # retain candidates close to the best hidden-source hit probability, then
+        # take the cheapest of that statistically safe set.
+        finish=[r for r in rec if r[4]>=thr]
+        if finish:
+            maxpd=max(r[5] for r in finish)
+            # Near the upper source-count bound, missing one source is much more
+            # expensive than a modest detour. Tighten the admissible loss in
+            # hidden-source detection probability as k approaches 16.
+            gap=0.01 if k>=15 else (0.05 if k>=14 else 0.10)
+            safe=[r for r in finish if r[5]>=maxpd-gap]
+            return min(safe,key=lambda r:(r[2],-r[5],-r[4]))[0]
+        # Otherwise maximize posterior progress per virtual second.
+        def utility(r):
+            gain=max(0.0,r[4]-ps0)
+            return gain/max(1.0,r[2]) + 0.00012*gain
+        best=max(rec,key=lambda r:(utility(r),r[4],r[5],-r[2]))
+        return best[0]
+    def posterior_same_count(self):
+        k=self.known()
+        if k<10:return 0.0
+        q=max(1e-6,min(1-1e-9,self.cover.expected_detect()))
+        ws=[]
+        for n in range(k,17):
+            w=math.comb(n,k)*(q**k)*((1-q)**(n-k));ws.append((n,w))
+        z=sum(w for _,w in ws)
+        return 0.0 if z<=0 else ws[0][1]/z
+    def stop_threshold(self,k=None):
+        k=self.known() if k is None else int(k)
+        if k<=10:return 0.74
+        if k==11:return 0.78
+        if k==12:return 0.81
+        if k==13:return 0.83
+        return 0.85
+    def coverage_done(self):return self.cover.expected_detect()>=0.997
+    def run(self):
+        entered=self.c.enter()
+        print("="*62,flush=True)
+        print("Q3 自动定位清除程序 v154（11源后终点感知版）",flush=True)
+        remain=entered.get('remaining_real_duration_s') if isinstance(entered,dict) else None
+        if isinstance(remain,(int,float)):print(f"[连接] 已进入问题3测试，真实时间剩余 {float(remain):.0f}s",flush=True)
+        else:print("[连接] /enter 成功，开始执行 Q3",flush=True)
+        print("="*62,flush=True)
+        try:
+            self.scan_unknown(np.zeros(2))
+            p=self.bootstrap_point();print(f"[启动] 第二测站选择 {self._pos(p)}",flush=True);self.scan_unknown(p);self.scan_info(p,limit=8)
+            for step in range(120):
+                k=self.known();ps=self.posterior_same_count();thr=self.stop_threshold(k)
+                soft_done=(k>=10 and len(self.cleared)>=9 and ps>=thr);hard_done=(k>=16);discovery_done=hard_done or soft_done
+                detected=[(ch,b.estimate()[0]) for ch,b in self.B.items() if ch not in self.cleared and b.status=='detected' and b.estimate()[0] is not None]
+                if detected:
+                    kind,ch,p=self.joint_next(detected,soft_done=discovery_done)
+                    if kind=='probe':
+                        print(f"[探索] 插入后验探测点 {self._pos(p)}，继续寻找未发现源",flush=True)
+                        self.scan_unknown(p);self.scan_info(p,limit=5);continue
+                    self.service(ch);q=np.asarray(self.c.position,float)
+                    if not hard_done and not soft_done:
+                        pd=self.cover.conditional_detect(q);thscan=0.08 if self.known()>=14 else (0.11 if self.known()>=12 else 0.15)
+                        if pd>=thscan:
+                            print(f"[顺路普查] 当前清除点仍有发现隐藏源价值 P≈{pd:.2f}",flush=True)
+                            self.scan_unknown(q)
+                    self.scan_info(q,limit=2 if self.known()<13 else 4)
+                    continue
+                if discovery_done:
+                    print(f"[结束判据] 当前无待清源，发现阶段判定完成 | {self._progress()}",flush=True);break
+                ep=self.exploration_point()
+                if ep is None:
+                    print("[结束判据] 无可用后验探测点，结束搜索",flush=True);break
+                print(f"[探索] 无待清源，前往后验热点 {self._pos(ep)}",flush=True)
+                self.scan_unknown(ep);self.scan_info(ep,limit=5)
+            print(f"[主程序完成] {self._progress()}",flush=True)
+            return len(self.cleared)
+        finally:
+            body=self.c.exit()
+            reason=body.get('exit_reason') if isinstance(body,dict) else None
+            print(f"[退出] 已发送 /exit"+(f"，原因={reason}" if reason is not None else ""),flush=True)
+
+def run_q3_particle(client):return Q3ParticleController(client).run()
