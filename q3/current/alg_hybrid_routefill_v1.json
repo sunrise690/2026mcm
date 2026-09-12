@@ -1,0 +1,28 @@
+{
+  "controller": "tunable",
+  "tune": {
+    "particle_n": 32000,
+    "particle_rebuild_n": 64000,
+    "stop_thr_13": 0.9,
+    "service_waypoint": 1,
+    "service_waypoint_min_prob": 0.4,
+    "service_waypoint_cross_weight": 300,
+    "service_waypoint_prob_weight": 100,
+    "adaptive_bootstrap_info": 1,
+    "scan_info_score_thr": 0.3,
+    "service_uncertainty_trigger": 80,
+    "stop_thr_10": 0.58,
+    "stop_thr_11": 0.68,
+    "stop_thr_12": 0.75,
+    "service_waypoint_detour_weight": 1.5,
+    "service_aware_route": 1,
+    "service_aware_uncertainty_scale": 0.8,
+    "hard_done_info_limit": 1,
+    "bootstrap_sparse_radii": [650, 800, 950],
+    "bootstrap_sparse_max_known": 3,
+    "adaptive_route_scan": 1,
+    "adaptive_route_scan_min_known": 0,
+    "adaptive_route_scan_max_known": 9,
+    "route_scan_value_s": 500
+  }
+}
