@@ -1,0 +1,23 @@
+{
+  "version": "20260912_2141",
+  "reports": {
+    "coverage_audit": {
+      "tests_run": 14,
+      "passed": true,
+      "network_requests_sent": 0,
+      "simulator_used": false,
+      "scope": "连续闭圆覆盖证书、accepted响应和完成判据回归"
+    },
+    "simulator_audit": {
+      "tests_run": 18,
+      "passed": true,
+      "network_requests_sent": 0,
+      "scope": "离线模拟器、观测封装、参数边界、Windows子进程超时和计时分母"
+    }
+  },
+  "limitations": [
+    "离线模拟器内部一致性通过不等于官方正式测试场景一致",
+    "planned版本优先保证全清，验证集速度仍慢于baseline",
+    "本版本未宣称官方正式测试成绩"
+  ]
+}

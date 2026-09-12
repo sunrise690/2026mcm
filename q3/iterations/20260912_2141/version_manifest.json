@@ -1,0 +1,31 @@
+{
+  "version": "20260912_2141",
+  "problem": 3,
+  "offline": true,
+  "source": "C:/Users/1/Desktop/B0/q3_iterations/release_20260912_2141",
+  "validation": {
+    "train_cases": 35,
+    "validation_cases": 35,
+    "baseline_train_fullclear": "34/35",
+    "complete_train_fullclear": "35/35",
+    "planned_train_fullclear": "35/35",
+    "baseline_validation_mean_s_per_source": 246.71416805102922,
+    "complete_validation_mean_s_per_source": 379.0547878957535,
+    "planned_validation_mean_s_per_source": 358.33704643964774,
+    "planned_validation_p90_s_per_source": 455.47445113030307
+  },
+  "artifacts": [
+    "src/baseline_commit10.py",
+    "src/q3_complete_controller.py",
+    "src/q3_efficient_controller.py",
+    "src/q3_planned_controller.py",
+    "src/run_local.py",
+    "configs/*_seeds.json",
+    "reports/version_20260912_2141_validation.json",
+    "reports/simulator_audit.json",
+    "reports/coverage_audit.json",
+    "tests/test_offline_contract.py",
+    "tests/test_coverage_certificate.py"
+  ],
+  "next_iteration_rule": "每个可运行候选单独提交，保留训练/验证结果和源码哈希；不得把在线正式测试结果伪称为离线结果。"
+}
