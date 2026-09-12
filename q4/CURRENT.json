@@ -53,7 +53,12 @@
   "stable_speed_holdout_source_clear_rate": 0.9697802197802198,
   "stable_speed_fresh70_mean_s_per_source": 410.5351852615955,
   "stable_speed_fresh70_all_clear": "44/70",
-  "round20_status": "screened_iter068_holdout_pending",
+  "round20_status": "holdout_rejected_reliability_loss",
   "round20_latest_iteration": "iter_068_single_bearing_rescan",
-  "github_remote_head": "50e3f308a3c2945366d081c236f2330dcda02c29"
+  "round20_holdout_mean_s_per_source": 401.0193052669031,
+  "round20_holdout_all_clear": "99/140",
+  "round20_holdout_source_clear_rate": 0.9675824175824176,
+  "round20_holdout_new_failures": 3,
+  "round20_holdout_rescued_cases": 1,
+  "github_remote_head": "6508e6b8fb23f854d69882a277a877512aaff4b3"
 }
