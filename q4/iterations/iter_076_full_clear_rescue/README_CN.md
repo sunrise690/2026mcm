@@ -1,31 +1,85 @@
 # iter_076_full_clear_rescue
 
-目标：在用户允许约 360 s/source 的时间预算下，优先提高第四问全清率。
+这是第四问当前的**完整可运行实验候选**。不覆盖 `q4/CURRENT.json`。
 
-## 35-case 离线验证
+## 已复现 35-case 结果
 
-- 平均时间：358.339572 s/source
-- 总清除：436 / 455 = 95.8242%
-- 完全清除：25 / 35 = 71.4286%
-- 验证种子：950000..950034
-- N：10 + i % 7
-- directional_fraction：(i % 5) / 4
+- 平均时间：`358.339572 s/source`
+- 总清除：`436 / 455 = 95.8242%`
+- 完全清除：`25 / 35 = 71.4286%`
+- seeds：`950000..950034`
+- `N = 10 + i % 7`
+- `directional_fraction = (i % 5) / 4`
 
-## 相对 iter_075
+## 一键运行
 
-iter_075：346.71 s/source，430/455。
+进入本目录后：
 
-iter_076 在仍低于 360 s/source 的条件下，多清除 6 个源，并把重点转向全清率。
+```bash
+python run_iter076.py
+```
 
-## 关键改动
+`run_iter076.py` 会自动解压 `iter076_source_bundle.zip` 到本目录的 `workspace/`，然后执行：
 
-1. 启动三点采用 0° / 120° / 240°，启动半径从 525 m 微调为 520 m。
-2. 保留延后第 5 点与清除目标联合路线，route_lambda = 0.000472。
-3. unknown rescan gate = 426 m。
-4. 第二救援采用 1225 m 外圈定向后验点，tail travel penalty = 0.00012。
-5. 当 found <= 10 时允许第三救援；第三救援专门补东北外圈盲区：r = 1800 m, angle = 40°。
-6. second_if = 12；第三救援只用于高风险低发现数案例。
+```bash
+python workspace/code/benchmark_iter076.py
+```
 
-## 状态
+首次运行前如缺依赖：
 
-实验候选，不覆盖 q4/CURRENT.json。下一步继续分析剩余 10 个未全清案例，目标 26/35 以上，同时保持均值 <= 360 s/source。
+```bash
+python -m pip install -r workspace/code/requirements.txt
+```
+
+也可以手动解压源码包后运行：
+
+```bash
+unzip iter076_source_bundle.zip
+cd workspace
+python -m pip install -r code/requirements.txt
+python code/benchmark_iter076.py
+```
+
+运行后会生成：
+
+```text
+workspace/iter076_validation.csv
+```
+
+## 源码包内容
+
+`iter076_source_bundle.zip` 内含完整复现实验所需文件：
+
+- `workspace/PROBLEM_FACTS.json`
+- `workspace/code/params.py`
+- `workspace/code/utils.py`
+- `workspace/code/sim_engine.py`
+- `workspace/code/deferred_proto.py`
+- `workspace/code/iter076_policy.py`
+- `workspace/code/benchmark_iter076.py`
+- `workspace/code/requirements.txt`
+- `workspace/iter076_validation.csv`
+
+源码包 SHA256：
+
+```text
+73a3027f7f26f762cc5259968539237c57227e088f345e46a0b860d6de034757
+```
+
+## 冻结参数
+
+```python
+radius = 520
+startup_angles = (0, 120, 240)
+radii = (525, 1700)       # 延后第 5 点候选半径集合
+route_lambda = 0.000472
+unknown_gate = 426
+second_if = 12
+tail_ring_radius = 1225
+tail_travel_penalty = 0.00012
+third_if = 10
+third_radius = 1800
+third_angle = 40
+```
+
+之前只提交 README 时漏写了 `radii=(525,1700)`，导致无法复现 358.34；本版本已补齐完整源码包、运行入口和精确参数，指标以 `benchmark_iter076.py` 的实际输出为准。
