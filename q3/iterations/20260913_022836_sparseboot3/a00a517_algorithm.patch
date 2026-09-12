@@ -1,0 +1,97 @@
+diff --git a/q3/current/README_latest.md b/q3/current/README_latest.md
+index 1dd0872..01de99a 100644
+--- a/q3/current/README_latest.md
++++ b/q3/current/README_latest.md
+@@ -1,21 +1,21 @@
+-# Q3 iteration 20260913_021027_hardinfo1
++# Q3 iteration 20260913_022836_sparseboot3
+ 
+ 离线模拟器固定验证集 35 例，N=10–16 各 5 例，35/35 全清。
+ 
+-- 总平均：233.9378363376 秒/源（上一最佳 233.9614097465）
+-- P90：291.1748087400 秒/源
++- 总平均：232.1959708980 秒/源（上一最佳 233.9378363376）
++- P90：269.9416631782 秒/源
+ - N10：289.4778319600
+-- N11：259.8575915636
+-- N12：241.7033059833
++- N11：250.5917666364
++- N12：238.7760728333
+ - N13：221.1150505692
+ - N14：218.5426781429
+ - N15：206.0305273067
+ - N16：200.8378688375
+ 
+-核心变化：当 16 个源已经全部发现时，将每次清除后的定位补测预算从最多 4 次降到 1 次。此时不存在继续发现未知源的需要，保留一次高价值交会补测即可；完整验证中 N16 平均降低 0.1650138625 秒/源，其他 N 不受影响。
++核心变化：原点普查只发现不超过 3 个源时，第二测站候选半径由 `[700,900,1100]` 自适应切换到 `[650,800,950]`。该判据只依赖当时可观测的发现数，不读取真实源数。稀疏发现局获得更合适的交会与覆盖几何，完整验证中 N11、N12 分别降低 9.266 和 2.927 秒/源。
+ 
+ 评测命令：
+ 
+ ```powershell
+-python -B q3_iterations/src/run_local.py --variants alg_hardinfo1 --seed-file q3_iterations/configs/validation_seeds.json --workers 4 --label hardinfo1_full_validation
++python -B q3_iterations/src/run_local.py --variants alg_sparseboot3 --seed-file q3_iterations/configs/validation_seeds.json --workers 4 --label sparse_bootstrap_full
+ ```
+diff --git a/q3/current/alg_sparseboot3.json b/q3/current/alg_sparseboot3.json
+new file mode 100644
+index 0000000..269bf8e
+--- /dev/null
++++ b/q3/current/alg_sparseboot3.json
+@@ -0,0 +1,30 @@
++{
++  "controller": "tunable",
++  "tune": {
++    "particle_n": 32000,
++    "particle_rebuild_n": 64000,
++    "adaptive_route_scan": 1,
++    "route_scan_value_s": 900,
++    "stop_thr_13": 0.9,
++    "service_waypoint": 1,
++    "service_waypoint_min_prob": 0.4,
++    "service_waypoint_cross_weight": 300,
++    "service_waypoint_prob_weight": 100,
++    "adaptive_bootstrap_info": 1,
++    "scan_info_score_thr": 0.3,
++    "service_uncertainty_trigger": 80,
++    "stop_thr_10": 0.58,
++    "stop_thr_11": 0.68,
++    "stop_thr_12": 0.75,
++    "service_waypoint_detour_weight": 1.5,
++    "service_aware_route": 1,
++    "service_aware_uncertainty_scale": 0.8,
++    "hard_done_info_limit": 1,
++    "bootstrap_sparse_radii": [
++      650,
++      800,
++      950
++    ],
++    "bootstrap_sparse_max_known": 3
++  }
++}
+diff --git a/q3/current/tunable_controller.py b/q3/current/tunable_controller.py
+index 4b11b42..6d76ce4 100644
+--- a/q3/current/tunable_controller.py
++++ b/q3/current/tunable_controller.py
+@@ -93,6 +93,8 @@ DEFAULT_TUNE = {
+     "risk_empty_probe_limit": 1,
+     "risk_empty_probe_max_known": 12,
+     "bootstrap_radii": [700,900,1100],
++    "bootstrap_sparse_radii": [700,900,1100],
++    "bootstrap_sparse_max_known": -1,
+     "bootstrap_unknown_scan": 1,
+     "bootstrap_first_source_w": 0.0,
+     "route_end_explore": 0,
+@@ -338,7 +340,8 @@ class Q3ParticleController:
+     def bootstrap_point(self):
+         best=None;cur=np.asarray(self.c.position,float)
+         source_est=[b.estimate()[0] for b in self.B.values() if b.status=='detected' and b.estimate()[0] is not None]
+-        for r in self.g("bootstrap_radii"):
++        radii=self.g("bootstrap_sparse_radii") if self.known()<=int(self.g("bootstrap_sparse_max_known")) else self.g("bootstrap_radii")
++        for r in radii:
+             n=24
+             for k in range(n):
+                 p=r*np.array([math.cos(2*math.pi*k/n),math.sin(2*math.pi*k/n)])
+@@ -869,3 +872,4 @@ class Q3ParticleController:
+ def run_q3_particle(client):return Q3ParticleController(client).run()
+ 
+ 
++
