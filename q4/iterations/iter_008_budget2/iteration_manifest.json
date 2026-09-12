@@ -1,0 +1,7 @@
+{
+  "parent": "iter_003_full_posterior",
+  "version": "v393-budget2",
+  "tail_budget": 2,
+  "outward_budget": 2,
+  "status": "development_candidate"
+}
