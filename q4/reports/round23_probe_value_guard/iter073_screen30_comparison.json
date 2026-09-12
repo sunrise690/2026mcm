@@ -1,0 +1,293 @@
+{
+  "scope": "本地练习分布离线模拟；同一批种子配对；均值分母为已清源数，必须与全清率一起阅读",
+  "variants": {
+    "q4_iterations\\iter_071_mec20_rescan_gate\\workspace\\code": {
+      "overall": {
+        "runs": 30,
+        "all_clear_runs": 20,
+        "all_clear_rate": 0.6666666666666666,
+        "source_clear_rate": 0.9562043795620438,
+        "mean_s_per_cleared_source": 385.8882816078015,
+        "all_clear_only_mean_s_per_source": 373.047871287023,
+        "p95_s_per_cleared_source": 510.29393917499993,
+        "max_s_per_cleared_source": 549.3022882222223,
+        "mean_move_s": 3555.1292953333327,
+        "mean_measure_count": 202.06666666666666,
+        "mean_clear_failures": 25.866666666666667,
+        "errors": 0,
+        "all_accounting_checks_pass": true
+      },
+      "by_n": {
+        "10": {
+          "runs": 2,
+          "all_clear_runs": 2,
+          "all_clear_rate": 1.0,
+          "source_clear_rate": 1.0,
+          "mean_s_per_cleared_source": 490.32349884999996,
+          "all_clear_only_mean_s_per_source": 490.32349884999996,
+          "p95_s_per_cleared_source": 497.694596815,
+          "max_s_per_cleared_source": 498.5136077,
+          "mean_move_s": 3432.7349885000003,
+          "mean_measure_count": 228.0,
+          "mean_clear_failures": 21.0,
+          "errors": 0,
+          "all_accounting_checks_pass": true
+        },
+        "11": {
+          "runs": 4,
+          "all_clear_runs": 2,
+          "all_clear_rate": 0.5,
+          "source_clear_rate": 0.9318181818181818,
+          "mean_s_per_cleared_source": 493.94967853737376,
+          "all_clear_only_mean_s_per_source": 453.2820168636364,
+          "p95_s_per_cleared_source": 544.8968038188889,
+          "max_s_per_cleared_source": 549.3022882222223,
+          "mean_move_s": 3434.31222175,
+          "mean_measure_count": 248.75,
+          "mean_clear_failures": 21.0,
+          "errors": 0,
+          "all_accounting_checks_pass": true
+        },
+        "12": {
+          "runs": 3,
+          "all_clear_runs": 2,
+          "all_clear_rate": 0.6666666666666666,
+          "source_clear_rate": 0.9444444444444444,
+          "mean_s_per_cleared_source": 452.3121847722222,
+          "all_clear_only_mean_s_per_source": 435.01605720833334,
+          "p95_s_per_cleared_source": 493.423087415,
+          "max_s_per_cleared_source": 494.1473815833333,
+          "mean_move_s": 3587.4765906666667,
+          "mean_measure_count": 225.33333333333334,
+          "mean_clear_failures": 40.333333333333336,
+          "errors": 0,
+          "all_accounting_checks_pass": true
+        },
+        "13": {
+          "runs": 4,
+          "all_clear_runs": 3,
+          "all_clear_rate": 0.75,
+          "source_clear_rate": 0.9615384615384616,
+          "mean_s_per_cleared_source": 406.3980230734266,
+          "all_clear_only_mean_s_per_source": 381.69587379487183,
+          "p95_s_per_cleared_source": 470.0094597842657,
+          "max_s_per_cleared_source": 480.5044709090909,
+          "mean_move_s": 3624.6720645,
+          "mean_measure_count": 214.75,
+          "mean_clear_failures": 26.5,
+          "errors": 0,
+          "all_accounting_checks_pass": true
+        },
+        "14": {
+          "runs": 4,
+          "all_clear_runs": 4,
+          "all_clear_rate": 1.0,
+          "source_clear_rate": 1.0,
+          "mean_s_per_cleared_source": 350.75651335714286,
+          "all_clear_only_mean_s_per_source": 350.75651335714286,
+          "p95_s_per_cleared_source": 389.22455694642855,
+          "max_s_per_cleared_source": 389.7871082142857,
+          "mean_move_s": 3607.841187,
+          "mean_measure_count": 197.25,
+          "mean_clear_failures": 20.0,
+          "errors": 0,
+          "all_accounting_checks_pass": true
+        },
+        "15": {
+          "runs": 5,
+          "all_clear_runs": 2,
+          "all_clear_rate": 0.4,
+          "source_clear_rate": 0.9333333333333333,
+          "mean_s_per_cleared_source": 347.3787252457875,
+          "all_clear_only_mean_s_per_source": 328.62741766666664,
+          "p95_s_per_cleared_source": 379.605072585641,
+          "max_s_per_cleared_source": 379.7073036153846,
+          "mean_move_s": 3591.6974069999997,
+          "mean_measure_count": 185.4,
+          "mean_clear_failures": 27.8,
+          "errors": 0,
+          "all_accounting_checks_pass": true
+        },
+        "16": {
+          "runs": 8,
+          "all_clear_runs": 5,
+          "all_clear_rate": 0.625,
+          "source_clear_rate": 0.953125,
+          "mean_s_per_cleared_source": 312.21930126458335,
+          "all_clear_only_mean_s_per_source": 299.66915394999995,
+          "p95_s_per_cleared_source": 391.93556289583324,
+          "max_s_per_cleared_source": 426.15724616666665,
+          "mean_move_s": 3550.023772875,
+          "mean_measure_count": 170.0,
+          "mean_clear_failures": 25.5,
+          "errors": 0,
+          "all_accounting_checks_pass": true
+        }
+      },
+      "missed_seeds": [
+        1000,
+        1004,
+        1013,
+        1015,
+        50001,
+        50010,
+        50020,
+        50025,
+        50044,
+        50053
+      ]
+    },
+    "q4_iterations\\repo_sync\\q4\\iterations\\iter_073_deferred_fifth_joint_route\\workspace\\code": {
+      "overall": {
+        "runs": 30,
+        "all_clear_runs": 20,
+        "all_clear_rate": 0.6666666666666666,
+        "source_clear_rate": 0.9732360097323601,
+        "mean_s_per_cleared_source": 413.9372109982226,
+        "all_clear_only_mean_s_per_source": 411.9163232498339,
+        "p95_s_per_cleared_source": 563.940923185,
+        "max_s_per_cleared_source": 571.0995611000001,
+        "mean_move_s": 3991.4726588,
+        "mean_measure_count": 206.33333333333334,
+        "mean_clear_failures": 31.566666666666666,
+        "errors": 0,
+        "all_accounting_checks_pass": true
+      },
+      "by_n": {
+        "10": {
+          "runs": 2,
+          "all_clear_runs": 2,
+          "all_clear_rate": 1.0,
+          "source_clear_rate": 1.0,
+          "mean_s_per_cleared_source": 528.2015304500001,
+          "all_clear_only_mean_s_per_source": 528.2015304500001,
+          "p95_s_per_cleared_source": 566.8097580350001,
+          "max_s_per_cleared_source": 571.0995611000001,
+          "mean_move_s": 3742.5153044999997,
+          "mean_measure_count": 239.0,
+          "mean_clear_failures": 24.0,
+          "errors": 0,
+          "all_accounting_checks_pass": true
+        },
+        "11": {
+          "runs": 4,
+          "all_clear_runs": 2,
+          "all_clear_rate": 0.5,
+          "source_clear_rate": 0.9545454545454546,
+          "mean_s_per_cleared_source": 519.6038965477273,
+          "all_clear_only_mean_s_per_source": 475.87020654545455,
+          "p95_s_per_cleared_source": 567.560942995,
+          "max_s_per_cleared_source": 569.3709529,
+          "mean_move_s": 3821.47406875,
+          "mean_measure_count": 247.5,
+          "mean_clear_failures": 30.25,
+          "errors": 0,
+          "all_accounting_checks_pass": true
+        },
+        "12": {
+          "runs": 3,
+          "all_clear_runs": 3,
+          "all_clear_rate": 1.0,
+          "source_clear_rate": 1.0,
+          "mean_s_per_cleared_source": 477.17455225,
+          "all_clear_only_mean_s_per_source": 477.17455225,
+          "p95_s_per_cleared_source": 506.33283301666665,
+          "max_s_per_cleared_source": 510.96116574999996,
+          "mean_move_s": 4109.427960333333,
+          "mean_measure_count": 241.66666666666666,
+          "mean_clear_failures": 39.333333333333336,
+          "errors": 0,
+          "all_accounting_checks_pass": true
+        },
+        "13": {
+          "runs": 4,
+          "all_clear_runs": 3,
+          "all_clear_rate": 0.75,
+          "source_clear_rate": 0.9807692307692307,
+          "mean_s_per_cleared_source": 453.84245482852566,
+          "all_clear_only_mean_s_per_source": 432.1839004102564,
+          "p95_s_per_cleared_source": 510.52460490544877,
+          "max_s_per_cleared_source": 518.8181180833334,
+          "mean_move_s": 4295.74738325,
+          "mean_measure_count": 218.75,
+          "mean_clear_failures": 37.0,
+          "errors": 0,
+          "all_accounting_checks_pass": true
+        },
+        "14": {
+          "runs": 4,
+          "all_clear_runs": 4,
+          "all_clear_rate": 1.0,
+          "source_clear_rate": 1.0,
+          "mean_s_per_cleared_source": 372.009518875,
+          "all_clear_only_mean_s_per_source": 372.009518875,
+          "p95_s_per_cleared_source": 392.6233959285714,
+          "max_s_per_cleared_source": 393.1738974285714,
+          "mean_move_s": 3870.63326425,
+          "mean_measure_count": 199.25,
+          "mean_clear_failures": 28.25,
+          "errors": 0,
+          "all_accounting_checks_pass": true
+        },
+        "15": {
+          "runs": 5,
+          "all_clear_runs": 3,
+          "all_clear_rate": 0.6,
+          "source_clear_rate": 0.9733333333333334,
+          "mean_s_per_cleared_source": 383.10621233714284,
+          "all_clear_only_mean_s_per_source": 374.9350894666666,
+          "p95_s_per_cleared_source": 419.1555999314286,
+          "max_s_per_cleared_source": 421.52754221428575,
+          "mean_move_s": 4354.448026399999,
+          "mean_measure_count": 177.0,
+          "mean_clear_failures": 37.0,
+          "errors": 0,
+          "all_accounting_checks_pass": true
+        },
+        "16": {
+          "runs": 8,
+          "all_clear_runs": 3,
+          "all_clear_rate": 0.375,
+          "source_clear_rate": 0.953125,
+          "mean_s_per_cleared_source": 329.10438370074405,
+          "all_clear_only_mean_s_per_source": 296.4214297083333,
+          "p95_s_per_cleared_source": 388.242974915,
+          "max_s_per_cleared_source": 392.9054696,
+          "mean_move_s": 3775.9007846249997,
+          "mean_measure_count": 180.0,
+          "mean_clear_failures": 26.75,
+          "errors": 0,
+          "all_accounting_checks_pass": true
+        }
+      },
+      "missed_seeds": [
+        1004,
+        1015,
+        50001,
+        50010,
+        50020,
+        50025,
+        50044,
+        50051,
+        50053,
+        50074
+      ]
+    }
+  },
+  "paired": {
+    "q4_iterations\\repo_sync\\q4\\iterations\\iter_073_deferred_fifth_joint_route\\workspace\\code": {
+      "mean_time_delta_s_per_source": 28.048929390421154,
+      "shared_full_clear_cases": 18,
+      "shared_full_clear_mean_delta_s_per_source": 30.106842599419558,
+      "new_failures": [
+        50051,
+        50074
+      ],
+      "rescued_cases": [
+        1000,
+        1013
+      ],
+      "faster_cases": 8
+    }
+  }
+}

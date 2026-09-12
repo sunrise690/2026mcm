@@ -1,0 +1,381 @@
+{
+  "argv": [
+    "q4_iterations\\tools\\offline_benchmark.py",
+    "compare",
+    "--bank",
+    "q4_iterations\\datasets\\round18_fresh70.json",
+    "--versions",
+    "q4_iterations\\iter_071_mec20_rescan_gate\\workspace\\code",
+    "q4_iterations\\repo_sync\\q4\\iterations\\iter_076_high14_probe2_value_guard\\workspace\\code",
+    "--out",
+    "q4_iterations\\reports\\round23_iter076_fresh70",
+    "--workers",
+    "8"
+  ],
+  "python": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+  "dependencies": {
+    "numpy": "2.3.5",
+    "scipy": "1.17.1",
+    "requests": "2.34.2",
+    "shapely": "2.1.2"
+  },
+  "dataset": {
+    "selection": "按源数10..16等额分层；仅按N入选，不按策略成绩筛选",
+    "seed_start": 90000,
+    "per_n": 10,
+    "cases": [
+      {
+        "seed": 90000,
+        "generator_seed_hex": "efc8778aab9e83a3b491bb6530c831c49f1c599dd85043a47b37921fc7829523",
+        "jammer_count": 14
+      },
+      {
+        "seed": 90001,
+        "generator_seed_hex": "7c6931df14e2cefc29e576fcdaebd58ed0caf841a95dfac326ab3f416fd2951b",
+        "jammer_count": 15
+      },
+      {
+        "seed": 90002,
+        "generator_seed_hex": "565d8d76d8e1865d683158ce5d61af4a0c51269c8e9744728506caf78dbd5837",
+        "jammer_count": 16
+      },
+      {
+        "seed": 90003,
+        "generator_seed_hex": "141114b1d14560fb393eff26cd822a0cfe4ec0bdede9b0ee534fe272dedc8098",
+        "jammer_count": 13
+      },
+      {
+        "seed": 90004,
+        "generator_seed_hex": "e1015b840d24c6480c17f09b43ebdb9accb5c4596284607ae34ab50337b33ca9",
+        "jammer_count": 15
+      },
+      {
+        "seed": 90005,
+        "generator_seed_hex": "44c715f457b4978ef3761cd630c123d20bb56998a0d5e14f9d8a49b2b2dbe6e1",
+        "jammer_count": 14
+      },
+      {
+        "seed": 90006,
+        "generator_seed_hex": "9a75d731a6419481c3a0c10d8596a60583a10d92670b0b22e8d58618507344f5",
+        "jammer_count": 12
+      },
+      {
+        "seed": 90007,
+        "generator_seed_hex": "9f2a8120a2455b68bf22040d024f0b88b666bf2eda21986b1ff01822fb73d06b",
+        "jammer_count": 11
+      },
+      {
+        "seed": 90008,
+        "generator_seed_hex": "469da32535cd2159b654c52cff4c6cb45ba774b551cbe8ca0723a04de98a554c",
+        "jammer_count": 14
+      },
+      {
+        "seed": 90009,
+        "generator_seed_hex": "c6747ae66d594691c5cf7ec7285fe2552222bd93ef284ab6189ccd34a37a2fb4",
+        "jammer_count": 13
+      },
+      {
+        "seed": 90010,
+        "generator_seed_hex": "a0a24a7c2cf0b4bbe5dbb276decc205939e74ff6264a79578681d1e85b680897",
+        "jammer_count": 12
+      },
+      {
+        "seed": 90011,
+        "generator_seed_hex": "15af8c6e8bcae4774796453a8acd7bc5f7702fabde74cae0d87d5a524c3a941d",
+        "jammer_count": 12
+      },
+      {
+        "seed": 90012,
+        "generator_seed_hex": "ef928396b6059c23a7dc3ee4163b40aaf08307b5fa4a8ce2389e5a41260e25f6",
+        "jammer_count": 14
+      },
+      {
+        "seed": 90013,
+        "generator_seed_hex": "601135224b785e33c9274cd717d98fff53314ec2a63ffe9e2209e8e2d37a52ed",
+        "jammer_count": 11
+      },
+      {
+        "seed": 90014,
+        "generator_seed_hex": "7d634c01a581abcdeef60f967c314ebe1b914b1421930005031a6651b3412b1b",
+        "jammer_count": 10
+      },
+      {
+        "seed": 90015,
+        "generator_seed_hex": "86d4ced0e5e3ddaac902ba7eb7dfc82b0a564d2be6e7be5f63dcbdb355d4604a",
+        "jammer_count": 16
+      },
+      {
+        "seed": 90016,
+        "generator_seed_hex": "cd5582903afe859d3bbc8dcba0d9803f338ead55d77fcfa63db9df044fe09f2e",
+        "jammer_count": 13
+      },
+      {
+        "seed": 90017,
+        "generator_seed_hex": "b87b384f02f9db286cff1d992992104ab21d187132799f782b7c53da43effc2b",
+        "jammer_count": 10
+      },
+      {
+        "seed": 90018,
+        "generator_seed_hex": "4c11d8b981b8e1e6a20db9a40d31690866a31a6100d46a0c4f1f4ed7b31a51b9",
+        "jammer_count": 11
+      },
+      {
+        "seed": 90019,
+        "generator_seed_hex": "b19ee9f1c442ae8af0beab58c2ccb0ea23cb41b793880df212a4929a1b441b04",
+        "jammer_count": 15
+      },
+      {
+        "seed": 90020,
+        "generator_seed_hex": "91bab0ed4b68cb46604fafa755926894eb472233ab3b04528d71e7676a14c094",
+        "jammer_count": 13
+      },
+      {
+        "seed": 90021,
+        "generator_seed_hex": "16036ee5114474e1fab51811702676573ab4b3356865c8f0ac280417066fda0b",
+        "jammer_count": 11
+      },
+      {
+        "seed": 90022,
+        "generator_seed_hex": "f2967d5f6276c738efffd68f1c1ad36686d197323ee6410998eafdcee32a15ff",
+        "jammer_count": 14
+      },
+      {
+        "seed": 90023,
+        "generator_seed_hex": "4dc88d00b7f67a020857d838170354dfd1ba5648f387cdf95a972d1e310342f0",
+        "jammer_count": 12
+      },
+      {
+        "seed": 90024,
+        "generator_seed_hex": "fb028cc3c167a110798464f213a8ce79e0d6f0e6b3760512c1533199a2bab192",
+        "jammer_count": 10
+      },
+      {
+        "seed": 90025,
+        "generator_seed_hex": "a5d8fc34eb60d84a9619632364092a44c6feb78421fba96be3cb56784a04f0e0",
+        "jammer_count": 14
+      },
+      {
+        "seed": 90026,
+        "generator_seed_hex": "805ac1f62c6bd819c1f0719cc3a8c3c5b66d9dcf7ffbe0f1f08aa2034c93f1a5",
+        "jammer_count": 15
+      },
+      {
+        "seed": 90027,
+        "generator_seed_hex": "827ff28d66439286bb0726e1268cdd6a19b353960c324077740be69a337d1168",
+        "jammer_count": 14
+      },
+      {
+        "seed": 90028,
+        "generator_seed_hex": "bfe3a380746c306536e5ebf3d17357290afa42563c94ed161e642919dc4744db",
+        "jammer_count": 15
+      },
+      {
+        "seed": 90029,
+        "generator_seed_hex": "e9b8504dcf9a72a07dfcc45f734af0050a6d7455ffffcd0747ad86bca7555a4c",
+        "jammer_count": 12
+      },
+      {
+        "seed": 90030,
+        "generator_seed_hex": "d494ca41811722a99d7d4fd0fe04b60fafb433aa8d02876c0f44edc68f2181c2",
+        "jammer_count": 10
+      },
+      {
+        "seed": 90031,
+        "generator_seed_hex": "1e90bb9503b9f9461997d82ad9f0e503867f2ca5bbd5d7bd1500efbd28bba780",
+        "jammer_count": 10
+      },
+      {
+        "seed": 90032,
+        "generator_seed_hex": "d58f92bb4d9871fceca1144f513ce8beaff99ecf43c3198896543c9648fc686f",
+        "jammer_count": 15
+      },
+      {
+        "seed": 90033,
+        "generator_seed_hex": "ab10100c727c35e028082e832f5e9b8e299cfda75a9d08e408bec202f26de0b3",
+        "jammer_count": 15
+      },
+      {
+        "seed": 90034,
+        "generator_seed_hex": "01b35d3ec71a636533e5c2ab511b43ae808969ecc313288f6ddc3eecd828f208",
+        "jammer_count": 13
+      },
+      {
+        "seed": 90035,
+        "generator_seed_hex": "426db95db4b7e12f1758285d717ce5efa0f79cc2776863594ed50bcfd6559128",
+        "jammer_count": 14
+      },
+      {
+        "seed": 90036,
+        "generator_seed_hex": "1b38ed7333f58a4ff6a3c27369c1c0e8cc59b489d9b0afa593ec67a530854c5c",
+        "jammer_count": 12
+      },
+      {
+        "seed": 90037,
+        "generator_seed_hex": "37fc931dd9d9f33309fe4b6497bcc9d6be31f2cae27a8740f67986dddc917ece",
+        "jammer_count": 14
+      },
+      {
+        "seed": 90038,
+        "generator_seed_hex": "a252b362ce449a7a93042cf8895c003f01c3a2ad1198e7cad38d2fe23a6d8b34",
+        "jammer_count": 14
+      },
+      {
+        "seed": 90039,
+        "generator_seed_hex": "45ea132d3a99c33614ffbea80aa00721679279a262ebb96db8b41306d380dc41",
+        "jammer_count": 16
+      },
+      {
+        "seed": 90040,
+        "generator_seed_hex": "2924a70e38c704a876e2283c33c483ba2ec32d292cf78e9d959c05c4d127bd06",
+        "jammer_count": 12
+      },
+      {
+        "seed": 90041,
+        "generator_seed_hex": "730a03286bfc561b6dd6abd46dd817eca5bcb10e330e42fb15a21ce7798dbf77",
+        "jammer_count": 11
+      },
+      {
+        "seed": 90042,
+        "generator_seed_hex": "1d2a3c4b2487b0d3bae624e5c1b06716e4ffc2ea659c9b04c546359106f5b702",
+        "jammer_count": 12
+      },
+      {
+        "seed": 90043,
+        "generator_seed_hex": "ec95ff408e05629b6cc245cdb9114817f015104fda32b44957ff950c23fb6a9d",
+        "jammer_count": 16
+      },
+      {
+        "seed": 90044,
+        "generator_seed_hex": "192168ff9856dfff83d682d6436552d3ae48ef0dbee714dc6c0e8f879256af97",
+        "jammer_count": 15
+      },
+      {
+        "seed": 90045,
+        "generator_seed_hex": "5a2867d703ca53d98756f388ddc0f10fef87f3012f236c4352be1349885d6b54",
+        "jammer_count": 11
+      },
+      {
+        "seed": 90046,
+        "generator_seed_hex": "4ea2c0aca48a09664e041b873c6467bd925c65b736d52cf937b5601c62473d0a",
+        "jammer_count": 11
+      },
+      {
+        "seed": 90047,
+        "generator_seed_hex": "adfbd37fc8e1fb574779a1a361fc71c824c4ef3c2ba4965200a9f77f9b36c398",
+        "jammer_count": 12
+      },
+      {
+        "seed": 90048,
+        "generator_seed_hex": "7dce8a94a11d6ffb0e9a910296bc76a66a47fa05dd4484665e8196d571bf8455",
+        "jammer_count": 11
+      },
+      {
+        "seed": 90049,
+        "generator_seed_hex": "da8ddccf9cb23ee00089457dbde69ddf5c78baa29aed03747e6e134a52fa740e",
+        "jammer_count": 15
+      },
+      {
+        "seed": 90050,
+        "generator_seed_hex": "6c4b74f60dd00bcd639d950e37e05903567ac9db7659aa2a32c41dde36da8873",
+        "jammer_count": 10
+      },
+      {
+        "seed": 90051,
+        "generator_seed_hex": "fbda1f0442212829a693131f6e115f7a588fa507081b5f77f0fa0299d6d778d9",
+        "jammer_count": 11
+      },
+      {
+        "seed": 90052,
+        "generator_seed_hex": "b1a8bc32ca80db4b869942817223fb067b1626991ed377edeaff4707dc16ff10",
+        "jammer_count": 16
+      },
+      {
+        "seed": 90054,
+        "generator_seed_hex": "c9262e0f98bc11dca09da3d4d9d755cc02d728d2ca51bab441601e0ea03497eb",
+        "jammer_count": 10
+      },
+      {
+        "seed": 90055,
+        "generator_seed_hex": "3a9b59bf2aef916470917e207b1b5a829f6554956ed5d099d043bf1de5a02972",
+        "jammer_count": 13
+      },
+      {
+        "seed": 90056,
+        "generator_seed_hex": "c7a6c8ab5aef5dc7560247bd2fc1712219d9f983afc37973dac7bb3932a1916f",
+        "jammer_count": 10
+      },
+      {
+        "seed": 90057,
+        "generator_seed_hex": "8871fd624bf194fb09693a7729092c0a2da58935cf1bfb597d83e4c43a15ab26",
+        "jammer_count": 15
+      },
+      {
+        "seed": 90058,
+        "generator_seed_hex": "f834009d0e0e2be2041e01bd93555f909564433c17a20bc3d2da3eb82ff19c34",
+        "jammer_count": 12
+      },
+      {
+        "seed": 90061,
+        "generator_seed_hex": "e330d8304990bf12b486a79795813346594bb6d628a9292aef20fbd3e1de4c87",
+        "jammer_count": 16
+      },
+      {
+        "seed": 90062,
+        "generator_seed_hex": "6cb4215492407da7a1e2a578c962d343b1756ef8bb78c469ab6c74d650b56cc2",
+        "jammer_count": 10
+      },
+      {
+        "seed": 90064,
+        "generator_seed_hex": "8fd5cbbc028df197750327bb70c0162295ee5330b65edc5d6c6d0d1301fbc2b2",
+        "jammer_count": 11
+      },
+      {
+        "seed": 90068,
+        "generator_seed_hex": "29e3048a91090c13c8d2e1c44cf9a4f91c31a4bf4a75e21238f905ee37e4216f",
+        "jammer_count": 16
+      },
+      {
+        "seed": 90069,
+        "generator_seed_hex": "70b56aaa32c2e198b6c598efe5fad12ae712529a3ed6543a8363f0672a38a793",
+        "jammer_count": 10
+      },
+      {
+        "seed": 90073,
+        "generator_seed_hex": "02c4ce941b2b412622a230a06ed443908a20c8bea824076beb45bb5d92f42701",
+        "jammer_count": 16
+      },
+      {
+        "seed": 90074,
+        "generator_seed_hex": "5a3686a9694b8d8087600fb5da80209de63e678be2eae9295ee079cdfb26d69b",
+        "jammer_count": 16
+      },
+      {
+        "seed": 90077,
+        "generator_seed_hex": "8a93f34bf90072d0f6dc3819451a2e6530fe4a5afc64992ffde95cf50cb5a569",
+        "jammer_count": 13
+      },
+      {
+        "seed": 90081,
+        "generator_seed_hex": "14870a024fe571e97679bebd3bf56067acca39083850ba290058ea2a3274a20d",
+        "jammer_count": 13
+      },
+      {
+        "seed": 90086,
+        "generator_seed_hex": "ed29a2ac9dcc9d0a0dd0a810ccc2bb01b0ab22bf5a85a79d1779161c0d0a46c1",
+        "jammer_count": 16
+      },
+      {
+        "seed": 90090,
+        "generator_seed_hex": "02a1865321859559a4ff8db6a008bd70a18ca73cd8d0e64ba293296900a9b2d6",
+        "jammer_count": 13
+      },
+      {
+        "seed": 90095,
+        "generator_seed_hex": "683c96f2c1bc779ddc62c2ccd0cf22978b5f5cde6b9a9847c3171cc468cb9ee4",
+        "jammer_count": 13
+      }
+    ]
+  },
+  "case_bank_sha256": "b93a74d49b878e80c0cb4f39d2c4de5c75daf22618465068568064d0edde2e39",
+  "started": "2026-09-13 02:59:23"
+}
