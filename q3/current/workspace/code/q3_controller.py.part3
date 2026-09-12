@@ -1,0 +1,125 @@
+            if route_target is None or endpoint_weight<=0:
+                last=int(np.argmin(dp[mask]))
+            else:
+                rt=np.asarray(route_target,float);tail=np.linalg.norm(pts-rt,axis=1)
+                last=int(np.argmin(dp[mask]+float(endpoint_weight)*tail))
+            o=[]
+            while mask:
+                o.append(last);q=int(par[mask,last]);mask^=1<<last;last=q
+            return [(chs[i],pts[i]) for i in reversed(o)]
+        # 16-source real-time fallback: nearest-neighbour + 2-opt, avoids exponential stall.
+        chs=[ch for ch,p in items];pts=np.asarray([p for ch,p in items],float);cur=np.asarray(self.c.position,float);n=len(chs)
+        starts=np.argsort(np.linalg.norm(pts-cur,axis=1))[:6];best=None
+        def plen(o):
+            z=float(np.linalg.norm(pts[o[0]]-cur))
+            for a,b in zip(o,o[1:]):z+=float(np.linalg.norm(pts[b]-pts[a]))
+            return z
+        for st in starts:
+            unused=set(range(n));unused.remove(int(st));o=[int(st)]
+            while unused:
+                j=min(unused,key=lambda x:float(np.linalg.norm(pts[x]-pts[o[-1]])));o.append(j);unused.remove(j)
+            base=plen(o)
+            for _ in range(3):
+                changed=False
+                for a in range(n-2):
+                    for b in range(a+2,n):
+                        q=o[:a+1]+list(reversed(o[a+1:b+1]))+o[b+1:];v=plen(q)
+                        if v+1e-9<base:o,base,changed=q,v,True
+                if not changed:break
+            obj=base
+            if route_target is not None and endpoint_weight>0:
+                obj+=float(endpoint_weight)*float(np.linalg.norm(pts[o[-1]]-np.asarray(route_target,float)))
+            if best is None or obj<best[0]:best=(obj,o)
+        return [(chs[i],pts[i]) for i in best[1]]
+
+    def joint_next(self,items,soft_done=False):
+        if soft_done or self.known()>=16:
+            self.committed_probe=None
+            order=self.exact_order(items)
+            return ('none',None,None) if not order else ('source',order[0][0],order[0][1])
+        cur=np.asarray(self.c.position,float)
+
+        # Keep a cheap future survey point committed across intermediate clears.
+        # This fixes the old receding-horizon bug where a 200-300 m end-of-tour
+        # survey could mutate into a 2 km cross-disk trip by the time the tour ended.
+        if self.committed_probe is not None:
+            cp=np.asarray(self.committed_probe,float)
+            aug=list(items)+[(-999,cp)]
+            ao=self.exact_order(aug)
+            if ao:
+                ch,p=ao[0]
+                if ch==-999:
+                    self.committed_probe=None
+                    return ('probe',None,np.asarray(p,float))
+                return ('source',ch,np.asarray(p,float))
+            self.committed_probe=None
+
+        probe,pd=self.cover.best_posterior_probe(cur)
+        if probe is None:
+            order=self.exact_order(items)
+            return ('none',None,None) if not order else ('source',order[0][0],order[0][1])
+        hp=max(0.0,min(1.0,1.0-self.posterior_same_count()))
+        order=self.exact_order(items)
+        if not order:return ('none',None,None)
+        probe=np.asarray(probe,float); pts=[np.asarray(p,float) for _,p in order]
+        best=(float('inf'),0)
+        for pos in range(len(pts)+1):
+            a=cur if pos==0 else pts[pos-1]
+            if pos<len(pts):
+                b=pts[pos]; delta=float(np.linalg.norm(probe-a)+np.linalg.norm(b-probe)-np.linalg.norm(b-a))
+            else:
+                delta=float(np.linalg.norm(probe-a))
+            if delta<best[0]: best=(delta,pos)
+        allowance=(260.0+1900.0*hp*pd) if self.known()<12 else (160.0+1200.0*hp*pd)
+        m=len(self.unknown()); scan_s=5.0*m+max(0,m-1)
+        allowance=max(40.0,allowance-2.0*scan_s)
+        # Commit whenever the whole-tour insertion is cheap enough, not only when
+        # the optimal insertion happens to be the very next action.
+        if self.known()>=10 and best[0] <= allowance and hp*pd>=0.16:
+            self.committed_probe=probe.copy()
+            aug=list(items)+[(-999,probe)]
+            ao=self.exact_order(aug)
+            if ao:
+                ch,p=ao[0]
+                if ch==-999:
+                    self.committed_probe=None
+                    return ('probe',None,np.asarray(p,float))
+                return ('source',ch,np.asarray(p,float))
+        return ('source',order[0][0],order[0][1])
+    def service(self,ch):
+        b=self.B[ch]
+        p0,r0=b.estimate()
+        if p0 is not None:
+            print(f"[清除] CH{ch:02d} 目标≈{self._pos(p0)} 后验半径≈{float(r0):.0f}m",flush=True)
+        for it in range(3):
+            p,r=b.estimate()
+            if p is None:
+                print(f"  [清除] CH{ch:02d} 无可用位置估计，暂缓",flush=True);return False
+            if r>28 and it==0:
+                print(f"  [定位] CH{ch:02d} 不确定度 {float(r):.0f}m，先到估计点补测",flush=True)
+                self.measure(p,ch)
+                if ch in self.cleared:return True
+                continue
+            z=self.c.clear(float(p[0]),float(p[1]),int(ch))
+            if z.get('clear_result')=='success':
+                b.status='cleared';self.cleared.add(ch)
+                print(f"  [成功] CH{ch:02d} @ {self._pos(p)} | {self._progress()}",flush=True);return True
+            print(f"  [失败] CH{ch:02d} @ {self._pos(p)}，利用失败点继续定位",flush=True)
+            b.add_clear_fail(p)
+            self.measure(p,ch)
+            if ch in self.cleared:return True
+        p,r=b.estimate()
+        if p is not None:
+            z=self.c.clear(float(p[0]),float(p[1]),int(ch))
+            if z.get('clear_result')=='success':
+                b.status='cleared';self.cleared.add(ch)
+                print(f"  [成功] CH{ch:02d} @ {self._pos(p)} | {self._progress()}",flush=True);return True
+        print(f"  [暂未清除] CH{ch:02d}，后续滚动重规划",flush=True)
+        return False
+    def _posterior_same_at_q(self,k,q):
+        if k<10:return 0.0
+        q=max(1e-8,min(1-1e-10,float(q)));ws=[]
+        for n in range(k,17):ws.append(math.comb(n,k)*(q**k)*((1-q)**(n-k)))
+        z=sum(ws);return 0.0 if z<=0 else ws[0]/z
+    def _explore_candidates(self,current,max_pool=180):
+        w=self.cover.miss_weight();idx=np.where(w>1e-6)[0]
