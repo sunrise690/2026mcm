@@ -1,0 +1,169 @@
+{
+  "status": "frozen_candidate_b",
+  "role": "可组合补查selector，未达到350s整体硬目标；交由短普查前缀版本组合评测",
+  "seed_scope": "仅使用旧validation70里的固定20例，未读取/运行新holdout",
+  "candidate": "B: 外环1900/2100m，局部候选最大半径2100m，最多2次补查，旅行罚0.00035",
+  "tested_seeds": [
+    50000,
+    50001,
+    50002,
+    50003,
+    50004,
+    50005,
+    50006,
+    50007,
+    50008,
+    50009,
+    50010,
+    50020,
+    50025,
+    50042,
+    50044,
+    50051,
+    50053,
+    50054,
+    50057,
+    50074
+  ],
+  "results": {
+    "a": {
+      "metrics": {
+        "runs": 20,
+        "all_clear_runs": 13,
+        "all_clear_rate": 0.65,
+        "source_clear_rate": 0.9706959706959707,
+        "mean_s_per_cleared_source": 493.34451515122566,
+        "all_clear_only_mean_s_per_source": 508.0394820203171,
+        "p95_s_per_cleared_source": 675.7233956159092,
+        "max_s_per_cleared_source": 771.2119258181818,
+        "mean_move_s": 4936.6592707,
+        "mean_measure_count": 208.85,
+        "mean_clear_failures": 17.1,
+        "errors": 0,
+        "all_accounting_checks_pass": true
+      },
+      "missed_seeds": [
+        50020,
+        50025,
+        50042,
+        50053,
+        50054,
+        50057,
+        50074
+      ]
+    },
+    "b": {
+      "metrics": {
+        "runs": 20,
+        "all_clear_runs": 15,
+        "all_clear_rate": 0.75,
+        "source_clear_rate": 0.9816849816849816,
+        "mean_s_per_cleared_source": 511.034841359409,
+        "all_clear_only_mean_s_per_source": 526.64244635002,
+        "p95_s_per_cleared_source": 709.6733618445455,
+        "max_s_per_cleared_source": 767.4252610909091,
+        "mean_move_s": 5190.985537049999,
+        "mean_measure_count": 214.7,
+        "mean_clear_failures": 17.2,
+        "errors": 0,
+        "all_accounting_checks_pass": true
+      },
+      "missed_seeds": [
+        50020,
+        50025,
+        50042,
+        50054,
+        50057
+      ]
+    },
+    "c": {
+      "metrics": {
+        "runs": 20,
+        "all_clear_runs": 12,
+        "all_clear_rate": 0.6,
+        "source_clear_rate": 0.9706959706959707,
+        "mean_s_per_cleared_source": 508.9797417683468,
+        "all_clear_only_mean_s_per_source": 502.52432374623464,
+        "p95_s_per_cleared_source": 708.4605441350001,
+        "max_s_per_cleared_source": 801.8003248,
+        "mean_move_s": 5072.82238625,
+        "mean_measure_count": 214.9,
+        "mean_clear_failures": 17.25,
+        "errors": 0,
+        "all_accounting_checks_pass": true
+      },
+      "missed_seeds": [
+        50020,
+        50025,
+        50042,
+        50044,
+        50053,
+        50054,
+        50057,
+        50074
+      ]
+    },
+    "d": {
+      "metrics": {
+        "runs": 20,
+        "all_clear_runs": 14,
+        "all_clear_rate": 0.7,
+        "source_clear_rate": 0.978021978021978,
+        "mean_s_per_cleared_source": 502.59787457522333,
+        "all_clear_only_mean_s_per_source": 523.814256583977,
+        "p95_s_per_cleared_source": 707.3132615672728,
+        "max_s_per_cleared_source": 720.2232555454545,
+        "mean_move_s": 5063.223847,
+        "mean_measure_count": 214.55,
+        "mean_clear_failures": 17.0,
+        "errors": 0,
+        "all_accounting_checks_pass": true
+      },
+      "missed_seeds": [
+        50020,
+        50025,
+        50042,
+        50054,
+        50057,
+        50074
+      ]
+    },
+    "e": {
+      "metrics": {
+        "runs": 20,
+        "all_clear_runs": 15,
+        "all_clear_rate": 0.75,
+        "source_clear_rate": 0.9816849816849816,
+        "mean_s_per_cleared_source": 511.771998609409,
+        "all_clear_only_mean_s_per_source": 526.64244635002,
+        "p95_s_per_cleared_source": 709.6733618445455,
+        "max_s_per_cleared_source": 767.4252610909091,
+        "mean_move_s": 5200.542895799999,
+        "mean_measure_count": 214.95,
+        "mean_clear_failures": 17.2,
+        "errors": 0,
+        "all_accounting_checks_pass": true
+      },
+      "missed_seeds": [
+        50020,
+        50025,
+        50042,
+        50054,
+        50057
+      ]
+    }
+  },
+  "code_sha256": {
+    "live_q4.py": "5d36ef7ded60ed9d44b2b7aab1c6b6a7354e38bb252e74fadddb8670854c114d",
+    "live_q4_candidate_a.py": "ea010ed2f7016df88d5a9e4aa453a6944c7a987fa11bb316f07929ac75934094",
+    "live_runner.py": "c50c9037565828ea5f44891e6453799572b250f1b34e9f4df6558ef6497eb230",
+    "params.py": "2460bab32b2cba2149818903e5eb779311ed54f71e59aae8a6d293b130bde0ad",
+    "q4_rescue_probe_budgeted.py": "f441a5faedf0ba6e6430afdd2b68bace4ecfe09e986ad6e0654877af87221d06",
+    "q4_targeted_rescue_v3.py": "60fb4deabdfa592d44ef17077eabba9afe6cefd7764df8a74ffbfbd73aadf671",
+    "sim_engine.py": "bf11e2c698b8a34472c5448f880c236f88280981384b6d6228416220d388ee0a",
+    "utils.py": "b0e16bb7e7666c7a786c84d5b9956f45c10664da1e202b95851fb7b68cd50090",
+    "__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "optional_module": "q4_rescue_probe_budgeted.py",
+  "optional_module_status": "新增max_cost_s/min_score默认关闭；参数接口仅编译检查，预算启用后的策略成绩尚未验证"
+}
