@@ -1,0 +1,181 @@
+{
+  "argv": [
+    "q4_iterations\\tools\\offline_benchmark.py",
+    "compare",
+    "--bank",
+    "q4_iterations\\datasets\\round2_screen30.json",
+    "--versions",
+    "q4_iterations\\iter_066_adaptive_probe4_guard11\\workspace\\code",
+    "q4_iterations\\iter_071_mec20_rescan_gate\\workspace\\code",
+    "q4_iterations\\iter_072_dir3_mec40_rescan_gate\\workspace\\code",
+    "--out",
+    "q4_iterations\\reports\\round22_conservative_rescan_screen",
+    "--workers",
+    "8"
+  ],
+  "python": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+  "dependencies": {
+    "numpy": "2.3.5",
+    "scipy": "1.17.1",
+    "requests": "2.34.2",
+    "shapely": "2.1.2"
+  },
+  "dataset": {
+    "selection": "开发异常16+每N两个普通案例；仅筛选候选，非独立验证",
+    "split_role": "development",
+    "cases": [
+      {
+        "seed": 1000,
+        "generator_seed_hex": "a39334436216b7720ce278b711385d7dca832383743dc7ee45cf80f278994aa2",
+        "jammer_count": 15
+      },
+      {
+        "seed": 1001,
+        "generator_seed_hex": "6a92cde9a30ece31faeac9a4be1e43b8aa972356165c7304da2dbae1a85fe92c",
+        "jammer_count": 16
+      },
+      {
+        "seed": 1002,
+        "generator_seed_hex": "b16bedba126f505b0eef897842824c4628a3ef6bed6b3f14ef46b6cc0e790676",
+        "jammer_count": 13
+      },
+      {
+        "seed": 1003,
+        "generator_seed_hex": "6ec4fe5f46e6a1fb96e9ff2fa84a021808ee77fd95395210770bfa4b527358b2",
+        "jammer_count": 10
+      },
+      {
+        "seed": 1004,
+        "generator_seed_hex": "37e989970d07895fea1e87128626768d1ed7cc6e1f08beb6c25e92537297f4a0",
+        "jammer_count": 16
+      },
+      {
+        "seed": 1005,
+        "generator_seed_hex": "defb8891c8a6d7555ad88929607b571f9c86d3f206545861775f1da0730d1f68",
+        "jammer_count": 16
+      },
+      {
+        "seed": 1006,
+        "generator_seed_hex": "66154f44c3c0713d51406e58bcb4c4b5e454de2897d535a586709912c7a54b59",
+        "jammer_count": 14
+      },
+      {
+        "seed": 1007,
+        "generator_seed_hex": "2d2e44b2e0bf2c448ff932a2287183d10706c07281bfa3006644a61982a5f015",
+        "jammer_count": 11
+      },
+      {
+        "seed": 1008,
+        "generator_seed_hex": "bc93e96d36c23696b2d00ad01f727f2108a19c1735505225fd0564c5933d191d",
+        "jammer_count": 14
+      },
+      {
+        "seed": 1010,
+        "generator_seed_hex": "2ce3bbb987e9724b3248d9c85a1f2dee1b7bd9beb32c85a1df68d7a521956dfb",
+        "jammer_count": 15
+      },
+      {
+        "seed": 1011,
+        "generator_seed_hex": "49742deb7653f3a7174dcdb63a4503dba00f30f472b62c864247e469aaaae0d5",
+        "jammer_count": 14
+      },
+      {
+        "seed": 1013,
+        "generator_seed_hex": "29de345465a1d88de74628fc8fbdcdd34033542543354644a030de902436c522",
+        "jammer_count": 12
+      },
+      {
+        "seed": 1014,
+        "generator_seed_hex": "628ef7416312911dbe93b087e1fa8353bf6cbf205a0a9ecfd806598ed41eb99b",
+        "jammer_count": 13
+      },
+      {
+        "seed": 1015,
+        "generator_seed_hex": "d1030316333d920720281adeebd8b8ddbbdfc6258aa90566873435f631d1aa83",
+        "jammer_count": 11
+      },
+      {
+        "seed": 1017,
+        "generator_seed_hex": "68373498fa152d2d4a911e80f82c369b29c88c1239554ec578bd780cfe3b3c89",
+        "jammer_count": 11
+      },
+      {
+        "seed": 1022,
+        "generator_seed_hex": "a791a5a33c7de217b380dea8f41ce919c14da8e184be9847661a5f15635ac902",
+        "jammer_count": 12
+      },
+      {
+        "seed": 1023,
+        "generator_seed_hex": "ef42f860fa498e72aa0cc83fbd8881a2fe359a4ca4875fab5b9b2f8612b1a68e",
+        "jammer_count": 14
+      },
+      {
+        "seed": 1024,
+        "generator_seed_hex": "d0f2cabe551457a8eef53042f6199c012fc1a16aecb484ba80983fe9c55b28fa",
+        "jammer_count": 10
+      },
+      {
+        "seed": 50001,
+        "generator_seed_hex": "ca54ff143d42c25fcef31d3ac9f922096d5344ede1c08b13f90c6f6a735c6683",
+        "jammer_count": 15
+      },
+      {
+        "seed": 50006,
+        "generator_seed_hex": "d40d6cf939b13cef80b78559c8560ac4e323ee12e868ffa1fda6564dd06159d4",
+        "jammer_count": 15
+      },
+      {
+        "seed": 50010,
+        "generator_seed_hex": "585ae0f7a1c8e69f7388275f6016d631511cb99bb4a1b5779b2e17f4dbac6a73",
+        "jammer_count": 15
+      },
+      {
+        "seed": 50020,
+        "generator_seed_hex": "f23ec87f788c3bc386e99048c56b9fa9a36e8a0557d9343d2ce427ebfed41aa1",
+        "jammer_count": 16
+      },
+      {
+        "seed": 50025,
+        "generator_seed_hex": "98b247c445be3fa6ddb86b239a91e3bf6ab641395b3106cb41c96b337bb25b7b",
+        "jammer_count": 16
+      },
+      {
+        "seed": 50042,
+        "generator_seed_hex": "12e8d58ab467701b0c3ef30bd7ddd403ab07c20243660b3bca0c8bc3caff1a65",
+        "jammer_count": 13
+      },
+      {
+        "seed": 50044,
+        "generator_seed_hex": "ce9d7a9450c2a09fb8d6a7976e33745b77dc514dbc2d802212baa52467126c2c",
+        "jammer_count": 11
+      },
+      {
+        "seed": 50051,
+        "generator_seed_hex": "ce1fffbb2d5140f4c7d80497d707a5500b1758b02393e00b65fb84483ce7abdb",
+        "jammer_count": 16
+      },
+      {
+        "seed": 50053,
+        "generator_seed_hex": "bd258d4734918bdc0ffeb1e909d5407c6b01af6fdc604dc877493b6efa75e7d9",
+        "jammer_count": 13
+      },
+      {
+        "seed": 50054,
+        "generator_seed_hex": "46a000bf7191f578885ebe1ff34cf4d9ccda9267be0462f0845092d5d18eda5e",
+        "jammer_count": 12
+      },
+      {
+        "seed": 50057,
+        "generator_seed_hex": "639cc3122646dfd3067e16785acb0808d0212a8cb7349977e13493ab759ee92e",
+        "jammer_count": 16
+      },
+      {
+        "seed": 50074,
+        "generator_seed_hex": "b6724bf5014b4e8622801744a85cae55ca19a0052f48d7d198eabc378c855a5f",
+        "jammer_count": 16
+      }
+    ]
+  },
+  "case_bank_sha256": "2f28c1ddea03184e2a2e2e43aba11cd2ee3cce5ad947538bfd2f2e86fb19f50e",
+  "started": "2026-09-13 02:10:14"
+}
