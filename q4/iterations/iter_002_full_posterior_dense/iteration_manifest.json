@@ -1,0 +1,67 @@
+{
+  "iteration": "iter_002_full_posterior_dense",
+  "parent": "iter_001_outer_route",
+  "status": "稠密粒子中间试验；等价策略冻结至iter003",
+  "code_sha256": {
+    "__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "live_q4.py": "5f60d423a82bb4259deb6937eea2f21c0cc84cb525b27cc02dd68043d01991f7",
+    "live_runner.py": "c50c9037565828ea5f44891e6453799572b250f1b34e9f4df6558ef6497eb230",
+    "params.py": "2460bab32b2cba2149818903e5eb779311ed54f71e59aae8a6d293b130bde0ad",
+    "q4_targeted_rescue_v3.py": "e9962a5ea06ddb81e16d4698a85e6ba18ec30d21aacb1143d9331dfe66c362fe",
+    "sim_engine.py": "bf11e2c698b8a34472c5448f880c236f88280981384b6d6228416220d388ee0a",
+    "utils.py": "b0e16bb7e7666c7a786c84d5b9956f45c10664da1e202b95851fb7b68cd50090"
+  },
+  "matches_tested_hashes": {
+    "1005": true,
+    "1011": true,
+    "1015": true,
+    "1023": true
+  },
+  "changes": [
+    "完整圆盘统一补查代替观测计数13/14的外圈先验",
+    "最多4次条件化后验探针",
+    "travel_penalty固定0.00015"
+  ],
+  "particle_count": 200000,
+  "tested_reports": "C:\\Users\\1\\Desktop\\B0\\q4_iterations\\reports\\iter002_dense_anomalies4",
+  "cases": [
+    {
+      "seed": 1005,
+      "n": 16,
+      "cleared": 16,
+      "all_clear": true,
+      "average_clear_time_s": 281.8514804375,
+      "measure_count": 133,
+      "clear_failure_count": 21
+    },
+    {
+      "seed": 1011,
+      "n": 14,
+      "cleared": 14,
+      "all_clear": true,
+      "average_clear_time_s": 638.4592709285714,
+      "measure_count": 236,
+      "clear_failure_count": 57
+    },
+    {
+      "seed": 1015,
+      "n": 11,
+      "cleared": 11,
+      "all_clear": true,
+      "average_clear_time_s": 735.3773583636364,
+      "measure_count": 279,
+      "clear_failure_count": 14
+    },
+    {
+      "seed": 1023,
+      "n": 14,
+      "cleared": 14,
+      "all_clear": true,
+      "average_clear_time_s": 575.4441347142857,
+      "measure_count": 239,
+      "clear_failure_count": 43
+    }
+  ],
+  "known_cost": "四次尾部补查增加部分已全清样本的移动与测量耗时；有限后验补查不证明完备性。",
+  "leakage_audit": "仅开发异常样本用于调试；代码不读取真值、种子、真实N；独立70未读取。"
+}
