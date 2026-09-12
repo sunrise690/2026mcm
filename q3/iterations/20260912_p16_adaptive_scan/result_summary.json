@@ -1,0 +1,56 @@
+{
+  "iteration": "p16_adaptive_scan",
+  "offline_simulator": true,
+  "decision": "candidate_only_keep_reliable_baseline_as_default",
+  "validation35": {
+    "baseline": {
+      "fullclear": "35/35",
+      "mean_s_per_source": 231.13831528738083,
+      "p90_s_per_source": 266.6039747181818
+    },
+    "global_candidate": {
+      "fullclear": "35/35",
+      "mean_s_per_source": 230.62615046694793,
+      "p90_s_per_source": 261.8525205615384
+    }
+  },
+  "holdout70": {
+    "baseline": {
+      "fullclear": "68/70",
+      "known_fail_seeds": [
+        10001,
+        10040
+      ]
+    },
+    "global_candidate": {
+      "fullclear": "67/70",
+      "fail_seeds": [
+        10001,
+        10040,
+        10073
+      ],
+      "mean_fullclear_s_per_source": 236.75246138617365
+    },
+    "conclusion": "global candidate adds seed 10073 failure and is not promoted"
+  },
+  "safe_boundary_target10": {
+    "safe13": {
+      "fullclear": "10/10",
+      "mean_s_per_source": 226.65813471090908
+    },
+    "baseline": {
+      "fullclear": "10/10",
+      "mean_s_per_source": 226.88180342424243
+    }
+  },
+  "runner_output": [
+    "full-clear runs",
+    "source clear rate",
+    "mean of per-run averages",
+    "mean time per true source",
+    "weighted time per cleared source",
+    "P90",
+    "N10-N16 grouped means",
+    "target PASS/FAIL"
+  ]
+}
