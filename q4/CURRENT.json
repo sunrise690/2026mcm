@@ -19,7 +19,7 @@
   "round3_best_screen_mean_s_per_source": 385.7371944659512,
   "round3_best_screen_all_clear": "19/30",
   "round3_report": "reports/round3_progress_CN.md",
-  "github_versions_committed_through": "iter_028_batch2_risk85",
+  "github_versions_committed_through": "pending_iter_055",
   "github_branch": "main",
   "default_change_reason": "用户明确要求恢复速度优先；迭代003可靠性版不再作为默认。",
   "round2_report": "reports/round2_report_CN.md",
@@ -27,5 +27,13 @@
   "previous_reliability_candidate": "iter_003_full_posterior",
   "reliability_candidate_mean_s_per_source": 509.26872379843365,
   "reliability_candidate_all_clear": "133/140",
-  "remaining_failures_note": "各版本新140失败列表见round2报告；旧列表仅第一轮记录"
+  "remaining_failures_note": "各版本新140失败列表见round2报告；旧列表仅第一轮记录",
+  "round12_status": "evaluated_target_not_met",
+  "round12_latest_iteration": "iter_055_after13_limit5",
+  "current_stable_speed_candidate": "iter_041_split900",
+  "current_reliability_candidate_experimental": "iter_054_after13_limit6",
+  "stable_speed_holdout_mean_s_per_source": 405.7313061130969,
+  "stable_speed_holdout_all_clear": "100/140",
+  "experimental_reliability_holdout_mean_s_per_source": 406.17911976428803,
+  "experimental_reliability_holdout_all_clear": "102/140"
 }
