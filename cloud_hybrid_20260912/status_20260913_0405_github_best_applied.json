@@ -1,0 +1,36 @@
+{
+  "timestamp_beijing": "2026-09-13 04:05",
+  "remote_root": "/root/autodl-tmp/b0_iteration_20260912",
+  "action": "Applied the GitHub/cloud recorded best strategy and rejected the lower-clear Q4 Round11 dynamic-route candidate.",
+  "q3": {
+    "active_strategy": "feedback_v2_q3/results/best_fullclear.json",
+    "candidate_id": "55d21aa07712f13a",
+    "mean_s_per_source": 252.61833330600604,
+    "clear_rate": 1.0,
+    "export": "/root/autodl-tmp/b0_iteration_20260912/feedback_v2_q3/exported/q3_github_best_fullclear",
+    "active_tuning_json": "/root/autodl-tmp/b0_iteration_20260912/feedback_v2_q3/workspace/code/q3_tuning.json",
+    "note": "This is the current reliable Q3 hybrid strategy. The Q3 optimizer is allowed to continue searching from this reliable baseline."
+  },
+  "q4": {
+    "active_strategy": "feedback_v2_q4/round6_before_probe_batch_score_20260913_022101/feedback_results/best.json",
+    "candidate_id": "fc32832baead",
+    "mean_s_per_source": 443.1008896131774,
+    "full_rate": 0.8857142857142857,
+    "source_clear_rate": 0.9912087912087912,
+    "active_config": "/root/autodl-tmp/b0_iteration_20260912/feedback_v2_q4/current_github_best_config.json",
+    "round11_dynamic_route_status": "stopped/rejected",
+    "rejected_round11_best_valid": {
+      "candidate_id": "6c5294175ebb",
+      "mean_s_per_source": 464.4,
+      "full_rate": 0.70,
+      "reason": "Lower validated full-clear rate than the pre-Round11 GitHub/cloud best."
+    },
+    "note": "Use fc32832baead as the current Q4 strategy unless a future candidate improves both reliability and speed under the same fixed repeated validation protocol."
+  },
+  "process_check": {
+    "q4_feedback_tune_process": "not running after apply",
+    "remaining_autotune_main_pid": 34711,
+    "remaining_autotune_cwd": "/root/autodl-tmp/b0_iteration_20260912/feedback_v2_q3"
+  },
+  "remote_summary_file": "/root/autodl-tmp/b0_iteration_20260912/github_best_strategy_applied.json"
+}
