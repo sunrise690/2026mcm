@@ -16,7 +16,6 @@ def seedbytes(seed):return hashlib.sha256(f'cumcm-offline-generator-key:{seed}'.
 def one(label,override):
  sim=load('sim_'+label,SIM); base=json.loads(CFG.read_text())['tune'];base.update(override);os.environ['Q3_TUNE_JSON']=json.dumps(base)
  ctrl=load('ctrl_'+label,CTRL)
- # context tags
  C=ctrl.Q3ParticleController
  orig_scan=C.scan_unknown;orig_info=C.scan_info;orig_service=C.service
  def scan(self,p):
@@ -58,3 +57,4 @@ def one(label,override):
 
 one('baseline',{})
 one('v550',{'route_scan_value_s':550})
+# trigger
