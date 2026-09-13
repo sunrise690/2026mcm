@@ -1,0 +1,19 @@
+name: q3-trace-seed
+on:
+  push:
+    branches: [q3-opt-200]
+    paths:
+      - 'tools/q3_trace_seed.py'
+      - '.github/workflows/q3_trace_seed.yml'
+jobs:
+  trace:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install --disable-pip-version-check numpy
+      - run: python q3/bench/sim_payload.py
+      - run: python tools/q3_trace_seed.py
