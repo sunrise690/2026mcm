@@ -1,0 +1,25 @@
+name: q3-validate-v550
+on:
+  push:
+    branches: [q3-opt-200]
+    paths:
+      - 'tools/q3_validate_v550.py'
+      - '.github/workflows/q3_validate_v550.yml'
+jobs:
+  validate:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install --disable-pip-version-check numpy
+      - run: |
+          python q3/bench/sim_payload.py
+          python q3/bench/jammers_offline_sim.py selftest
+      - name: Validate baseline and v550
+        env:
+          Q3_BENCH_K: '5'
+          Q3_WORKERS: '7'
+        run: python tools/q3_validate_v550.py
