@@ -1,0 +1,57 @@
+--- q3_controller.py	2026-09-13
++++ q3_v156.py	2026-09-13
+@@ -336,6 +336,31 @@
+                     return ('probe',None,np.asarray(p,float))
+                 return ('source',ch,np.asarray(p,float))
+         return ('source',order[0][0],order[0][1])
++    def triangulation_point(self,ch):
++        b=self.B[ch]; est,r=b.estimate(); cur=np.asarray(self.c.position,float)
++        if est is None:return cur
++        est=np.asarray(est,float); cand=[]
++        # Nearby lateral moves: preserve signal probability while changing bearing geometry.
++        for rad in (220.0,340.0,480.0,650.0):
++            for k in range(16):
++                a=2*math.pi*k/16.0; q=cur+rad*np.array([math.cos(a),math.sin(a)])
++                nq=float(np.linalg.norm(q))
++                if nq<=REGION:cand.append(q)
++        # Also consider points around the midpoint to avoid chasing a poor range estimate.
++        mid=0.55*cur+0.45*est
++        for rad in (220.0,380.0):
++            for k in range(12):
++                a=2*math.pi*k/12.0; q=mid+rad*np.array([math.cos(a),math.sin(a)])
++                if np.linalg.norm(q)<=REGION:cand.append(q)
++        best=None
++        for q in cand:
++            prob=b.signal_prob(q); cross=b.expected_cross(q); dist=float(np.linalg.norm(q-cur))
++            if prob<0.45:continue
++            # High crossing angle is valuable, but a long detour is not.
++            score=1.65*prob*cross + 0.20*prob - dist/1800.0
++            rec=(score,prob*cross,-dist,q)
++            if best is None or rec[:3]>best[:3]:best=rec
++        return np.asarray(est,float) if best is None else best[3]
+     def service(self,ch):
+         b=self.B[ch]
+         p0,r0=b.estimate()
+@@ -345,9 +370,10 @@
+             p,r=b.estimate()
+             if p is None:
+                 print(f"  [清除] CH{ch:02d} 无可用位置估计，暂缓",flush=True);return False
+-            if r>28 and it==0:
+-                print(f"  [定位] CH{ch:02d} 不确定度 {float(r):.0f}m，先到估计点补测",flush=True)
+-                self.measure(p,ch)
++            if r>120 and it==0:
++                tp=self.triangulation_point(ch)
++                print(f"  [定位] CH{ch:02d} 不确定度 {float(r):.0f}m，先到高夹角点 {self._pos(tp)} 补测",flush=True)
++                self.measure(tp,ch)
+                 if ch in self.cleared:return True
+                 continue
+             z=self.c.clear(float(p[0]),float(p[1]),int(ch))
+@@ -445,7 +471,7 @@
+         return 0.0 if z<=0 else ws[0][1]/z
+     def stop_threshold(self,k=None):
+         k=self.known() if k is None else int(k)
+-        if k<=10:return 0.74
++        if k<=10:return 0.60
+         if k==11:return 0.78
+         if k==12:return 0.81
+         if k==13:return 0.83
