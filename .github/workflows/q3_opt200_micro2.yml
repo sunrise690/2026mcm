@@ -1,0 +1,25 @@
+name: q3-opt200-micro2
+on:
+  push:
+    branches: [q3-opt-200]
+    paths:
+      - 'tools/q3_bench_micro2.py'
+      - '.github/workflows/q3_opt200_micro2.yml'
+jobs:
+  screen:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install --disable-pip-version-check numpy
+      - run: |
+          python q3/bench/sim_payload.py
+          python q3/bench/jammers_offline_sim.py selftest
+      - name: Combined micro screen
+        env:
+          Q3_BENCH_K: '1'
+          Q3_WORKERS: '7'
+        run: python tools/q3_bench_micro2.py
